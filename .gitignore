@@ -1,0 +1,35 @@
+# SAEFUR hemsida. Arkivet innehåller bara den aktuella webbversionen med byggkällor
+# (lansering-2026-10-26/) och den publicerbara utgåvan (publik-2026-10-26/).
+# Allt annat i mappen är äldre arbetskopior, sparade kopior och underlag som stannar lokalt.
+
+# Äldre arbetskopior, sparade kopior, skisser och underlag
+/*
+!/.gitignore
+!/README.md
+!/lansering-2026-10-26/
+!/publik-2026-10-26/
+
+# Lokala inställningar och tillfälliga filer
+.DS_Store
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+*.log
+*.tmp
+*.swp
+node_modules/
+.env
+.env.*
+
+# Lanseringsversionen: genererade skärmbilder, interna sidor och lokala verktyg
+/lansering-2026-10-26/skarmbilder/
+/lansering-2026-10-26/intern.html
+/lansering-2026-10-26/kontroll-*.html
+/lansering-2026-10-26/START.md
+# Språkgranskningen över lokalt nätverk (personuppgifter och lokal adress)
+/lansering-2026-10-26/sprakgranskning/
+/lansering-2026-10-26/server-natverk.mjs
+# Prov mot produktionen och mot en lokal provinstans
+/lansering-2026-10-26/prov-produktion-webblasare.mjs
+/lansering-2026-10-26/prov-early-bird-flode.mjs

@@ -1,0 +1,65 @@
+/* Lanseringslager, 2026-10-25. Läggs efter site.css och sidans egen css. Rör ingen godkänd stil, bara tillägg. */
+.lansering{background:var(--navy3);color:var(--soft);font-size:14px;line-height:1.3}
+.lansering .wrap{display:flex;justify-content:center;align-items:center;gap:18px;padding:9px 0;flex-wrap:wrap}
+.lansering span{font-weight:700;letter-spacing:.02em;color:#fff}
+.lansering a{color:var(--gold);font-weight:600}
+.lansering a:hover{color:var(--goldhover)}
+.lansering a::after{content:" →"}
+
+/* Huvudmenyn fastnar i överkant (alla sidor utom Funktioner, som har sin egen fastnande perspektivmeny).
+   Läsbar bakgrund, och ankarmål hamnar under menyn i stället för bakom den. 26 okt. */
+.huvudrad{position:relative;z-index:20}
+.huvudrad.fast{position:sticky;top:0;background:#1b2537eb;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #ffffff14}
+html:has(.huvudrad.fast){scroll-padding-top:112px}
+.huvudrad.fast .meny .panel{max-height:calc(100vh - 88px);overflow:auto}
+
+/* Sidfoten utan menyrad: varumärke och beskrivning, sedan support och bolag */
+.fot{padding:48px 0 36px}
+.fot .liten{margin-top:24px}
+
+/* Pilotinloggning: diskret, lägre än knappen */
+.loggain.pilot{font-size:13px;color:var(--dim)}
+.btn.mjuk[aria-current=page]{background:var(--gold);color:var(--navy)}
+.skissrad a{text-decoration:underline}
+
+/* Early Bird-sidan */
+.eb-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+.eb-tre{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:14px;counter-reset:eb}
+.eb-tre li{counter-increment:eb;position:relative;padding:18px 20px 18px 64px;border-radius:18px;background:#ffffff0a}
+.eb-tre li::before{content:counter(eb);position:absolute;left:20px;top:18px;width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--navy);font-weight:700;display:grid;place-items:center;font-size:15px}
+.eb-tre b{display:block;color:#fff;font-size:20px;letter-spacing:-.01em}
+.eb-tre span{color:var(--soft)}
+.eb-form{background:var(--navy2);border-radius:18px;padding:32px}
+.eb-form h2{margin:0 0 18px;font-size:26px;color:#fff;letter-spacing:-.02em}
+.eb-falt{margin-bottom:18px}
+.eb-falt label{display:block;font-weight:600;margin-bottom:8px}
+.eb-falt .frivilligt{font-weight:400;color:var(--dim)}
+.eb-falt input[type=email],.eb-falt input[type=text]{width:100%;font:500 18px var(--sans);padding:13px 16px;border-radius:12px;border:2px solid transparent;background:var(--navy);color:#fff}
+.eb-falt input:focus-visible{border-color:var(--gold);outline:0}
+.eb-fang{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.eb-samtycke{display:flex;gap:12px;align-items:flex-start;margin:6px 0 6px;color:var(--soft);font-size:15px;line-height:1.5}
+.eb-samtycke input{flex:none;width:22px;height:22px;margin:2px 0 0;accent-color:var(--gold)}
+.eb-samtycke label{cursor:pointer}
+.eb-fel{color:#ffb3a7;font-size:14px;margin:8px 0 0}
+.eb-form .btn.stor{margin-top:14px;width:100%}
+.eb-form .btn:disabled{opacity:.6;cursor:wait}
+.eb-ej-ansluten{background:#d7a13b26;color:#f2d594;border-radius:12px;padding:12px 16px;font-size:14px;margin:0 0 20px}
+.eb-status{margin-top:20px;border-radius:12px;padding:16px 18px;font-size:16px;line-height:1.5;outline:0}
+.eb-status.ok{background:#2f6f4f55;color:#d6f3e3}
+.eb-status.fel{background:#8a3a2e55;color:#ffd9d2}
+.eb-status.info{background:#d7a13b26;color:#f2d594}
+.eb-form .mikro{margin-top:20px}
+.villkor{margin-top:0}
+.villkor li{font-size:18px}
+.eb-text p{margin:0 0 14px;color:var(--soft);font-size:18px;line-height:1.65}
+
+@media(max-width:1080px){.eb-grid{grid-template-columns:1fr;gap:40px}}
+@media(max-width:700px){
+  .lansering .wrap{gap:4px 12px;padding:8px 0}
+  html:has(.huvudrad.fast){scroll-padding-top:84px}
+  .huvudrad.fast .meny .panel{max-height:calc(100vh - 68px)}
+  .fot{padding:40px 0 32px}
+  .fot .liten{margin-top:20px}
+  .eb-form{padding:24px}
+  .eb-tre li{padding:16px 16px 16px 58px}
+}

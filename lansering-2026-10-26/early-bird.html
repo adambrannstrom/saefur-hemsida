@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Early Bird | SAEFUR</title>
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="lansering.css">
+</head>
+<body>
+<div class="skissrad">Granskningsversion med lanseringslager, 25 oktober 2026 · lokalt, inget publicerat · Early Bird-formuläret skickar först när mottagningen är ansluten · <a href="intern.html">intern översikt</a></div>
+<div class="lansering"><div class="wrap"><span>Lansering hösten 2026</span><a href="early-bird.html">Anmäl ditt företag till Early Bird</a></div></div>
+<div class="huvudrad fast">
+<header class="wrap head">
+  <a class="brand" href="index.html">SAEFUR</a>
+  <nav class="nav" aria-label="Huvudmeny"><a href="funktioner.html">Funktioner</a><a href="media.html">Media</a><a href="priser.html">Priser</a><a href="om.html">Om SAEFUR</a></nav>
+  <div class="right">
+    <a class="loggain pilot" href="https://saefur.com/sv/login">Pilotinloggning</a>
+    <a class="btn mjuk" href="early-bird.html" aria-current="page">Early Bird</a>
+    <details class="meny"><summary>Meny</summary>
+      <div class="panel"><a href="funktioner.html">Funktioner</a><a href="media.html">Media</a><a href="priser.html">Priser</a><a href="om.html">Om SAEFUR</a><a href="early-bird.html">Early Bird</a><a href="https://saefur.com/sv/login">Pilotinloggning</a></div>
+    </details>
+  </div>
+</header>
+</div>
+
+<main>
+<section class="hero sida">
+  <div class="wrap hero-text">
+    <span class="markning">Lansering hösten 2026</span>
+    <h1>Få besked när<br><span>SAEFUR öppnar.</span></h1>
+    <p class="lead">Anmäl ditt företag till Early Bird och få 20 % rabatt på licenserna i sex månader enligt villkoren nedan. Vi skickar en bekräftelse till din e-postadress och hör av oss när det går att börja.</p>
+  </div>
+</section>
+
+<section class="sektion">
+  <div class="wrap eb-grid">
+    <div>
+      <p class="etikett">Erbjudandet</p>
+      <ol class="eb-tre">
+        <li><b>20 % rabatt</b><span>på licenserna i sex månader.</span></li>
+        <li><b>Från första betalda perioden</b><span>efter provperioden.</span></li>
+        <li><b>Start inom 90 dagar</b><span>efter att vi har meddelat att SAEFUR öppnat.</span></li>
+      </ol>
+      <p class="not"><a class="textlank" href="#villkor">Alla villkor</a></p>
+    </div>
+
+    <form class="eb-form" id="eb-form" novalidate aria-labelledby="eb-rubrik">
+      <h2 id="eb-rubrik">Anmäl ditt företag</h2>
+      <p class="eb-ej-ansluten" id="eb-ej-ansluten" hidden>Anmälan är inte ansluten ännu. Formuläret skickar ingenting och ingenting sparas förrän mottagningen är på plats.</p>
+      <div class="eb-falt">
+        <label for="eb-epost">E-postadress</label>
+        <input id="eb-epost" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254">
+        <p class="eb-fel" id="eb-epost-fel" role="alert" hidden></p>
+      </div>
+      <div class="eb-falt">
+        <label for="eb-foretag">Företagets namn <span class="frivilligt">(frivilligt)</span></label>
+        <input id="eb-foretag" name="company" type="text" autocomplete="organization" maxlength="200">
+      </div>
+      <div class="eb-falt eb-fang" aria-hidden="true">
+        <label for="eb-webb">Lämna tomt</label>
+        <input id="eb-webb" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <p class="mikro eb-samtycke-text">När du anmäler dig sparar vi uppgifterna enligt nedan. En anmälan ger inte tillgång till systemet.</p>
+      <button class="btn stor" type="submit" id="eb-skicka">Anmäl ditt företag</button>
+      <div class="eb-status" id="eb-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+      <p class="mikro">Redan inbjuden som pilot? <a class="textlank" href="https://saefur.com/sv/login">Pilotinloggning</a></p>
+    </form>
+  </div>
+</section>
+
+<section class="sektion band" id="villkor">
+  <div class="wrap eb-grid">
+    <div>
+      <p class="etikett">Villkor</p>
+      <h2 class="rubrik">Early Bird i korthet.</h2>
+    </div>
+    <ul class="lista villkor"><li>20 % rabatt på grundproduktens licenser och extra användarlicenser i sex månader från första betalda abonnemangsperioden efter provperioden.</li><li>Rabatten avser ordinarie licenspriser vid abonnemangsstart.</li><li>Tillägg, tjänster och engångsavgifter ingår inte.</li><li>Ett företag per anmälan.</li><li>Abonnemanget ska starta inom 90 dagar efter lanseringsbeskedet.</li><li>Kan inte kombineras med Founding Customer eller andra introduktionserbjudanden.</li><li>Anmälan ger inte pilotåtkomst.</li></ul>
+  </div>
+</section>
+
+<section class="sektion" id="uppgifter">
+  <div class="wrap eb-grid">
+    <div>
+      <p class="etikett">Dina uppgifter</p>
+      <h2 class="rubrik">Så används e-postadressen.</h2>
+    </div>
+    <div class="eb-text">
+      <p>Vi sparar e-postadressen och, om du anger det, företagets namn. Vi använder dem enbart för att bekräfta anmälan, meddela när SAEFUR öppnar och ge företaget rabatten.</p>
+      <p>Efter anmälan skickar vi ett mejl till adressen du angav. Bekräfta anmälan med länken i mejlet, så gäller den. Vill du bli borttagen räcker ett mejl till info@saefur.com.</p>
+      <p><span data-p="gallring">En anmälan som inte bekräftas raderas efter 30 dagar. Har du bekräftat och inte blivit kund raderas den 120 dagar efter att vi har skickat lanseringsbeskedet till dig. Blir du kund raderas anmälan när rabattperioden är slut och rabatten är korrekt registrerad. Ditt kundkonto och dina bokföringsuppgifter berörs inte.</span></p>
+      <p class="not">Personuppgiftsansvarig: AT Interactive Design AB.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="fot">
+  <div class="wrap">
+    <div class="rad">
+      <div><span class="brand">SAEFUR</span>Affärssystem för kunder, arbete, leveranser och ekonomi. Lansering hösten 2026.</div>
+    </div>
+    <p class="liten">Support: info@saefur.com · AT Interactive Design AB, org.nr 559556-4393, säte Rättvik</p>
+  </div>
+</footer>
+<script id="data" type="application/json">{"mottagning": "/api/early-bird"}</script>
+<script src="early-bird.js"></script>
+</body>
+</html>

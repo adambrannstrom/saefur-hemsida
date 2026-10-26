@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priser | SAEFUR</title>
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="priser.css">
+<link rel="stylesheet" href="lansering.css">
+</head>
+<body class="med-bakgrund">
+<div class="bakgrund" aria-hidden="true"><img src="bilder/foto-02-mindre-foretagets-arbetsplats.jpg" alt="" data-bild="arbetsplats" style="--pos:50% 50%;--pos-m:50% 50%" class="aktiv"><img src="bilder/foto-03-kontorslandskap.jpg" alt="" data-bild="kontorslandskap" style="--pos:50% 50%;--pos-m:44% 50%" loading="lazy"><img src="bilder/foto-04-kontor-och-praktisk-verksamhet.jpg" alt="" data-bild="praktisk" style="--pos:50% 50%;--pos-m:52% 50%" loading="lazy"><img src="bilder/foto-05-gemensamt-mote.jpg" alt="" data-bild="mote" style="--pos:50% 50%;--pos-m:64% 50%" loading="lazy"><img src="bilder/foto-06-styrelsemote.jpg" alt="" data-bild="styrelse" style="--pos:50% 45%;--pos-m:52% 45%" loading="lazy"></div>
+
+<div class="lansering"><div class="wrap"><span>Lansering hösten 2026</span><a href="early-bird.html">Anmäl ditt företag till Early Bird</a></div></div>
+<div class="huvudrad fast">
+<header class="wrap head">
+  <a class="brand" href="index.html">SAEFUR</a>
+  <nav class="nav" aria-label="Huvudmeny"><a href="funktioner.html">Funktioner</a><a href="media.html">Media</a><a href="priser.html" aria-current="page">Priser</a><a href="om.html">Om SAEFUR</a></nav>
+  <div class="right">
+    <a class="loggain pilot" href="https://saefur.com/sv/login">Pilotinloggning</a>
+    <a class="btn mjuk" href="early-bird.html">Early Bird</a>
+    <details class="meny"><summary>Meny</summary>
+      <div class="panel"><a href="funktioner.html">Funktioner</a><a href="media.html">Media</a><a href="priser.html">Priser</a><a href="om.html">Om SAEFUR</a><a href="early-bird.html">Early Bird</a><a href="https://saefur.com/sv/login">Pilotinloggning</a></div>
+    </details>
+  </div>
+</header>
+</div>
+
+<main>
+<section class="hero sida">
+  <div class="wrap hero-text">
+    <span class="markning">Arbetsförslag till prislista, ej beslutat</span>
+    <h1>Priset följer<br><span>antalet användare.</span></h1>
+    <p class="lead"><span class="forslag" data-p="pris-niva">Första licensen kostar 995 kr per månad. Varje ytterligare användare kostar mindre ju fler ni är.</span> <span class="forslag" data-p="moms">Priser exklusive moms.</span></p>
+  </div>
+</section>
+
+<section class="sektion rakna" id="rakna">
+  <div class="wrap pris-topp">
+    <div class="staffel-del">
+      <p class="etikett">Så räknas priset</p>
+      <ul class="staffel" id="staffel"><li data-lo="1" data-hi="1"><span>Första licensen</span><em class="antal-i" aria-live="off"></em><b>995 kr</b></li><li data-lo="2" data-hi="10"><span>Användare 2 till 10</span><em class="antal-i" aria-live="off"></em><b>229 kr</b></li><li data-lo="11" data-hi="30"><span>Användare 11 till 30</span><em class="antal-i" aria-live="off"></em><b>179 kr</b></li><li data-lo="31" data-hi="60"><span>Användare 31 till 60</span><em class="antal-i" aria-live="off"></em><b>149 kr</b></li><li data-lo="61" data-hi="120"><span>Användare 61 till 120</span><em class="antal-i" aria-live="off"></em><b>129 kr</b></li><li data-lo="121" data-hi=""><span>Användare 121 och uppåt</span><em class="antal-i" aria-live="off"></em><b>99 kr</b></li></ul>
+      <p class="not"><span class="forslag" data-p="pris-intervall">Per användare och månad. Varje pris gäller användarna i sitt intervall, och priset för de tidigare användarna står kvar när en gräns passeras.</span></p>
+    </div>
+    <div class="raknare" id="raknare">
+      <div class="raknare-huvud">
+        <label for="antal">Hur många användare har ni?</label>
+        <div class="falt"><input id="antal" type="number" min="1" max="2000" value="12" inputmode="numeric" aria-describedby="summa"><span>användare</span></div>
+      </div>
+      <input id="glid" type="range" min="1" max="150" value="12" aria-label="Antal användare" aria-controls="antal">
+      <div class="snabb" aria-label="Snabbval"><button type="button" class="chip" data-n="1">1</button><button type="button" class="chip" data-n="5">5</button><button type="button" class="chip" data-n="12">12</button><button type="button" class="chip" data-n="30">30</button><button type="button" class="chip" data-n="60">60</button><button type="button" class="chip" data-n="120">120</button></div>
+      <p class="summa" id="summa">3 414 kr <small>per månad, exklusive moms</small></p>
+      <p class="iord" id="iord"></p>
+      <ol class="delar" id="delar" aria-label="Uppdelning per intervall"></ol>
+      <p class="snitt" id="snitt"></p>
+      <p class="mikro">Utan tillägg. <span class="forslag" data-p="andring">Antalet kan ändras månad för månad.</span></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="etikett exempel-etikett">Tre exempel, tryck för att räkna</p>
+    <div class="exempel"><button type="button" class="ex" data-n="1"><p>1 användare</p><b>995 kr</b><p>per månad</p></button><button type="button" class="ex" data-n="10"><p>10 användare</p><b>3 056 kr</b><p>per månad</p></button><button type="button" class="ex" data-n="30"><p>30 användare</p><b>6 636 kr</b><p>per månad</p></button></div>
+  </div>
+</section>
+
+<section class="sektion band">
+  <div class="wrap">
+    <h2 class="rubrik">Vad en licens är.</h2>
+    <p class="ingress"><span class="bekrafta" data-p="licens">En licens är en person i ert företag med eget konto. Kundens länk, byråns läsplats och samarbetspartner i andra företag ingår utan kostnad.</span></p>
+    <div class="tva" style="margin-top:48px">
+      <div>
+        <h3 class="etikett">Ingår i grundprodukten</h3>
+        <p class="ingress" style="margin-top:0"><span class="forslag" data-p="grundprodukt">Hela kedjan från kund och projekt till leverans och ekonomi, för alla användare i företaget.</span> Vad var och en ser och gör styrs av behörigheten. <a class="textlank" href="funktioner.html">Se hur SAEFUR fungerar</a></p>
+        <ul class="lista">
+          <li><span class="forslag" data-p="grundprodukt">Valbara tillägg redovisas här när de är beslutade.</span></li>
+          <li><span class="bekrafta" data-p="avtal-ingar">Bankkoppling och fraktbokning ingår i grundprodukten när de är på plats, utan extra kostnad från SAEFUR.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="etikett">Ligger utanför</h3>
+        <ul class="lista ute">
+          <li>Bokslut och deklaration. Redovisningsbyrån får underlaget.</li>
+          <li>Lönekörning. Lönepartnern får underlaget.</li>
+          <li>Kassaregister.</li>
+          <li>Personalliggare i byggherrens system.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sektion" id="borja">
+  <div class="wrap">
+    <h2 class="rubrik">Så börjar det.</h2>
+    <p class="ingress">Ni kommer igång på egen hand, och vi hjälper gärna till på info@saefur.com. Det som står med prickad understrykning är avsikten för flödet och bekräftas i produkten före publicering.</p>
+    <ol class="start-steg">
+      <li><span class="punkt" aria-hidden="true"></span><p class="nr">01</p><h3>Early Bird</h3><p><span data-p="early-bird">Anmäl er före lanseringen hösten 2026 och få 20 % rabatt på licenserna i sex månader. Anmälan ger ingen pilotåtkomst.</span> <a class="textlank" href="early-bird.html#villkor">Villkor och anmälan</a></p></li>
+      <li><span class="punkt" aria-hidden="true"></span><p class="nr">02</p><h3>Konto och 30 dagar</h3><p><span data-p="konto">När SAEFUR har öppnat skapar ni konto i webbläsaren.</span> <span class="bekrafta" data-p="prov-30">Ni har 30 dagar att prova, och ingenting debiteras under tiden.</span></p></li>
+      <li><span class="punkt" aria-hidden="true"></span><p class="nr">03</p><h3>Kort</h3><p><span class="bekrafta" data-p="kort">Kortuppgifter lämnas vid registreringen.</span> <span class="bekrafta" data-p="betalning">Därefter betalar ni månadsvis med sparat kort.</span></p></li>
+      <li><span class="punkt" aria-hidden="true"></span><p class="nr">04</p><h3>Besked</h3><p><span class="bekrafta" data-p="besked">Ni får besked om beloppet sju dagar före varje dragning.</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sektion band">
+  <div class="wrap">
+    <h2 class="rubrik">Fyra frågor om priset.</h2>
+    <div class="fragor">
+      <div><h3>Hur lång är bindningstiden?</h3><p><span class="bekrafta" data-p="bindning">Abonnemanget löper per månad och sägs upp till periodens slut.</span></p></div>
+      <div><h3>Vad händer med våra uppgifter om vi slutar?</h3><p><span class="bekrafta" data-p="export">Ni exporterar era egna uppgifter: kunder, fakturor, SIE-filer och dokument.</span></p></div>
+      <div><h3>Hur betalar vi?</h3><p><span class="bekrafta" data-p="betalning">Månadsvis med sparat kort.</span> <span class="bekrafta" data-p="besked">Ni får besked om beloppet sju dagar före varje dragning.</span></p></div>
+      <div><h3>Vad kostar kundens länk?</h3><p><span class="bekrafta" data-p="kundlank">Kundens länk ingår utan kostnad, och kunden använder den utan eget konto.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="avslut">
+  <div class="wrap">
+    <h2>Börja där ni behöver överblick.</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto">Lansering hösten 2026. När SAEFUR öppnar kan ni börja med det område som behöver ordning först och lägga till fler i er egen takt. Early Bird ger 20 % rabatt på licenserna i sex månader.</p>
+    <div class="actions"><a class="btn stor" href="early-bird.html">Anmäl ditt företag till Early Bird</a></div>
+    <p class="mikro">Frågor eller en genomgång först? Skriv till info@saefur.com.</p>
+  </div>
+</section>
+</main>
+
+<footer class="fot">
+  <div class="wrap">
+    <div class="rad">
+      <div><span class="brand">SAEFUR</span>Affärssystem för kunder, arbete, leveranser och ekonomi. Lansering hösten 2026.</div>
+    </div>
+    <p class="liten">Support: info@saefur.com · AT Interactive Design AB, org.nr 559556-4393, säte Rättvik</p>
+  </div>
+</footer>
+<script id="data" type="application/json">{"steg": [[1, 1, 995], [2, 10, 229], [11, 30, 179], [31, 60, 149], [61, 120, 129], [121, 0, 99]], "bilder": ["arbetsplats", "kontorslandskap", "praktisk", "mote", "styrelse"], "vaxling": 9, "standard": 12}</script>
+<script src="priser.js"></script>
+</body>
+</html>

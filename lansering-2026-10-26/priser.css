@@ -1,0 +1,107 @@
+/* Priser-prototyp 2026-10-25. Tillägg ovanpå v4:s site.css. Bakgrundsreglerna är desamma som i den godkända
+   Funktioner-varianten (port 5515): bilder som växlar med övertoning och driver långsamt åt olika håll.
+   Sedan 25 okt sen kväll sex fotografier i stället för produktfångster: ingen oskärpa, lättare ton så att bilden
+   kommer fram, beskärningspunkt per bild (--pos på dator, --pos-m på mobil, satta i bygg.py). */
+.bakgrund img{transition:opacity 2.4s ease;transform:scale(1.08);filter:saturate(.8) brightness(.92);object-position:var(--pos,50% 50%)}
+@media(max-width:720px){.bakgrund img{object-position:var(--pos-m,var(--pos,50% 50%))}}
+.bakgrund img.aktiv{animation:drift-a 16s ease-in-out infinite alternate}
+.bakgrund img:nth-child(4n+2).aktiv{animation-name:drift-b}
+.bakgrund img:nth-child(4n+3).aktiv{animation-name:drift-c}
+.bakgrund img:nth-child(4n+4).aktiv{animation-name:drift-d}
+@keyframes drift-a{from{transform:scale(1.07) translate(-1.6%,1%)}to{transform:scale(1.1) translate(1.6%,-1%)}}
+@keyframes drift-b{from{transform:scale(1.1) translate(1.4%,1.2%)}to{transform:scale(1.07) translate(-1.4%,-1.2%)}}
+@keyframes drift-c{from{transform:scale(1.07) translate(0.4%,-1.6%)}to{transform:scale(1.1) translate(-1%,1.6%)}}
+@keyframes drift-d{from{transform:scale(1.1) translate(-1.2%,-1.4%)}to{transform:scale(1.07) translate(1.6%,0.8%)}}
+.bakgrund::after{background:linear-gradient(180deg,#1b2537b8 0%,#1b2537a8 28%,#1b2537cc 62%,#1b2537ea 100%)}
+@media(prefers-reduced-motion:reduce){.bakgrund img,.bakgrund img.aktiv{transition:none;animation:none;transform:none}}
+.med-bakgrund .hero-text,.med-bakgrund .rubrik,.med-bakgrund .ingress,.med-bakgrund .etikett,.med-bakgrund .avslut,.med-bakgrund .start-steg,.med-bakgrund .fragor,.med-bakgrund .lista{text-shadow:0 1px 2px #1b2537,0 0 18px #1b2537cc}
+.med-bakgrund .skissrad{background:#141c2bf2}
+.med-bakgrund .fot{position:relative}
+.med-bakgrund .sektion.band{background:#22304acc}
+.med-bakgrund .staffel,.med-bakgrund .raknare,.med-bakgrund .ex,.med-bakgrund .start-steg li{background:#1b253799;backdrop-filter:blur(6px)}
+.skissrad a{color:var(--gold);text-decoration:underline dotted;text-underline-offset:3px}
+
+/* Tre lägen: omärkt = beslut eller belagt, gul = öppet affärsvillkor, prickad (site.css .bekrafta) = bekräftas i produkten */
+.forslag{background:#d7a13b2e;color:inherit;border-radius:6px;padding:1px 5px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.lead .forslag,.ingress .forslag{color:#fff}
+.skissrad .forslag{padding:0 5px}
+
+/* Staffling: raderna som ingår i det valda antalet lyser, med antalet personer i intervallet */
+.rakna{padding-top:72px}
+.staffel-del .etikett{margin-bottom:16px}
+.staffel li{align-items:center;transition:background .25s,color .25s;color:var(--dim)}
+.staffel li .antal-i{font-style:normal;font-size:13px;color:var(--gold);margin-left:auto;white-space:nowrap;opacity:0;transition:opacity .25s}
+.staffel li b{color:var(--dim);transition:color .25s}
+.staffel li.i{color:#fff;background:#d7a13b14}
+.staffel li.i b,.staffel li:first-child.i b{color:#fff}
+.staffel li.i .antal-i{opacity:1}
+.staffel li:first-child b{color:var(--gold)}
+
+/* Räknaren */
+.raknare{display:flex;flex-direction:column;gap:0}
+.raknare-huvud{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.raknare label{margin:0;font-size:19px}
+.raknare .falt{gap:10px}
+.raknare input[type=number]{width:104px;text-align:center}
+.raknare input[type=number]::-webkit-inner-spin-button{opacity:1}
+.raknare input[type=range]{width:100%;margin:22px 0 0;accent-color:var(--gold);cursor:pointer;height:28px}
+.snabb{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{font:inherit;font-size:14px;padding:6px 13px;border-radius:999px;border:0;background:#ffffff12;color:var(--soft);cursor:pointer;min-width:44px}
+.chip:hover{background:#ffffff22;color:#fff}
+.chip[aria-pressed=true]{background:var(--gold);color:var(--navy);font-weight:600}
+.raknare .summa{margin-top:28px}
+.iord{margin:10px 0 0;color:var(--soft);font-size:16px;line-height:1.55}
+.delar{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:8px}
+.delar li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;font-size:14px;color:var(--soft);font-variant-numeric:tabular-nums}
+.delar li span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.delar li b{color:#fff;font-weight:600;text-align:right;white-space:nowrap}
+.delar li i{grid-column:1/-1;display:block;height:6px;border-radius:3px;background:#ffffff14;position:relative;overflow:hidden}
+.delar li i::after{content:"";position:absolute;inset:0;width:var(--andel,0%);background:var(--gold);border-radius:3px;transition:width .35s ease}
+.delar li:first-child i::after{background:var(--goldhover)}
+.snitt{margin:16px 0 0;font-size:15px;color:var(--dim)}
+.snitt b{color:var(--soft);font-weight:600}
+.raknare .mikro{margin-top:14px}
+
+/* Tre exempel som knappar */
+.exempel-etikett{margin:56px 0 0}
+.exempel{margin-top:16px}
+.ex{font:inherit;text-align:left;border:0;cursor:pointer;color:inherit;background:#ffffff0a;border-radius:18px;padding:24px;transition:background .15s,box-shadow .15s}
+.ex:hover{background:#ffffff18}
+.ex[aria-pressed=true]{box-shadow:inset 0 0 0 2px var(--gold)}
+.ex p{margin:0;color:var(--dim);font-size:15px}
+.ex b{display:block;font-size:28px;color:#fff;letter-spacing:-.02em;margin-top:4px;font-variant-numeric:tabular-nums}
+
+/* Så börjar det: fyra steg på samma streckade spår som startsidan */
+.start-steg{list-style:none;padding:0;margin:56px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.start-steg li{position:relative;padding:40px 22px 22px;border-radius:18px}
+.start-steg li::before{content:"";position:absolute;top:8px;left:40px;right:-28px;border-top:2px dashed #d7a13b80}
+.start-steg li:last-child::before{right:22px;border-image:linear-gradient(90deg,#d7a13b80 60%,transparent) 1}
+.start-steg .punkt{position:absolute;top:0;left:22px;width:18px;height:18px;border-radius:50%;background:var(--navy);border:3px solid var(--gold)}
+.start-steg li:last-child .punkt{background:var(--gold)}
+.start-steg .nr{font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--gold);margin:0}
+.start-steg h3{font-size:22px;letter-spacing:-.01em;margin:2px 0 8px;color:#fff;font-weight:700}
+.start-steg p{margin:0;color:var(--soft);font-size:16px;line-height:1.55}
+.start-steg li .punkt{top:4px}
+.start-steg li::before{top:12px}
+
+.textlank{font-size:16px}
+.lista li .bekrafta{text-decoration-color:#d7a13b99}
+
+@media(max-width:1080px){
+  .start-steg{grid-template-columns:1fr 1fr;row-gap:28px}
+  .start-steg li:nth-child(2)::before{right:22px}
+}
+@media(max-width:700px){
+  .rakna{padding-top:48px}
+  .raknare-huvud{flex-direction:column;align-items:flex-start;gap:10px}
+  .raknare input[type=number]{width:96px}
+  .raknare .summa small{display:block;margin-top:2px}
+  .exempel-etikett{margin-top:40px}
+  .ex{padding:20px}
+  .start-steg{grid-template-columns:1fr;gap:0;margin-top:40px}
+  .start-steg li{padding:18px 18px 22px 52px;border-radius:0;background:transparent !important;backdrop-filter:none}
+  .start-steg li::before,.start-steg li:nth-child(2)::before{top:28px;bottom:-4px;left:26px;right:auto;border-top:0;border-left:2px dashed #d7a13b80;border-image:none}
+  .start-steg li:last-child::before{display:none}
+  .start-steg li .punkt{top:20px;left:18px}
+  .staffel li .antal-i{font-size:12px}
+}

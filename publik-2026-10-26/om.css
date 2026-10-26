@@ -1,0 +1,69 @@
+/* Om SAEFUR-prototyp 2026-10-25 sen kväll. Tillägg ovanpå v4:s site.css. Bakgrundsreglerna är desamma som på den
+   godkända prissidan (port 5516): sex fotografier som växlar med övertoning och driver långsamt åt olika håll,
+   ingen oskärpa, lättare ton, beskärningspunkt per bild (--pos på dator, --pos-m på mobil, satta i bygg.py). */
+.bakgrund img{transition:opacity 2.4s ease;transform:scale(1.08);filter:saturate(.8) brightness(.92);object-position:var(--pos,50% 50%)}
+@media(max-width:720px){.bakgrund img{object-position:var(--pos-m,var(--pos,50% 50%))}}
+.bakgrund img.aktiv{animation:drift-a 16s ease-in-out infinite alternate}
+.bakgrund img:nth-child(4n+2).aktiv{animation-name:drift-b}
+.bakgrund img:nth-child(4n+3).aktiv{animation-name:drift-c}
+.bakgrund img:nth-child(4n+4).aktiv{animation-name:drift-d}
+@keyframes drift-a{from{transform:scale(1.07) translate(-1.6%,1%)}to{transform:scale(1.1) translate(1.6%,-1%)}}
+@keyframes drift-b{from{transform:scale(1.1) translate(1.4%,1.2%)}to{transform:scale(1.07) translate(-1.4%,-1.2%)}}
+@keyframes drift-c{from{transform:scale(1.07) translate(0.4%,-1.6%)}to{transform:scale(1.1) translate(-1%,1.6%)}}
+@keyframes drift-d{from{transform:scale(1.1) translate(-1.2%,-1.4%)}to{transform:scale(1.07) translate(1.6%,0.8%)}}
+.bakgrund::after{background:linear-gradient(180deg,#1b2537b8 0%,#1b2537a8 28%,#1b2537cc 62%,#1b2537ea 100%)}
+@media(prefers-reduced-motion:reduce){.bakgrund img,.bakgrund img.aktiv{transition:none;animation:none;transform:none}}
+.med-bakgrund .hero-text,.med-bakgrund .rubrik,.med-bakgrund .ingress,.med-bakgrund .etikett,.med-bakgrund .avslut,.med-bakgrund .omrade,.med-bakgrund .fragor-spar,.med-bakgrund .lista{text-shadow:0 1px 2px #1b2537,0 0 18px #1b2537cc}
+.med-bakgrund .skissrad{background:#141c2bf2}
+.med-bakgrund .fot{position:relative}
+.med-bakgrund .sektion.band{background:#22304acc}
+.med-bakgrund .principer div,.med-bakgrund .fragor-spar li,.med-bakgrund .fakta{background:#1b253799;backdrop-filter:blur(6px)}
+.skissrad a{color:var(--gold);text-decoration:underline dotted;text-underline-offset:3px}
+
+/* Berättande avsnitt: rubrik till vänster, text till höger (site.css .omrade) */
+.varfor{padding-top:104px}
+.omrade .text p{margin:0 0 22px;color:var(--soft);font-size:18px;line-height:1.65}
+.omrade .text p:last-child{margin-bottom:0}
+.omrade .text p:first-child{color:var(--text)}
+
+/* Fyra frågor på det streckade spåret från startsidan */
+.fragor-spar{list-style:none;padding:0;margin:56px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.fragor-spar li{position:relative;padding:40px 22px 22px;border-radius:18px}
+.fragor-spar li::before{content:"";position:absolute;top:12px;left:40px;right:-28px;border-top:2px dashed #d7a13b80}
+.fragor-spar li:last-child::before{right:22px;border-image:linear-gradient(90deg,#d7a13b80 60%,transparent) 1}
+.fragor-spar .punkt{position:absolute;top:4px;left:22px;width:18px;height:18px;border-radius:50%;background:var(--navy);border:3px solid var(--gold)}
+.fragor-spar li:last-child .punkt{background:var(--gold)}
+.fragor-spar .nr{font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--gold);margin:0}
+.fragor-spar h3{font-size:22px;letter-spacing:-.01em;margin:2px 0 8px;color:#fff;font-weight:700}
+.fragor-spar p{margin:0;color:var(--soft);font-size:16px;line-height:1.55}
+h2.rubrik .bekrafta,h2.rubrik span{font-style:normal}
+
+/* Fyra principer som två gånger två */
+.principer.fyra{grid-template-columns:1fr 1fr}
+.principer.fyra div{padding:32px}
+.principer.fyra h3{font-size:22px}
+.principer.fyra p{font-size:17px;line-height:1.6}
+
+/* Företagets fakta */
+.fakta{margin:32px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;border-radius:18px;padding:24px 28px}
+.fakta div{margin:0}
+.fakta dt{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.fakta dd{margin:4px 0 0;color:#fff;font-size:17px}
+.fakta a{text-decoration:underline;text-decoration-color:#d7a13b99;text-underline-offset:4px}
+.lista li .bekrafta{text-decoration-color:#d7a13b99}
+
+@media(max-width:1080px){
+  .fragor-spar{grid-template-columns:1fr 1fr;row-gap:28px}
+  .fragor-spar li:nth-child(2)::before{right:22px}
+  .principer.fyra{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .varfor{padding-top:64px}
+  .omrade .text p{font-size:17px}
+  .fragor-spar{grid-template-columns:1fr;gap:0;margin-top:40px}
+  .fragor-spar li{padding:18px 18px 22px 52px;border-radius:0;background:transparent !important;backdrop-filter:none}
+  .fragor-spar li::before,.fragor-spar li:nth-child(2)::before{top:28px;bottom:-4px;left:26px;right:auto;border-top:0;border-left:2px dashed #d7a13b80;border-image:none}
+  .fragor-spar li:last-child::before{display:none}
+  .fragor-spar li .punkt{top:20px;left:18px}
+  .fakta{grid-template-columns:1fr;padding:20px}
+}

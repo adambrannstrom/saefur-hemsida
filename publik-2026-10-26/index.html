@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAEFUR | Ett system för hela företaget</title>
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="lansering.css">
+</head>
+<body class="med-bakgrund">
+<div class="bakgrund" aria-hidden="true"><img src="bilder/sit-ensam.jpg" alt="" class="aktiv" title="Hantverkare med telefonen vid servicebilen"><img src="bilder/sit-kundmote.jpg" alt="" title="Kundmöte utanför fastigheten"><img src="bilder/sit-lager.jpg" alt="" title="Plock i lagret"><img src="bilder/sit-projekt.jpg" alt="" title="Projektgenomgång över ritningen"><img src="bilder/sit-team.jpg" alt="" title="Teamet vid datorn"></div>
+
+<div class="lansering"><div class="wrap"><span>Lansering hösten 2026</span><a href="early-bird.html">Anmäl ditt företag till Early Bird</a></div></div>
+<div class="huvudrad fast">
+<header class="wrap head">
+  <a class="brand" href="index.html">SAEFUR</a>
+  <nav class="nav" aria-label="Huvudmeny"><a href="funktioner.html">Funktioner</a><a href="media.html">Media</a><a href="priser.html">Priser</a><a href="om.html">Om SAEFUR</a></nav>
+  <div class="right">
+    <a class="loggain pilot" href="https://saefur.com/sv/login">Pilotinloggning</a>
+    <a class="btn mjuk" href="early-bird.html">Early Bird</a>
+    <details class="meny"><summary>Meny</summary>
+      <div class="panel"><a href="funktioner.html">Funktioner</a><a href="media.html">Media</a><a href="priser.html">Priser</a><a href="om.html">Om SAEFUR</a><a href="early-bird.html">Early Bird</a><a href="https://saefur.com/sv/login">Pilotinloggning</a></div>
+    </details>
+  </div>
+</header>
+</div>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-text">
+    <h1>Ett system för<br><span>hela företaget.</span></h1>
+    <p class="lead">SAEFUR samlar kunder, arbete, leveranser och ekonomi för projekt, tjänster, varor och löpande avtal. Ni ser vad som är överenskommet, genomfört, fakturerat och betalt, och kan fördela ansvaret och samtidigt följa helheten.</p>
+    <div class="actions">
+      <a class="btn stor" href="early-bird.html">Anmäl ditt företag till Early Bird</a>
+      <a class="textlank" href="funktioner.html">Se hur SAEFUR fungerar</a>
+    </div>
+    <p class="mikro">Lansering hösten 2026. Early Bird ger 20 % rabatt på licenserna i sex månader. <a class="textlank" href="early-bird.html#villkor">Villkor</a></p>
+  </div>
+</section>
+
+<section class="kedja" aria-label="Från överenskommelse till överlämnat underlag i fyra steg">
+  <div class="wrap">
+    <ol class="steg">
+      <li>
+        <span class="punkt" aria-hidden="true"></span>
+        <p class="nr">01</p>
+        <h2>Överenskommet</h2>
+        <p class="kort">Kunden svarar på offerten via en länk.</p>
+        <div class="bild"><img src="bilder/ut-lofte.jpg" alt="Offert markerad som godkänd, med timpris och uppskattat belopp"></div>
+      </li>
+      <li>
+        <span class="punkt" aria-hidden="true"></span>
+        <p class="nr">02</p>
+        <h2>Genomfört</h2>
+        <p class="kort">Tid, material och foton följer uppdraget.</p>
+        <div class="bild"><img src="bilder/prod-telefon.jpg" alt="Ett uppdrag i telefonen med rapporterad tid, foton och material"></div>
+      </li>
+      <li>
+        <span class="punkt" aria-hidden="true"></span>
+        <p class="nr">03</p>
+        <h2>Fakturerat</h2>
+        <p class="kort">Fakturan bygger på underlaget, och betalningen följs upp.</p>
+        <div class="bild"><img src="bilder/ut-betalt.jpg" alt="Fakturaöversikt med belopp kvar att betala och en påminnelse som väntar på godkännande"></div>
+      </li>
+      <li>
+        <span class="punkt" aria-hidden="true"></span>
+        <p class="nr">04</p>
+        <h2>Överlämnat</h2>
+        <p class="kort">Redovisningspartnern får periodens underlag.</p>
+        <div class="bild"><img src="bilder/ut-overlamnat.jpg" alt="Perioden före överlämning, med listan över det som behöver kompletteras"></div>
+      </li>
+    </ol>
+    <p class="vidare"><a class="textlank" href="funktioner.html">Alla funktioner</a> · <a class="textlank" href="funktioner.html?p=sjalv&amp;g=kunden-gor-sin-del">Så följer kunden arbetet</a></p>
+  </div>
+</section>
+</main>
+
+<footer class="fot">
+  <div class="wrap">
+    <div class="rad">
+      <div><span class="brand">SAEFUR</span>Affärssystem för kunder, arbete, leveranser och ekonomi. Lansering hösten 2026.</div>
+    </div>
+    <p class="liten">Support: info@saefur.com · AT Interactive Design AB, org.nr 559556-4393, säte Rättvik</p>
+  </div>
+</footer>
+<script>
+// Växlar bakgrundsbild var åttonde sekund. Står stilla om besökaren har bett om minskad rörelse.
+(function () {
+  var bilder = document.querySelectorAll('.bakgrund img');
+  if (bilder.length < 2 || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var i = 0;
+  setInterval(function () {
+    bilder[i].classList.remove('aktiv');
+    i = (i + 1) % bilder.length;
+    bilder[i].classList.add('aktiv');
+  }, 8000);
+})();
+</script>
+</body>
+</html>

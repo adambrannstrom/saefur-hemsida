@@ -1,0 +1,4665 @@
+{
+ "datum": "2026-10-25",
+ "kalla": "Hantis-main/scripts/framdrift/formagor.mjs v54",
+ "perspektiv": [
+  {
+   "id": "sjalv",
+   "namn": "Jag driver företaget själv",
+   "grupper": [
+    {
+     "id": "fa-jobbet",
+     "namn": "Få uppdraget",
+     "rubrik": "Kundens ja finns sparat på affären.",
+     "ids": [
+      "offertlank",
+      "offert-och-motbud",
+      "pris-utanfor",
+      "timoffert",
+      "standardtimtaxa",
+      "avtal-bankid",
+      "offertkrav",
+      "kopiera-projekt",
+      "dokumentmallar",
+      "betalningsplan",
+      "lopande-avtal",
+      "kundens-avtalsrum",
+      "webbforfragan",
+      "affarsmojligheter",
+      "prospektimport",
+      "foretagsprofil",
+      "referensprojekt",
+      "marknadsplats"
+     ]
+    },
+    {
+     "id": "kunderna",
+     "namn": "Kunderna",
+     "rubrik": "Det du lovade i telefon finns kvar i morgon.",
+     "ids": [
+      "kundregister",
+      "kundens-nu",
+      "kontaktlogg",
+      "kundhistorik",
+      "kundarenden",
+      "proaktiv-service",
+      "kundunika-priser",
+      "forslag-i-kundens-nu",
+      "arkivera-kund",
+      "bolagsverket-uppslag",
+      "inkommande-mejl",
+      "foretagskund-flera-roller",
+      "serviceanalys"
+     ]
+    },
+    {
+     "id": "gora-jobbet",
+     "namn": "Göra jobbet",
+     "rubrik": "Arbetet och underlaget följs åt.",
+     "ids": [
+      "idag",
+      "tid-resa-material",
+      "fotodokumentation",
+      "projektlogg",
+      "hinder",
+      "klarmarkera-godkanna",
+      "ata",
+      "tvist",
+      "notiser",
+      "agera-ur-avsikt",
+      "skapa-projekt",
+      "utfort-arbete-ett-steg",
+      "projektmallar",
+      "tidplan-gantt",
+      "vision-referensbilder",
+      "projektekonomi"
+     ]
+    },
+    {
+     "id": "branschkrav",
+     "namn": "Branschkrav i jobbet",
+     "rubrik": "Kraven finns med i arbetet där de gäller.",
+     "ids": [
+      "regelpaket",
+      "skyldigheter",
+      "matning-attest",
+      "avvikelser",
+      "dossier",
+      "kundens-verifieringsvy",
+      "behorighet-roller",
+      "fler-regelverk"
+     ]
+    },
+    {
+     "id": "material",
+     "namn": "Material, inköp och varor",
+     "rubrik": "Inköp, lager och leverans hänger ihop.",
+     "ids": [
+      "kvitton",
+      "kvittoskanning",
+      "leverantorsregister",
+      "leverantorsfaktura",
+      "inkopsorder",
+      "artikelregister",
+      "kundorder",
+      "lagersaldo",
+      "flera-lager-platser",
+      "delleverans-restorder",
+      "leveransbesked",
+      "plock-skanning",
+      "inventering",
+      "returer",
+      "serienummer-parti",
+      "lagervarde-fifo",
+      "frakt",
+      "edi"
+     ]
+    },
+    {
+     "id": "fa-betalt",
+     "namn": "Få betalt",
+     "rubrik": "Fakturera och följ betalningen.",
+     "ids": [
+      "faktura-ur-arbete",
+      "projektlos-faktura",
+      "svensk-efterlevnad",
+      "omvand-byggmoms",
+      "utlandsk-valuta",
+      "peppol",
+      "fakturalista-csv",
+      "fakturalank",
+      "swish-qr",
+      "kortbetalning",
+      "kortterminal",
+      "betalningar",
+      "paminnelser",
+      "drojsmalsranta",
+      "drojsmalskrav",
+      "inkasso"
+     ]
+    },
+    {
+     "id": "kunden-gor-sin-del",
+     "namn": "Kunden följer och svarar",
+     "rubrik": "Kunden svarar via en länk, utan konto.",
+     "ids": [
+      "foljlank",
+      "kundens-staende-lank",
+      "mottagningsbekraftelse",
+      "bestallare-med-konto",
+      "transaktionsmejl"
+     ]
+    },
+    {
+     "id": "byran",
+     "namn": "Ekonomi och underlag",
+     "rubrik": "Följ ekonomin och lämna periodens underlag.",
+     "ids": [
+      "ekonomivy",
+      "resultatbild",
+      "sie4",
+      "byrans-lasplats",
+      "reskontra-export",
+      "bankkoppling",
+      "live-integration"
+     ]
+    },
+    {
+     "id": "ta-hjalp",
+     "namn": "Ta in ett annat företag",
+     "rubrik": "Underentreprenören arbetar i sitt eget SAEFUR.",
+     "ids": [
+      "foretagsrelation",
+      "tilldela",
+      "kedjevillkor",
+      "godkanna-ue",
+      "samarbetsfaktura",
+      "underentreprenorskostnad",
+      "avtalstid-intjanat",
+      "fler-aktiviteter",
+      "bjud-in-foretag"
+     ]
+    },
+    {
+     "id": "telefonen",
+     "namn": "I telefonen, på ditt språk",
+     "rubrik": "Börja enkelt och fördjupa dig när du behöver.",
+     "ids": [
+      "inloggning",
+      "google-inloggning",
+      "pwa",
+      "push-notiser",
+      "meny-tandregel",
+      "sprak",
+      "meddelandeoversattning",
+      "hjalpcenter",
+      "mini",
+      "grunda-foretaget",
+      "bolagsverket-verifiering",
+      "flera-organisationer",
+      "marknader",
+      "support-sparbarhet",
+      "driftsakerhet",
+      "projektintelligens"
+     ]
+    },
+    {
+     "id": "nar-ni-blir-fler",
+     "namn": "Redo när ni blir fler",
+     "rubrik": "Samma system den dag du anställer.",
+     "ids": [
+      "anstallningar",
+      "teamimport",
+      "rattigheter",
+      "narvaro-franvaro",
+      "schema",
+      "ledighetsansokan",
+      "villkor-personalakt",
+      "avtal-fran-mall",
+      "tjansteresa",
+      "ta-bort-medlem",
+      "loneunderlag",
+      "paxml",
+      "kollegachatt",
+      "projektroller",
+      "projektorganisation",
+      "tvasteg-attest",
+      "projektpolicyer",
+      "konversationer",
+      "kundansvar",
+      "samarbetsrattigheter",
+      "organisationskarta",
+      "tvapersonskontroll",
+      "stallforetradare"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "team",
+   "namn": "Vi delar på arbetet",
+   "grupper": [
+    {
+     "id": "salja",
+     "namn": "Sälja och offerera",
+     "rubrik": "Kollegan som tar över affären ser vad som lovats.",
+     "ids": [
+      "affarsmojligheter",
+      "prospektimport",
+      "webbforfragan",
+      "foretagsprofil",
+      "referensprojekt",
+      "marknadsplats",
+      "offert-och-motbud",
+      "offertlank",
+      "pris-utanfor",
+      "timoffert",
+      "standardtimtaxa",
+      "kundunika-priser",
+      "avtal-bankid",
+      "offertkrav",
+      "betalningsplan",
+      "lopande-avtal",
+      "kundens-avtalsrum",
+      "kopiera-projekt",
+      "dokumentmallar"
+     ]
+    },
+    {
+     "id": "kunderna",
+     "namn": "Kunder och kundservice",
+     "rubrik": "Samma besked, vem som än svarar.",
+     "ids": [
+      "kundregister",
+      "bolagsverket-uppslag",
+      "kundens-nu",
+      "kontaktlogg",
+      "kundhistorik",
+      "kundarenden",
+      "proaktiv-service",
+      "leveransbesked",
+      "kundansvar",
+      "forslag-i-kundens-nu",
+      "serviceanalys",
+      "arkivera-kund",
+      "inkommande-mejl",
+      "foretagskund-flera-roller"
+     ]
+    },
+    {
+     "id": "planera",
+     "namn": "Planera och fördela arbetet",
+     "rubrik": "Se, fördela och ändra vem som gör vad.",
+     "ids": [
+      "skapa-projekt",
+      "projektmallar",
+      "tidplan-gantt",
+      "tilldela",
+      "idag",
+      "projektroller",
+      "projektorganisation",
+      "projektpolicyer",
+      "notiser",
+      "konversationer",
+      "ata",
+      "tvist",
+      "tvasteg-attest",
+      "vision-referensbilder",
+      "projektekonomi"
+     ]
+    },
+    {
+     "id": "ute",
+     "namn": "Ute på jobbet",
+     "rubrik": "Registrera på plats, i telefonen.",
+     "ids": [
+      "tid-resa-material",
+      "fotodokumentation",
+      "hinder",
+      "klarmarkera-godkanna",
+      "projektlogg",
+      "kvitton",
+      "utfort-arbete-ett-steg",
+      "agera-ur-avsikt",
+      "kollegachatt"
+     ]
+    },
+    {
+     "id": "branschkrav",
+     "namn": "Branschkrav och dokumentation",
+     "rubrik": "Kraven finns med i arbetet där de gäller.",
+     "ids": [
+      "regelpaket",
+      "skyldigheter",
+      "behorighet-roller",
+      "matning-attest",
+      "avvikelser",
+      "dossier",
+      "kundens-verifieringsvy",
+      "fler-regelverk"
+     ]
+    },
+    {
+     "id": "material",
+     "namn": "Material, inköp och lager",
+     "rubrik": "Följ inköpet från beställning till användning.",
+     "ids": [
+      "leverantorsregister",
+      "inkopsorder",
+      "leverantorsfaktura",
+      "kvittoskanning",
+      "artikelregister",
+      "kundorder",
+      "lagersaldo",
+      "flera-lager-platser",
+      "delleverans-restorder",
+      "plock-skanning",
+      "inventering",
+      "returer",
+      "serienummer-parti",
+      "lagervarde-fifo",
+      "frakt",
+      "edi"
+     ]
+    },
+    {
+     "id": "kontoret",
+     "namn": "Fakturering och ekonomi",
+     "rubrik": "Underlaget hjälper den som tar över faktureringen.",
+     "ids": [
+      "faktura-ur-arbete",
+      "projektlos-faktura",
+      "svensk-efterlevnad",
+      "omvand-byggmoms",
+      "utlandsk-valuta",
+      "peppol",
+      "fakturalista-csv",
+      "fakturalank",
+      "swish-qr",
+      "kortbetalning",
+      "kortterminal",
+      "betalningar",
+      "paminnelser",
+      "drojsmalsranta",
+      "drojsmalskrav",
+      "inkasso",
+      "ekonomivy",
+      "resultatbild",
+      "sie4",
+      "byrans-lasplats",
+      "reskontra-export",
+      "bankkoppling",
+      "live-integration"
+     ]
+    },
+    {
+     "id": "medarbetarna",
+     "namn": "Medarbetarna",
+     "rubrik": "Fler medarbetare. Samma ordning.",
+     "ids": [
+      "anstallningar",
+      "teamimport",
+      "rattigheter",
+      "narvaro-franvaro",
+      "schema",
+      "ledighetsansokan",
+      "villkor-personalakt",
+      "avtal-fran-mall",
+      "loneunderlag",
+      "paxml",
+      "tjansteresa",
+      "ta-bort-medlem",
+      "organisationskarta",
+      "tvapersonskontroll",
+      "stallforetradare"
+     ]
+    },
+    {
+     "id": "kunden-deltar",
+     "namn": "Kunden deltar",
+     "rubrik": "Kunden följer och svarar via länkar.",
+     "ids": [
+      "foljlank",
+      "kundens-staende-lank",
+      "mottagningsbekraftelse",
+      "bestallare-med-konto",
+      "transaktionsmejl"
+     ]
+    },
+    {
+     "id": "samarbeten",
+     "namn": "Underentreprenörer och samarbeten",
+     "rubrik": "Två företag, ett uppdrag.",
+     "ids": [
+      "foretagsrelation",
+      "kedjevillkor",
+      "godkanna-ue",
+      "samarbetsfaktura",
+      "underentreprenorskostnad",
+      "avtalstid-intjanat",
+      "fler-aktiviteter",
+      "samarbetsrattigheter",
+      "bjud-in-foretag"
+     ]
+    },
+    {
+     "id": "plattform",
+     "namn": "Inloggning, språk och hjälp",
+     "rubrik": "Börja enkelt och fördjupa er när ni behöver.",
+     "ids": [
+      "inloggning",
+      "google-inloggning",
+      "pwa",
+      "push-notiser",
+      "meny-tandregel",
+      "sprak",
+      "meddelandeoversattning",
+      "hjalpcenter",
+      "mini",
+      "grunda-foretaget",
+      "bolagsverket-verifiering",
+      "flera-organisationer",
+      "marknader",
+      "support-sparbarhet",
+      "driftsakerhet",
+      "projektintelligens"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "avdelningar",
+   "namn": "Vi har flera avdelningar",
+   "grupper": [
+    {
+     "id": "forsaljning",
+     "namn": "Försäljning",
+     "rubrik": "Följ affären från första kontakt till överenskommelse.",
+     "ids": [
+      "affarsmojligheter",
+      "prospektimport",
+      "webbforfragan",
+      "kundansvar",
+      "foretagsprofil",
+      "referensprojekt",
+      "marknadsplats",
+      "offert-och-motbud",
+      "offertlank",
+      "pris-utanfor",
+      "timoffert",
+      "standardtimtaxa",
+      "kundunika-priser",
+      "avtal-bankid",
+      "betalningsplan",
+      "lopande-avtal",
+      "kundens-avtalsrum",
+      "kopiera-projekt"
+     ]
+    },
+    {
+     "id": "kundservice",
+     "namn": "Kundservice",
+     "rubrik": "Samma besked, vem som än svarar.",
+     "ids": [
+      "kundregister",
+      "bolagsverket-uppslag",
+      "kundens-nu",
+      "kontaktlogg",
+      "kundhistorik",
+      "kundarenden",
+      "proaktiv-service",
+      "leveransbesked",
+      "forslag-i-kundens-nu",
+      "serviceanalys",
+      "arkivera-kund",
+      "inkommande-mejl",
+      "foretagskund-flera-roller"
+     ]
+    },
+    {
+     "id": "projekt",
+     "namn": "Projekt och uppdrag",
+     "rubrik": "Följ ansvar, kvalitet och lönsamhet medan arbetet pågår.",
+     "ids": [
+      "skapa-projekt",
+      "projektmallar",
+      "tidplan-gantt",
+      "tilldela",
+      "offertkrav",
+      "projektroller",
+      "projektorganisation",
+      "projektpolicyer",
+      "vision-referensbilder",
+      "projektekonomi",
+      "idag",
+      "tid-resa-material",
+      "fotodokumentation",
+      "hinder",
+      "projektlogg",
+      "konversationer",
+      "notiser",
+      "utfort-arbete-ett-steg",
+      "agera-ur-avsikt",
+      "klarmarkera-godkanna",
+      "tvasteg-attest",
+      "ata",
+      "tvist"
+     ]
+    },
+    {
+     "id": "kvalitet",
+     "namn": "Kvalitet och branschkrav",
+     "rubrik": "Dokumentation som stöd för den som bedömer.",
+     "ids": [
+      "regelpaket",
+      "skyldigheter",
+      "behorighet-roller",
+      "matning-attest",
+      "avvikelser",
+      "dossier",
+      "kundens-verifieringsvy",
+      "fler-regelverk"
+     ]
+    },
+    {
+     "id": "lager",
+     "namn": "Lager och logistik",
+     "rubrik": "Lagret och kundlöftet utgår från samma saldo.",
+     "ids": [
+      "artikelregister",
+      "kundorder",
+      "lagersaldo",
+      "flera-lager-platser",
+      "plock-skanning",
+      "delleverans-restorder",
+      "inventering",
+      "returer",
+      "serienummer-parti",
+      "lagervarde-fifo",
+      "frakt",
+      "edi"
+     ]
+    },
+    {
+     "id": "inkop",
+     "namn": "Inköp",
+     "rubrik": "Stäm av beställt, mottaget och fakturerat.",
+     "ids": [
+      "leverantorsregister",
+      "inkopsorder",
+      "leverantorsfaktura",
+      "kvitton",
+      "kvittoskanning",
+      "underentreprenorskostnad"
+     ]
+    },
+    {
+     "id": "ekonomi",
+     "namn": "Ekonomi",
+     "rubrik": "Beslut under månaden. Spårbart underlag.",
+     "ids": [
+      "faktura-ur-arbete",
+      "projektlos-faktura",
+      "svensk-efterlevnad",
+      "omvand-byggmoms",
+      "utlandsk-valuta",
+      "peppol",
+      "dokumentmallar",
+      "fakturalista-csv",
+      "swish-qr",
+      "kortbetalning",
+      "kortterminal",
+      "betalningar",
+      "paminnelser",
+      "drojsmalsranta",
+      "drojsmalskrav",
+      "inkasso",
+      "ekonomivy",
+      "resultatbild",
+      "bankkoppling",
+      "sie4",
+      "byrans-lasplats",
+      "reskontra-export",
+      "live-integration"
+     ]
+    },
+    {
+     "id": "hr",
+     "namn": "HR",
+     "rubrik": "Ett samlat arbetssätt för den som ansvarar för HR.",
+     "ids": [
+      "anstallningar",
+      "teamimport",
+      "villkor-personalakt",
+      "avtal-fran-mall",
+      "narvaro-franvaro",
+      "schema",
+      "ledighetsansokan",
+      "tjansteresa",
+      "organisationskarta",
+      "kollegachatt",
+      "loneunderlag",
+      "paxml",
+      "ta-bort-medlem"
+     ]
+    },
+    {
+     "id": "ledning",
+     "namn": "Ledning och behörigheter",
+     "rubrik": "Fördela ansvar och följ helheten.",
+     "ids": [
+      "rattigheter",
+      "tvapersonskontroll",
+      "stallforetradare",
+      "flera-organisationer",
+      "grunda-foretaget",
+      "bolagsverket-verifiering",
+      "marknader",
+      "support-sparbarhet",
+      "driftsakerhet",
+      "projektintelligens",
+      "meny-tandregel"
+     ]
+    },
+    {
+     "id": "kund",
+     "namn": "Kunden och beställaren",
+     "rubrik": "Privatperson, förening eller företag följer sin affär.",
+     "ids": [
+      "foljlank",
+      "fakturalank",
+      "kundens-staende-lank",
+      "mottagningsbekraftelse",
+      "bestallare-med-konto",
+      "transaktionsmejl"
+     ]
+    },
+    {
+     "id": "partner",
+     "namn": "Underentreprenörer och partner",
+     "rubrik": "Två företag, ett uppdrag.",
+     "ids": [
+      "foretagsrelation",
+      "kedjevillkor",
+      "godkanna-ue",
+      "samarbetsfaktura",
+      "avtalstid-intjanat",
+      "fler-aktiviteter",
+      "samarbetsrattigheter",
+      "bjud-in-foretag"
+     ]
+    },
+    {
+     "id": "alla",
+     "namn": "Språk, inloggning och hjälp",
+     "rubrik": "Varje medarbetare börjar enkelt.",
+     "ids": [
+      "inloggning",
+      "google-inloggning",
+      "pwa",
+      "push-notiser",
+      "sprak",
+      "meddelandeoversattning",
+      "hjalpcenter",
+      "mini"
+     ]
+    }
+   ]
+  }
+ ],
+ "funktioner": [
+  {
+   "id": "affarsmojligheter",
+   "omrade": "forsaljning",
+   "namn": "Affärsmöjligheter med skede, värde och sannolikhet",
+   "vad": "Varje möjlighet har kund eller prospekt, kontaktperson, ansvarig, nästa steg, bedömt värde och sannolikhet.",
+   "nytta": "Ni ser vilka affärer som kan komma och vad som behöver följas upp, och prognosen bygger på säljarnas uppföljning.",
+   "status": "finns",
+   "fm": [
+    "FM-011"
+   ],
+   "sok": [
+    "pipeline",
+    "prospekt",
+    "lead",
+    "säljtavla",
+    "prognos",
+    "CRM",
+    "säljstöd",
+    "försäljningsprognos",
+    "intäktsprognos",
+    "läge",
+    "skede"
+   ],
+   "roller": [
+    "agare",
+    "salj"
+   ],
+   "hor": [
+    "kundregister",
+    "offert-och-motbud"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "prospektimport",
+   "omrade": "forsaljning",
+   "namn": "Importera en prospektlista",
+   "vad": "En lista från Excel eller urklipp blir affärsmöjligheter, med förhandsgranskning, dubblettkontroll och möjlighet att ångra importen.",
+   "nytta": "Ert befintliga prospektunderlag kommer in i SAEFUR i ett samlat steg.",
+   "status": "finns",
+   "fm": [
+    "FM-012"
+   ],
+   "sok": [
+    "import",
+    "excel",
+    "csv",
+    "dubbletter",
+    "ångra",
+    "lista"
+   ],
+   "roller": [
+    "salj"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "webbforfragan",
+   "omrade": "forsaljning",
+   "namn": "Förfrågningar från er egen webbplats",
+   "vad": "Ett formulär på er webbplats kan anslutas till SAEFUR. Varje förfrågan kommer in som en förfrågan som kan bli en affärsmöjlighet.",
+   "nytta": "Förfrågan finns där ni följer upp affären.",
+   "status": "finns",
+   "fm": [
+    "FM-013"
+   ],
+   "sok": [
+    "formulär",
+    "hemsida",
+    "kontaktformulär",
+    "lead",
+    "offertförfrågan"
+   ],
+   "roller": [
+    "salj"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "foretagsprofil",
+   "omrade": "forsaljning",
+   "namn": "Publik företagsprofil med omdömen",
+   "vad": "Profilen visar tjänster, de certifieringar företaget har angett, F-skatt, om företaget är verifierat med BankID och ett samlat betyg från kunder. Företaget väljer själv att synas i katalogen.",
+   "nytta": "Kunden ser tjänster, omdömen och uppgifter om företaget samlade, även när ni ännu saknar egen webbplats.",
+   "status": "finns",
+   "fm": [
+    "FM-010"
+   ],
+   "sok": [
+    "profil",
+    "katalog",
+    "betyg",
+    "recensioner",
+    "omdömen",
+    "certifieringar",
+    "F-skatt"
+   ],
+   "roller": [
+    "agare",
+    "salj"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "marknadsplats",
+   "omrade": "forsaljning",
+   "namn": "Marknadsplats: uppdrag, anbud och riktade förfrågningar",
+   "vad": "En beställare lägger upp ett uppdrag eller frågar ett visst företag. Ett accepterat anbud förs vidare till ett projekt med kund och första aktivitet.",
+   "nytta": "En väg till nya kunder vid sidan av era egna, där affären startar med kund och uppdrag på plats.",
+   "status": "finns",
+   "fm": [
+    "FM-014"
+   ],
+   "sok": [
+    "anbud",
+    "upphandling",
+    "offertförfrågan",
+    "uppdrag",
+    "hitta utförare",
+    "mötesplats",
+    "jobb"
+   ],
+   "roller": [
+    "salj",
+    "kund"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "referensprojekt",
+   "omrade": "forsaljning",
+   "namn": "Referensprojekt bekräftade av kunden",
+   "vad": "Foton från avslutade projekt publiceras som referens på profilen, bekräftade av kunden. Planerad funktion i en senare utbyggnad.",
+   "nytta": "Referenserna bygger på arbete som kunden själv har godkänt.",
+   "status": "kommer",
+   "fm": [
+    "FM-015"
+   ],
+   "sok": [
+    "referenser",
+    "portfölj",
+    "bilder",
+    "tidigare arbeten",
+    "verifierade referenser"
+   ],
+   "roller": [
+    "agare",
+    "salj"
+   ],
+   "hor": [],
+   "not_": "Beslutad riktning, parkerad tills produktionen har avslutade projekt."
+  },
+  {
+   "id": "kundregister",
+   "omrade": "kunder",
+   "namn": "Kundregister med kundnummer och import",
+   "vad": "En kund läggs upp en gång och får kundnummer automatiskt. Befintliga kunder importeras från CSV eller Excel med dubblettkontroll, och kunden hittas på nummer, kontaktperson eller fakturanummer. Valet mellan privatperson och företag styr hur priset visas.",
+   "nytta": "Kunden följer med i offert, order, projekt och faktura.",
+   "status": "finns",
+   "fm": [
+    "FM-020"
+   ],
+   "sok": [
+    "kund",
+    "kundkort",
+    "import",
+    "excel",
+    "kundnummer",
+    "privatperson",
+    "företag",
+    "kontaktperson",
+    "sök",
+    "organisationsnummer"
+   ],
+   "roller": [
+    "salj",
+    "kundservice",
+    "ekonomi"
+   ],
+   "hor": [
+    "kundens-nu",
+    "bolagsverket-uppslag"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kundens-nu",
+   "omrade": "kunder",
+   "namn": "Kundens läge överst på kundkortet",
+   "vad": "Överst på kundkortet visas offerter som väntar på svar, ändringar, godkännanden, hinder, förseningar och obetalt, hämtat ur det som redan är registrerat.",
+   "nytta": "Ni ser vad som väntar på kunden, på er och på en leverantör innan samtalet börjar.",
+   "status": "finns",
+   "fm": [
+    "FM-023"
+   ],
+   "sok": [
+    "kundkort",
+    "läge",
+    "väntar på",
+    "överblick",
+    "kundöversikt",
+    "just nu",
+    "på en blick"
+   ],
+   "roller": [
+    "kundservice",
+    "salj",
+    "agare"
+   ],
+   "hor": [
+    "kontaktlogg",
+    "proaktiv-service"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kontaktlogg",
+   "omrade": "kunder",
+   "namn": "Kontaktlogg med löften och datum",
+   "vad": "Varje kontakt kan loggas med kanal, ämne och vad kunden fick veta. Ett löfte med datum syns på kundkortet tills det är uppfyllt, och mejl som skickas från SAEFUR loggas automatiskt.",
+   "nytta": "Det kunden fick veta finns kvar när en kollega tar vid.",
+   "status": "finns",
+   "fm": [
+    "FM-024"
+   ],
+   "sok": [
+    "samtal",
+    "logg",
+    "löfte",
+    "anteckning",
+    "historik",
+    "utskick",
+    "återkomma",
+    "telefonsamtal"
+   ],
+   "roller": [
+    "kundservice",
+    "salj"
+   ],
+   "hor": [
+    "kundarenden",
+    "kundhistorik"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kundarenden",
+   "omrade": "kunder",
+   "namn": "Kundärenden med ansvarig och återkoppling",
+   "vad": "En fråga, reklamation eller retur blir ett ärende med ansvarig, läge och datum för återkoppling. Förfallna ärenden visas på Idag.",
+   "nytta": "Ansvar och återkoppling finns samlade, och det som har förfallit lyfts fram.",
+   "status": "finns",
+   "fm": [
+    "FM-025"
+   ],
+   "sok": [
+    "ärende",
+    "reklamation",
+    "retur",
+    "återkoppling",
+    "support",
+    "ticket",
+    "klagomål"
+   ],
+   "roller": [
+    "kundservice"
+   ],
+   "hor": [
+    "kontaktlogg",
+    "returer"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kundhistorik",
+   "omrade": "kunder",
+   "namn": "Hela historiken i ett flöde",
+   "vad": "Kontakter, ärenden, affärsmöjligheter, beslut, avtal, leveranser, fakturor och betalningar i tidsordning på kunden.",
+   "nytta": "Kundens historik hjälper nästa kollega att ta vid där samtalet slutade.",
+   "status": "finns",
+   "fm": [
+    "FM-026"
+   ],
+   "sok": [
+    "historik",
+    "tidslinje",
+    "underlag",
+    "kundhistorik",
+    "logg"
+   ],
+   "roller": [
+    "kundservice",
+    "salj"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "proaktiv-service",
+   "omrade": "kunder",
+   "namn": "Besked innan kunden hör av sig",
+   "vad": "Kundservice ser löften som riskerar att passera sitt datum, restnoterade rader som väntar på besked och återkoppling som har förfallit. Markeringen försvinner när ett besked till kunden har loggats, och företaget ställer själv in fristerna.",
+   "nytta": "Ni kan höra av er först, med rätt information.",
+   "status": "finns",
+   "fm": [
+    "FM-028"
+   ],
+   "sok": [
+    "kundservice",
+    "varning",
+    "restorder",
+    "löfte i fara",
+    "proaktiv",
+    "kundservicevy",
+    "signal",
+    "besked innan kunden ringer"
+   ],
+   "roller": [
+    "kundservice",
+    "agare"
+   ],
+   "hor": [
+    "leveransbesked",
+    "delleverans-restorder"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "leveransbesked",
+   "omrade": "kunder",
+   "namn": "Leveransbesked på kundens språk",
+   "vad": "Beskedet visar levererat, återstående och känt leveransdatum, hämtat ur lagrets läge, utan belopp och på kundens språk.",
+   "nytta": "Kunden får besked utifrån leveransens registrerade läge.",
+   "status": "finns",
+   "fm": [
+    "FM-027"
+   ],
+   "sok": [
+    "leveransbesked",
+    "var är min order",
+    "leveransstatus",
+    "orderstatus",
+    "språk"
+   ],
+   "roller": [
+    "kundservice",
+    "lager"
+   ],
+   "hor": [
+    "delleverans-restorder"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kundansvar",
+   "omrade": "kunder",
+   "namn": "Kundansvar per medarbetare",
+   "vad": "Kundansvar tilldelas och tas tillbaka uttryckligen. Företaget kan avgränsa en säljares insyn till de egna kunderna, i register, avtal och fakturor.",
+   "nytta": "Ansvaret för varje kund är tydligt, och varje säljare har relevant insyn.",
+   "status": "finns",
+   "fm": [
+    "FM-021"
+   ],
+   "sok": [
+    "säljare",
+    "ansvarig",
+    "behörighet",
+    "kundansvarig",
+    "mina kunder"
+   ],
+   "roller": [
+    "salj",
+    "agare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "kundunika-priser",
+   "omrade": "kunder",
+   "namn": "Kundunika priser med giltighetstid",
+   "vad": "Ett avtalat nettopris per kund och artikel, med giltighetsperiod, används när artikeln läggs i en order eller offert.",
+   "nytta": "Det avtalade priset följer kunden till nästa offert och order.",
+   "status": "finns",
+   "fm": [
+    "FM-031"
+   ],
+   "sok": [
+    "nettopris",
+    "avtalspris",
+    "rabatt",
+    "prislista",
+    "kundpris"
+   ],
+   "roller": [
+    "salj",
+    "ekonomi"
+   ],
+   "hor": [
+    "artikelregister"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "forslag-i-kundens-nu",
+   "omrade": "kunder",
+   "namn": "Förslag utifrån kundens tidigare köp",
+   "vad": "Tillbehör som saknas, förbrukningsvaror som hör till kundens artiklar och ersättningsvaror som finns i lager föreslås utan pris. Säljaren avgör i ordern, och ett avfärdat förslag förblir avfärdat.",
+   "nytta": "Förslagen bygger på era artiklar och kundens tidigare affärer.",
+   "status": "finns",
+   "fm": [
+    "FM-029"
+   ],
+   "sok": [
+    "merförsäljning",
+    "tillbehör",
+    "förbrukning",
+    "ersättningsartikel",
+    "förslag"
+   ],
+   "roller": [
+    "salj",
+    "kundservice"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "serviceanalys",
+   "omrade": "kunder",
+   "namn": "Varför kunderna hör av sig",
+   "vad": "Kontakter per ämne och kanal över 30, 90 eller 365 dagar, upprepade frågor och förfallna återkopplingar. Möjliga samband visas som hypoteser att undersöka, och statistiken gäller verksamheten som helhet, utan tal per medarbetare.",
+   "nytta": "Ledningen ser återkommande frågor och möjliga samband att undersöka vidare.",
+   "status": "finns",
+   "fm": [
+    "FM-030"
+   ],
+   "sok": [
+    "analys",
+    "statistik",
+    "kanal",
+    "upprepade frågor",
+    "service intelligence",
+    "rapport"
+   ],
+   "roller": [
+    "agare",
+    "kundservice"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "arkivera-kund",
+   "omrade": "kunder",
+   "namn": "Arkivera, ta bort eller flytta tillbaka en kund",
+   "vad": "En kund med historik arkiveras, och historiken finns kvar. En kund utan historik kan tas bort, och ett prospekt kan flyttas tillbaka till Försäljning med kontakter och affärsmöjligheter.",
+   "nytta": "Registret hålls överskådligt, och historiken finns kvar där den behövs.",
+   "status": "finns",
+   "fm": [
+    "FM-022"
+   ],
+   "sok": [
+    "arkiv",
+    "radera",
+    "rensa",
+    "GDPR",
+    "ta bort kund"
+   ],
+   "roller": [
+    "salj",
+    "kundservice"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "bolagsverket-uppslag",
+   "omrade": "kunder",
+   "namn": "Hämta företagskundens uppgifter från Bolagsverket",
+   "vad": "Den som registrerar en svensk företagskund hämtar namn och adress ur Bolagsverkets register. Uppslaget öppnas när anslutningen till Bolagsverket är klar för drift.",
+   "nytta": "Kunduppgifterna hämtas direkt från registret.",
+   "status": "avtal",
+   "fm": [
+    "FM-260"
+   ],
+   "sok": [
+    "organisationsnummer",
+    "uppslag",
+    "Bolagsverket",
+    "orgnr"
+   ],
+   "roller": [
+    "salj"
+   ],
+   "hor": [
+    "kundregister"
+   ],
+   "not_": "Byggt. Väntar på produktionsbehörighet hos Bolagsverket."
+  },
+  {
+   "id": "inkommande-mejl",
+   "omrade": "kunder",
+   "namn": "Kundens mejl på kundposten",
+   "vad": "Ett mejl från kunden visas på kunden, kopplat till ärende eller projekt, och kunden behöver inget konto. Mottagningen av kundmejl öppnas i ett senare steg, och till dess loggas kontakten i kontaktloggen.",
+   "nytta": "Kundens eget mejl blir en del av historiken.",
+   "status": "avtal",
+   "fm": [
+    "FM-213"
+   ],
+   "sok": [
+    "e-post",
+    "inkorg",
+    "mejl",
+    "kundcenter",
+    "mejlbox"
+   ],
+   "roller": [
+    "kundservice"
+   ],
+   "hor": [
+    "kontaktlogg"
+   ],
+   "not_": "Byggt. Ingen mejlmottagning är aktiverad i drift."
+  },
+  {
+   "id": "foretagskund-flera-roller",
+   "omrade": "kunder",
+   "namn": "Beställarorganisation med flera personer och roller",
+   "vad": "En förening, förvaltare eller fastighetsägare med flera personer och olika ansvar som motpart. En organisation kan redan i dag vara beställare med eget konto, och stödet för flera roller hos beställaren är planerat.",
+   "nytta": "Beställarsidan kan bestå av flera personer med var sitt ansvar.",
+   "status": "kommer",
+   "fm": [
+    "FM-032"
+   ],
+   "sok": [
+    "förening",
+    "BRF",
+    "förvaltare",
+    "beställarorganisation",
+    "flera kontaktpersoner",
+    "företagskund"
+   ],
+   "roller": [
+    "salj",
+    "kund"
+   ],
+   "hor": [
+    "bestallare-med-konto"
+   ],
+   "not_": "En organisation som beställare finns i dag (se Kundens egen ingång). Flera roller hos beställaren är beslutad riktning."
+  },
+  {
+   "id": "offert-och-motbud",
+   "omrade": "offert",
+   "namn": "Offert med rader, styckpris och motbud",
+   "vad": "Offerten skickas, accepteras, avvisas eller besvaras med ett motbud. Varje rad har antal och pris per enhet, och raderna ger avtalets pris.",
+   "nytta": "Ni kommer överens om omfattning och pris med tydliga rader, och svaret kommer från kunden själv.",
+   "status": "finns",
+   "fm": [
+    "FM-040"
+   ],
+   "sok": [
+    "offert",
+    "motförslag",
+    "motbud",
+    "à-pris",
+    "prisförslag",
+    "anbud",
+    "förhandla"
+   ],
+   "roller": [
+    "salj",
+    "agare",
+    "kund"
+   ],
+   "hor": [
+    "offertlank",
+    "avtal-bankid"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "offertlank",
+   "omrade": "offert",
+   "namn": "Offerten skickas via länk, kunden svarar utan konto",
+   "vad": "Kunden får offerten som PDF och på en egen sida, svarar där, och svaret sparas i kundens namn. En accepterad offert blir avtal. Länken kan också delas för hand, till exempel i ett sms.",
+   "nytta": "Kundens svar sparas med offerten, och överenskommelsen följer med till arbetet och fakturan.",
+   "status": "finns",
+   "fm": [
+    "FM-042"
+   ],
+   "sok": [
+    "offertlänk",
+    "godkänna",
+    "acceptera",
+    "PDF",
+    "e-post",
+    "skicka offert",
+    "utan konto"
+   ],
+   "roller": [
+    "salj",
+    "kund"
+   ],
+   "hor": [
+    "foljlank",
+    "offertkrav"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "pris-utanfor",
+   "omrade": "offert",
+   "namn": "Pris som gjorts upp per telefon",
+   "vad": "En överenskommelse per telefon eller sms registreras som ett aktivt avtal, med kanal, tidpunkt och vem som registrerade den.",
+   "nytta": "Ni sparar vad ni kom överens om, när det skedde och vem som registrerade det.",
+   "status": "finns",
+   "fm": [
+    "FM-041"
+   ],
+   "sok": [
+    "muntligt avtal",
+    "sms",
+    "telefon",
+    "överenskommet utanför"
+   ],
+   "roller": [
+    "salj",
+    "falt"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "timoffert",
+   "omrade": "offert",
+   "namn": "Offert på löpande räkning med uppskattat belopp",
+   "vad": "Offerten visar timpriset och, när ni har angett timmar, ett uppskattat belopp. Uppskattningen är en vägledning, skild från ett takpris.",
+   "nytta": "Kunden ser timpriset och ungefär vad arbetet kan kosta innan det börjar.",
+   "status": "finns",
+   "fm": [
+    "FM-044"
+   ],
+   "sok": [
+    "löpande räkning",
+    "timpris",
+    "uppskattning",
+    "timmar",
+    "timoffert"
+   ],
+   "roller": [
+    "salj",
+    "kund"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "standardtimtaxa",
+   "omrade": "offert",
+   "namn": "Företagets standardtimtaxa",
+   "vad": "Taxan fylls i automatiskt när ett nytt projekt skapas.",
+   "nytta": "Prissättningen finns på plats från början.",
+   "status": "finns",
+   "fm": [
+    "FM-045"
+   ],
+   "sok": [
+    "timtaxa",
+    "timpris",
+    "standardpris",
+    "prissättning"
+   ],
+   "roller": [
+    "agare",
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "avtal-bankid",
+   "omrade": "offert",
+   "namn": "Avtal som PDF, med frivillig BankID-signering",
+   "vad": "Avtalet och dess rader finns som dokument som båda parter kan hämta. Ett projektavtal kan samla flera aktiviteter, och avtalet kan signeras med BankID där det behövs.",
+   "nytta": "Båda parter ser vad som gäller och vem som har godkänt det.",
+   "status": "finns",
+   "fm": [
+    "FM-046"
+   ],
+   "sok": [
+    "avtal",
+    "kontrakt",
+    "signera",
+    "e-signering",
+    "BankID",
+    "underteckna"
+   ],
+   "roller": [
+    "salj",
+    "kund",
+    "agare"
+   ],
+   "hor": [
+    "offertlank"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "offertkrav",
+   "omrade": "offert",
+   "namn": "Kräv godkänd offert innan arbetet startar",
+   "vad": "Ni väljer vid tilldelningen om en godkänd offert ska krävas, och som standard är valet avstängt. Utföraren ser vad som saknas och vem som ska agera.",
+   "nytta": "Ni bestämmer själva när arbetet ska vänta på kundens ja.",
+   "status": "finns",
+   "fm": [
+    "FM-043"
+   ],
+   "sok": [
+    "startspärr",
+    "godkännande före start",
+    "krav"
+   ],
+   "roller": [
+    "projektledare",
+    "falt"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "betalningsplan",
+   "omrade": "offert",
+   "namn": "Betalningsplan: förskott, delfakturor, innehållet belopp och slutfaktura",
+   "vad": "Varje steg i planen blir en faktura, och slutfakturan räknar av det som redan har fakturerats.",
+   "nytta": "Större uppdrag faktureras i den takt ni har kommit överens om.",
+   "status": "finns",
+   "fm": [
+    "FM-047"
+   ],
+   "sok": [
+    "förskott",
+    "delbetalning",
+    "a conto",
+    "slutfaktura",
+    "innehållet belopp",
+    "etappfaktura"
+   ],
+   "roller": [
+    "ekonomi",
+    "salj"
+   ],
+   "hor": [
+    "faktura-ur-arbete"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "lopande-avtal",
+   "omrade": "offert",
+   "namn": "Löpande avtal med faktura period för period",
+   "vad": "Ett serviceavtal eller abonnemang får eget nummer och egen sida. Varje period faktureras en gång, manuellt eller som ett automatiskt utkast som en människa låser. En pausad serie syns tydligt.",
+   "nytta": "Periodens fakturautkast förbereds i tid, så att ni kan granska och skicka det.",
+   "status": "finns",
+   "fm": [
+    "FM-130",
+    "FM-131"
+   ],
+   "sok": [
+    "serviceavtal",
+    "abonnemang",
+    "månadsavgift",
+    "periodfaktura",
+    "återkommande",
+    "prenumeration",
+    "drift",
+    "underhåll"
+   ],
+   "roller": [
+    "ekonomi",
+    "salj",
+    "agare"
+   ],
+   "hor": [
+    "kundens-avtalsrum"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kundens-avtalsrum",
+   "omrade": "offert",
+   "namn": "Kundens egen sida för sitt löpande avtal",
+   "vad": "Kunden läser sitt accepterade avtal via sin länk och hämtar det som PDF, och företaget kan skriva ut det.",
+   "nytta": "Avtalet finns där kunden följer sin affär.",
+   "status": "finns",
+   "fm": [
+    "FM-132"
+   ],
+   "sok": [
+    "avtal",
+    "kundportal",
+    "utskrift"
+   ],
+   "roller": [
+    "kund"
+   ],
+   "hor": [
+    "kundens-staende-lank"
+   ],
+   "not_": "I driftversionen 509a79334 sedan 26 okt 2026 (förmågekartan v54: klar, produktion nej före driftsättningen). Bekräftas i drift före publicering (E11)."
+  },
+  {
+   "id": "kopiera-projekt",
+   "omrade": "offert",
+   "namn": "Kopiera projekt och ta fram ny offert ur tidigare arbete",
+   "vad": "Ett fungerande upplägg återanvänds utan den gamla historiken, och priserna räknas om efter dagens taxa.",
+   "nytta": "Nästa liknande uppdrag kan utgå från ett upplägg ni redan vet fungerar.",
+   "status": "finns",
+   "fm": [
+    "FM-048"
+   ],
+   "sok": [
+    "mall",
+    "kopiera",
+    "återanvända",
+    "duplicera"
+   ],
+   "roller": [
+    "salj",
+    "projektledare"
+   ],
+   "hor": [
+    "projektmallar"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "dokumentmallar",
+   "omrade": "offert",
+   "namn": "Dokumentmallar: fem utseenden för offert och faktura",
+   "vad": "Företaget väljer en av fem stilar för offerter och fakturor. Fakturan följer offertens utseende, och ett skickat dokument behåller sitt utseende.",
+   "nytta": "Dokumenten får företagets egen prägel.",
+   "status": "finns",
+   "fm": [
+    "FM-255"
+   ],
+   "sok": [
+    "mall",
+    "layout",
+    "logotyp",
+    "design",
+    "fakturamall",
+    "utseende",
+    "brevpapper"
+   ],
+   "roller": [
+    "agare",
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": "Driftsatt. En intern efterkontroll återstår."
+  },
+  {
+   "id": "skapa-projekt",
+   "omrade": "projekt",
+   "namn": "Projekt med aktiviteter, områden och projektnummer",
+   "vad": "När ett uppdrag behöver ett projekt får det aktiviteter, områden och ett projektnummer i företagets serie. Tid, material och kvitton kan registreras samma dag.",
+   "nytta": "Arbetet samlas i aktiviteter och områden från första dagen.",
+   "status": "finns",
+   "fm": [
+    "FM-050",
+    "FM-059"
+   ],
+   "sok": [
+    "projekt",
+    "aktivitet",
+    "uppdrag",
+    "projektnummer",
+    "jobb",
+    "deluppdrag",
+    "underaktivitet"
+   ],
+   "roller": [
+    "projektledare",
+    "agare"
+   ],
+   "hor": [
+    "projektmallar",
+    "tilldela"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "projektmallar",
+   "omrade": "projekt",
+   "namn": "Projektmallar som hela företaget delar",
+   "vad": "Ett standardupplägg, till exempel för ett badrum, en installation eller ett serviceuppdrag, sparas som mall och används av hela företaget.",
+   "nytta": "Ett fungerande upplägg kan användas igen av alla i företaget.",
+   "status": "finns",
+   "fm": [
+    "FM-051"
+   ],
+   "sok": [
+    "mall",
+    "standardupplägg",
+    "projektmall"
+   ],
+   "roller": [
+    "projektledare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "tidplan-gantt",
+   "omrade": "projekt",
+   "namn": "Tidplan med beroenden",
+   "vad": "Aktiviteterna hänger ihop i en tidplan (Gantt). Den som går vidare trots ett beroende får en varning, och valet registreras.",
+   "nytta": "Alla ser planerad ordning och beroenden mellan aktiviteterna.",
+   "status": "finns",
+   "fm": [
+    "FM-052"
+   ],
+   "sok": [
+    "gantt",
+    "tidplan",
+    "beroende",
+    "planering",
+    "schema",
+    "ordning"
+   ],
+   "roller": [
+    "projektledare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "tilldela",
+   "omrade": "projekt",
+   "namn": "Tilldela arbete till medarbetare, inbjudna eller samarbetspartner",
+   "vad": "Uppgiften tilldelas en person eller ett företag, som kan påbörja eller avböja den.",
+   "nytta": "Den ansvariga hittar uppgiften bland sina uppdrag, och alla ser vem som gör vad.",
+   "status": "finns",
+   "fm": [
+    "FM-070"
+   ],
+   "sok": [
+    "tilldelning",
+    "bemanning",
+    "resurs",
+    "vem gör vad",
+    "fördela arbete"
+   ],
+   "roller": [
+    "projektledare"
+   ],
+   "hor": [
+    "foretagsrelation"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "idag",
+   "omrade": "projekt",
+   "namn": "Idag: det som väntar, det viktigaste först",
+   "vad": "Dagen börjar på en sida som visar läget, det som väntar på dig och de köer du ansvarar för, utifrån det du har behörighet att se. Dina beslut och Dina uppdrag samlar det som väntar på dig.",
+   "nytta": "Du ser vad som väntar på dig och vad som behöver uppmärksamhet först.",
+   "status": "finns",
+   "fm": [
+    "FM-079",
+    "FM-080"
+   ],
+   "sok": [
+    "idag",
+    "dashboard",
+    "översikt",
+    "dagsplan",
+    "mina uppdrag",
+    "mina beslut",
+    "att göra",
+    "startsida",
+    "allvarligaste först"
+   ],
+   "roller": [
+    "agare",
+    "projektledare",
+    "falt",
+    "ekonomi"
+   ],
+   "hor": [
+    "notiser"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "tid-resa-material",
+   "omrade": "projekt",
+   "namn": "Tid, resa och material på aktiviteten",
+   "vad": "Medarbetaren registrerar resan, arbetstiden på plats och materialet på aktiviteten i telefonen, medan uppgifterna finns till hands.",
+   "nytta": "Timmar, mil och material hamnar på rätt uppdrag och blir underlag för fakturan.",
+   "status": "finns",
+   "fm": [
+    "FM-072"
+   ],
+   "sok": [
+    "tidrapportering",
+    "timer",
+    "stämpla",
+    "körjournal",
+    "mil",
+    "resa",
+    "material",
+    "förbrukning",
+    "mobil",
+    "telefon",
+    "app",
+    "tidrapport"
+   ],
+   "roller": [
+    "falt",
+    "projektledare"
+   ],
+   "hor": [
+    "narvaro-franvaro",
+    "faktura-ur-arbete"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "fotodokumentation",
+   "omrade": "projekt",
+   "namn": "Foton före, under och efter",
+   "vad": "Varje bild får en fas och ett val om kunden ska se den. Företaget kan kräva foto där en regel säger det.",
+   "nytta": "Arbetet dokumenteras, och ni väljer vilka bilder kunden får se.",
+   "status": "finns",
+   "fm": [
+    "FM-073"
+   ],
+   "sok": [
+    "foto",
+    "bild",
+    "bevis",
+    "dokumentation",
+    "kamera",
+    "bildbevis"
+   ],
+   "roller": [
+    "falt",
+    "kund"
+   ],
+   "hor": [
+    "foljlank"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "hinder",
+   "omrade": "projekt",
+   "namn": "Hinder, återupptagande och avböjande",
+   "vad": "Ett stopp registreras med orsak och syns för alla berörda, med notiser.",
+   "nytta": "Alla som berörs får veta vad som hindrar arbetet.",
+   "status": "finns",
+   "fm": [
+    "FM-071"
+   ],
+   "sok": [
+    "hinder",
+    "stopp",
+    "avbrott",
+    "väntar",
+    "problem"
+   ],
+   "roller": [
+    "falt",
+    "projektledare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "klarmarkera-godkanna",
+   "omrade": "projekt",
+   "namn": "Klarmarkering och kundens godkännande, två skilda steg",
+   "vad": "Utföraren markerar arbetet som klart och kan ångra tills beslut har fattats. Beställaren godkänner eller avvisar i appen, via följlänken eller som ett registrerat beslut i efterhand. Kundens godkännande kommer alltid från kundsidan.",
+   "nytta": "Det framgår vem som markerade arbetet klart och om kunden har godkänt det.",
+   "status": "finns",
+   "fm": [
+    "FM-074",
+    "FM-075"
+   ],
+   "sok": [
+    "godkänna",
+    "klarmarkera",
+    "attest",
+    "avstämning",
+    "kundgodkännande",
+    "färdig",
+    "klart"
+   ],
+   "roller": [
+    "falt",
+    "kund",
+    "projektledare"
+   ],
+   "hor": [
+    "foljlank",
+    "tvasteg-attest"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "tvasteg-attest",
+   "omrade": "projekt",
+   "namn": "Arbetspass med attest i två steg",
+   "vad": "När uppdraget kräver det granskar arbetsledaren arbetspassen först, och beställaren godkänner sedan. Samma kontroll blir grunden för det som faktureras.",
+   "nytta": "Arbetsledaren granskar underlaget före beställarens beslut, och fakturan bygger på den kontrollen.",
+   "status": "finns",
+   "fm": [
+    "FM-078"
+   ],
+   "sok": [
+    "attest",
+    "arbetsledare",
+    "förattest",
+    "arbetspass",
+    "tvåstegsattest"
+   ],
+   "roller": [
+    "projektledare",
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "ata",
+   "omrade": "projekt",
+   "namn": "Ändringar och tillägg (ÄTA) med pris och beslut",
+   "vad": "En ändrad omfattning föreslås, godkänns eller avvisas, eller registreras som ett beslut som fattats vid sidan av SAEFUR. Versionshistoriken går att läsa.",
+   "nytta": "Ändringen finns med i överenskommelsen och följer med till fakturan.",
+   "status": "finns",
+   "fm": [
+    "FM-077",
+    "FM-083"
+   ],
+   "sok": [
+    "ÄTA",
+    "ändring",
+    "tillägg",
+    "avgående",
+    "ändringsarbete",
+    "versionshistorik",
+    "tilläggsarbete"
+   ],
+   "roller": [
+    "projektledare",
+    "kund",
+    "ekonomi"
+   ],
+   "hor": [
+    "avvikelser",
+    "godkanna-ue"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "tvist",
+   "omrade": "projekt",
+   "namn": "Oenighet efter en avvisning",
+   "vad": "När parterna är oense efter en avvisning syns det för båda, och ärendet förs tillbaka in i arbetet med foton och godkännanden bevarade.",
+   "nytta": "Båda parter utgår från samma dokumenterade händelser när de reder ut oenigheten.",
+   "status": "finns",
+   "fm": [
+    "FM-076"
+   ],
+   "sok": [
+    "tvist",
+    "oenighet",
+    "invändning",
+    "avvisa",
+    "konflikt",
+    "tvist efter avvisning"
+   ],
+   "roller": [
+    "projektledare",
+    "kund"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "utfort-arbete-ett-steg",
+   "omrade": "projekt",
+   "namn": "Registrera redan utfört arbete i ett samlat flöde",
+   "vad": "Ett uppdrag som redan är gjort blir projekt, aktivitet, avtal, klarmarkering och fakturautkast i en och samma registrering, med möjlighet att rätta i efterhand.",
+   "nytta": "Ett mindre uppdrag kan registreras och faktureras med lagom struktur.",
+   "status": "finns",
+   "fm": [
+    "FM-082"
+   ],
+   "sok": [
+    "efterregistrera",
+    "snabbt jobb",
+    "utfört",
+    "i efterhand",
+    "enkel",
+    "ett steg"
+   ],
+   "roller": [
+    "falt",
+    "agare"
+   ],
+   "hor": [
+    "projektlos-faktura"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "agera-ur-avsikt",
+   "omrade": "projekt",
+   "namn": "Börja med det du vill göra",
+   "vad": "Välj uppgiften först, till exempel att ge ett pris, starta arbete, fakturera, lägga upp en kund eller registrera ett kvitto. SAEFUR hittar eller skapar projektet och visar vilket.",
+   "nytta": "Du börjar med uppgiften, och systemet hjälper till med strukturen.",
+   "status": "finns",
+   "fm": [
+    "FM-081"
+   ],
+   "sok": [
+    "snabbval",
+    "genväg",
+    "avsikt",
+    "starta"
+   ],
+   "roller": [
+    "agare",
+    "falt"
+   ],
+   "hor": [],
+   "not_": "Kärnan finns. Egna ytor för varje handling byggs vidare."
+  },
+  {
+   "id": "projektroller",
+   "omrade": "projekt",
+   "namn": "Fyra projektroller och delegerade behörigheter",
+   "vad": "Beställare, utförare, kund och medlem har olika roller i projektet. Behörigheter som att godkänna tid eller se ekonomi ges var för sig eller samlat som arbetsledare och projektledare.",
+   "nytta": "Varje deltagare får den insyn och de befogenheter som uppdraget kräver.",
+   "status": "finns",
+   "fm": [
+    "FM-056"
+   ],
+   "sok": [
+    "roll",
+    "projektledare",
+    "arbetsledare",
+    "behörighet",
+    "rättighet",
+    "inbjudan",
+    "rättigheter"
+   ],
+   "roller": [
+    "projektledare",
+    "agare"
+   ],
+   "hor": [
+    "rattigheter"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "projektorganisation",
+   "omrade": "projekt",
+   "namn": "Projektets organisationskarta",
+   "vad": "Kartan visar vilka som deltar, vad de får göra och hur de nås. Ekonomin visas för dem som har behörighet.",
+   "nytta": "Projektledaren ser laget, och kontaktvägarna finns där de behövs.",
+   "status": "finns",
+   "fm": [
+    "FM-053"
+   ],
+   "sok": [
+    "vem är med",
+    "kontaktuppgifter",
+    "personhub",
+    "organisationskarta",
+    "team"
+   ],
+   "roller": [
+    "projektledare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "projektlogg",
+   "omrade": "projekt",
+   "namn": "Projektlogg med text och bilder",
+   "vad": "Händelser antecknas i projektet, och anteckningarna är privata tills de delas.",
+   "nytta": "Anteckningar och bilder sparas i projektets sammanhang, under arbetet eller efteråt.",
+   "status": "finns",
+   "fm": [
+    "FM-060"
+   ],
+   "sok": [
+    "dagbok",
+    "logg",
+    "anteckning",
+    "projektdagbok"
+   ],
+   "roller": [
+    "falt",
+    "projektledare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "projektpolicyer",
+   "omrade": "projekt",
+   "namn": "Projektregler för foton, låsning och insyn",
+   "vad": "Gemensamma regler för dokumentation och insyn sätts en gång per projekt och gäller alla som arbetar i det, till exempel krav på foto eller vad en underentreprenör ser.",
+   "nytta": "Alla i projektet arbetar efter samma regler.",
+   "status": "finns",
+   "fm": [
+    "FM-055"
+   ],
+   "sok": [
+    "policy",
+    "regler",
+    "inställningar",
+    "fotokrav",
+    "projektpolicyer",
+    "fotobevis",
+    "autolåsning",
+    "utförarsynlighet"
+   ],
+   "roller": [
+    "projektledare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "vision-referensbilder",
+   "omrade": "projekt",
+   "namn": "Målbild och referensbilder som utföraren bekräftar",
+   "vad": "Beställarens referensbilder visas för utföraren, som bekräftar dem före start.",
+   "nytta": "Utföraren har tagit del av beställarens målbild innan arbetet börjar.",
+   "status": "finns",
+   "fm": [
+    "FM-054"
+   ],
+   "sok": [
+    "referensbilder",
+    "målbild",
+    "vision",
+    "inspiration"
+   ],
+   "roller": [
+    "kund",
+    "falt"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "projektekonomi",
+   "omrade": "projekt",
+   "namn": "Projektekonomi och marginal medan arbetet pågår",
+   "vad": "Utföraren ser kostnader och marginal, och beställaren ser sina priser. Vem som ser vad styrs av part och behörighet.",
+   "nytta": "Ni följer uppdragets ekonomi medan det går att påverka den.",
+   "status": "finns",
+   "fm": [
+    "FM-172"
+   ],
+   "sok": [
+    "marginal",
+    "lönsamhet",
+    "projektkostnad",
+    "budget",
+    "kostnad",
+    "täckningsbidrag"
+   ],
+   "roller": [
+    "agare",
+    "projektledare",
+    "ekonomi"
+   ],
+   "hor": [
+    "ekonomivy",
+    "resultatbild"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "konversationer",
+   "omrade": "projekt",
+   "namn": "Samtal där arbetet sker",
+   "vad": "Samtal förs på aktiviteten, området eller ändringen, direkt eller i grupp, med bilagor och röstinmatning. Projektet har också en gemensam kommentarstråd.",
+   "nytta": "Samtalet sparas där arbetet och besluten finns.",
+   "status": "finns",
+   "fm": [
+    "FM-210",
+    "FM-084"
+   ],
+   "sok": [
+    "chatt",
+    "meddelande",
+    "röstmeddelande",
+    "kommunikation",
+    "gruppchatt",
+    "direktmeddelande"
+   ],
+   "roller": [
+    "falt",
+    "projektledare"
+   ],
+   "hor": [
+    "kollegachatt",
+    "notiser"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "notiser",
+   "omrade": "projekt",
+   "namn": "Notiser i appen och eskalering",
+   "vad": "Det som väntar på dig visas som notis i appen, och ett ärende kan lyftas ett steg uppåt i ansvarskedjan.",
+   "nytta": "Den som har ansvaret får veta vad som väntar.",
+   "status": "finns",
+   "fm": [
+    "FM-211"
+   ],
+   "sok": [
+    "notis",
+    "avisering",
+    "påminnelse",
+    "eskalera",
+    "larm"
+   ],
+   "roller": [
+    "falt",
+    "projektledare"
+   ],
+   "hor": [
+    "push-notiser"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "regelpaket",
+   "omrade": "regel",
+   "namn": "Regelpaket för Säker Vatten och elinstallation",
+   "vad": "Företaget antar ett regelpaket, och branschens krav kopplas till de arbeten där de gäller.",
+   "nytta": "Kraven finns i arbetet, där de ska följas.",
+   "status": "finns",
+   "fm": [
+    "FM-100"
+   ],
+   "sok": [
+    "Säker Vatten",
+    "el",
+    "elinstallation",
+    "VVS",
+    "VA",
+    "branschregler",
+    "egenkontroll",
+    "checklista",
+    "regelverk",
+    "auktorisation"
+   ],
+   "roller": [
+    "agare",
+    "projektledare",
+    "falt"
+   ],
+   "hor": [
+    "skyldigheter",
+    "dossier"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "skyldigheter",
+   "omrade": "regel",
+   "namn": "Krav kopplas till arbetet vid tilldelning",
+   "vad": "När en aktivitet tilldelas och startas får den de krav som följer av företagets regelpaket.",
+   "nytta": "Den som utför arbetet ser vilka krav som gäller för just den uppgiften.",
+   "status": "finns",
+   "fm": [
+    "FM-101"
+   ],
+   "sok": [
+    "skyldighet",
+    "krav",
+    "egenkontroll",
+    "kontrollpunkt",
+    "binds automatiskt"
+   ],
+   "roller": [
+    "falt",
+    "projektledare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "behorighet-roller",
+   "omrade": "regel",
+   "namn": "Behörigheter och utsedda roller enligt regelverket",
+   "vad": "Vid tilldelningen dokumenteras vem som utför arbetet, med behörigheter i profilen och utsedda roller enligt regelverket.",
+   "nytta": "Behörighetsunderlaget sparas med uppdraget, och företaget bedömer dess giltighet.",
+   "status": "finns",
+   "fm": [
+    "FM-102"
+   ],
+   "sok": [
+    "behörig",
+    "certifikat",
+    "auktorisation",
+    "elinstallatör",
+    "kontrollansvarig",
+    "behörighet"
+   ],
+   "roller": [
+    "hr",
+    "projektledare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "matning-attest",
+   "omrade": "regel",
+   "namn": "Mätning, attest och dokumenterade krav",
+   "vad": "Tryck, tid och tryckfall registreras där arbetet görs. En mätning som görs om sparas tillsammans med den tidigare, attest sker med egen bekräftelse eller legitimering, och varje uppfyllt krav dokumenteras.",
+   "nytta": "Mätvärdet finns kvar tillsammans med den som gjorde mätningen.",
+   "status": "finns",
+   "fm": [
+    "FM-103"
+   ],
+   "sok": [
+    "mätvärde",
+    "provtryckning",
+    "tryckfall",
+    "attest",
+    "intyg",
+    "täthetsprov",
+    "avbördning"
+   ],
+   "roller": [
+    "falt"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "avvikelser",
+   "omrade": "regel",
+   "namn": "Avvikelser kopplade till ändringar",
+   "vad": "En avvikelse dokumenteras med beslut och kan kopplas till en ändring. Ett uppfyllt krav kan leda till ett nytt med eget förfallodatum, till exempel en återkommande kontroll.",
+   "nytta": "Avvikelsen, beslutet och det som ska följas upp finns samlade.",
+   "status": "finns",
+   "fm": [
+    "FM-104"
+   ],
+   "sok": [
+    "avvikelse",
+    "avsteg",
+    "uppföljning"
+   ],
+   "roller": [
+    "projektledare"
+   ],
+   "hor": [
+    "ata"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "dossier",
+   "omrade": "regel",
+   "namn": "Samlad dokumentation som PDF",
+   "vad": "Regelversion, krav, behörigheter, mätningar, avvikelser och parter samlas i ett dokument i projektet, ofta kallat dossier. Historiken bevaras som den registrerades.",
+   "nytta": "Dokumentationen kan lämnas till kunden eller en myndighet som ett samlat dokument.",
+   "status": "finns",
+   "fm": [
+    "FM-105"
+   ],
+   "sok": [
+    "dossier",
+    "intyg",
+    "dokumentation",
+    "överlämning",
+    "PDF",
+    "egenkontrollpärm",
+    "slutdokumentation",
+    "bevisbild"
+   ],
+   "roller": [
+    "projektledare",
+    "kund"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "kundens-verifieringsvy",
+   "omrade": "regel",
+   "namn": "Kunden ser samma krav som utföraren",
+   "vad": "Kunden ser vilka krav som gäller och vilket underlag som har dokumenterats. Företaget ser före första aktiviteten om det är redo för en viss verksamhetstyp.",
+   "nytta": "Kunden kan själv följa vilka krav som har dokumenterats.",
+   "status": "finns",
+   "fm": [
+    "FM-106"
+   ],
+   "sok": [
+    "kundens vy",
+    "verifiering",
+    "insyn",
+    "krav"
+   ],
+   "roller": [
+    "kund",
+    "agare"
+   ],
+   "hor": [
+    "foljlank"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "fler-regelverk",
+   "omrade": "regel",
+   "namn": "Fler branscher i samma struktur",
+   "vad": "F-gas, brand och sprinkler, OVK och tryckkärl, samt återkommande skyldigheter för företaget. Planerad funktion i en senare utbyggnad. Regelinnehållet tas fram tillsammans med experter inom varje område.",
+   "nytta": "Samma arbetssätt för fler yrken.",
+   "status": "kommer",
+   "fm": [
+    "FM-107"
+   ],
+   "sok": [
+    "F-gas",
+    "köldmedier",
+    "sprinkler",
+    "brand",
+    "OVK",
+    "ventilation",
+    "tryckkärl",
+    "motor"
+   ],
+   "roller": [
+    "agare"
+   ],
+   "hor": [
+    "regelpaket"
+   ],
+   "not_": "Beslutad riktning. Regelinnehållet tas fram med externa experter."
+  },
+  {
+   "id": "artikelregister",
+   "omrade": "order",
+   "namn": "Artikelregister med kategorier, förpackningar och GTIN",
+   "vad": "Artiklar importeras och får kategorier, leverantörer, förpackningar, streckkoder och bilder. När en artikel läggs i en offert, order eller inköpsorder eller på ett uppdrag följer namn och pris med.",
+   "nytta": "Samma artikeluppgifter används i hela affären, och ett nytt artikelpris gäller från nästa dokument.",
+   "status": "finns",
+   "fm": [
+    "FM-142"
+   ],
+   "sok": [
+    "artikel",
+    "artikelnummer",
+    "produkt",
+    "streckkod",
+    "EAN",
+    "GTIN",
+    "enhet",
+    "förpackning",
+    "import",
+    "excel",
+    "bild",
+    "varor",
+    "sortiment"
+   ],
+   "roller": [
+    "lager",
+    "salj",
+    "inkop"
+   ],
+   "hor": [
+    "kundunika-priser",
+    "lagersaldo"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kundorder",
+   "omrade": "order",
+   "namn": "Kundorder med orderbekräftelse",
+   "vad": "Ordern registreras som den överenskommits, med eller utan projekt, och får ett nummer. En rättelse görs med en ny order, och den första finns kvar.",
+   "nytta": "Ni ser vad kunden beställde, på kundkortet eller i projektet.",
+   "status": "finns",
+   "fm": [
+    "FM-140"
+   ],
+   "sok": [
+    "order",
+    "orderbekräftelse",
+    "beställning",
+    "kundorder",
+    "säljorder"
+   ],
+   "roller": [
+    "salj",
+    "lager"
+   ],
+   "hor": [
+    "delleverans-restorder"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "delleverans-restorder",
+   "omrade": "order",
+   "namn": "Hel- eller delleverans, restorder och faktura per leverans",
+   "vad": "Per rad syns beställt, levererat, fakturerat och kvar. Säljarens leverans och kundens bekräftelse att varorna kommit fram registreras var för sig.",
+   "nytta": "Kundservice och lager följer samma uppgifter om vad som är levererat och vad som återstår.",
+   "status": "finns",
+   "fm": [
+    "FM-141"
+   ],
+   "sok": [
+    "delleverans",
+    "restorder",
+    "rest",
+    "leverans",
+    "följesedel",
+    "leveransrad"
+   ],
+   "roller": [
+    "lager",
+    "kundservice",
+    "ekonomi"
+   ],
+   "hor": [
+    "leveransbesked",
+    "proaktiv-service",
+    "mottagningsbekraftelse"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "lagersaldo",
+   "omrade": "order",
+   "namn": "Lagersaldo per artikel och plats, med beställningspunkt",
+   "vad": "Saldot hänger ihop med order och leverans. Inleverans och justering är egna handlingar, och justering kräver särskild behörighet. Reservationer visar vad som redan är lovat, och beställningspunkten visar när det är dags att fylla på.",
+   "nytta": "Säljaren ser behållning och reservationer innan en leverans lovas.",
+   "status": "finns",
+   "fm": [
+    "FM-143"
+   ],
+   "sok": [
+    "saldo",
+    "lagerbok",
+    "beställningspunkt",
+    "påfyllnad",
+    "justera",
+    "ta emot",
+    "reservation",
+    "reserverat",
+    "tillgängligt",
+    "lagerstatus",
+    "lagret"
+   ],
+   "roller": [
+    "lager",
+    "salj"
+   ],
+   "hor": [
+    "flera-lager-platser",
+    "inventering"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "flera-lager-platser",
+   "omrade": "order",
+   "namn": "Flera lager och lagerplatser i hierarki",
+   "vad": "Lager, servicebil och karantän är olika platser. Varje lager delas in i platser med en funktion, till exempel lagring, plock, buffert, mottag eller utlastning, och varje flöde anger vilken plats det gäller.",
+   "nytta": "Ni ser var varan är registrerad och kan följa flyttarna mellan platserna.",
+   "status": "finns",
+   "fm": [
+    "FM-144"
+   ],
+   "sok": [
+    "lagersektionering",
+    "sektion",
+    "sektioner",
+    "sektionera",
+    "zon",
+    "zoner",
+    "hylla",
+    "hyllplats",
+    "lagerplats",
+    "platser",
+    "flera lager",
+    "bil",
+    "servicebil",
+    "karantän",
+    "standardlager",
+    "plockplats",
+    "buffert",
+    "mottag",
+    "lagerstruktur",
+    "hylletikett",
+    "lagret"
+   ],
+   "roller": [
+    "lager",
+    "agare"
+   ],
+   "hor": [
+    "lagersaldo",
+    "inventering",
+    "plock-skanning"
+   ],
+   "not_": "Prioritering av plockordning efter hur affärskritisk varan är (nämnt i Adams beskrivning 24 okt) saknar rad i förmågekartan och tas med först när den är belagd."
+  },
+  {
+   "id": "plock-skanning",
+   "omrade": "order",
+   "namn": "Plock med skanning, packning och avsändning",
+   "vad": "Lagerkön visar vad som ska plockas. Raderna skannas mot ordern, packas och skickas som en försändelse när allt är plockat.",
+   "nytta": "Plocket stäms av mot orderns rader innan försändelsen lämnar lagret.",
+   "status": "finns",
+   "fm": [
+    "FM-145"
+   ],
+   "sok": [
+    "plock",
+    "plocklista",
+    "skanna",
+    "skanner",
+    "streckkod",
+    "mobil",
+    "pack",
+    "försändelse",
+    "utleverans",
+    "etikett"
+   ],
+   "roller": [
+    "lager"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "inventering",
+   "omrade": "order",
+   "namn": "Inventering: hela lagret, en zon eller rullande",
+   "vad": "Räkna ett helt lager eller valda platser. En differens över företagets gräns godkänns av någon med särskild behörighet, och varje räkning sparas med vem och när.",
+   "nytta": "Saldot stäms av i en takt som passar verksamheten.",
+   "status": "finns",
+   "fm": [
+    "FM-146"
+   ],
+   "sok": [
+    "inventering",
+    "lagerräkning",
+    "räkna",
+    "differens",
+    "rullande",
+    "zon"
+   ],
+   "roller": [
+    "lager",
+    "ekonomi"
+   ],
+   "hor": [
+    "flera-lager-platser"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "returer",
+   "omrade": "order",
+   "namn": "Returer, kassation och rättelse",
+   "vad": "Kundretur, leverantörsretur och kassation registreras, bedöms och genomförs i egna steg. Lagret påverkas när ett steg genomförs, och ett genomfört steg kan ångras med en spårbar rättelse.",
+   "nytta": "Ni följer returen från registrering till beslut och genomförd lageråtgärd.",
+   "status": "finns",
+   "fm": [
+    "FM-147"
+   ],
+   "sok": [
+    "retur",
+    "kassation",
+    "skrot",
+    "reklamation",
+    "återlämna",
+    "reversering"
+   ],
+   "roller": [
+    "lager",
+    "kundservice"
+   ],
+   "hor": [
+    "kundarenden"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "serienummer-parti",
+   "omrade": "order",
+   "namn": "Serienummer, parti och varianter",
+   "vad": "Ni ser vilken enhet, vilket parti och vilken variant som gick till vilken kund, från inköpet genom lagret till leveransen.",
+   "nytta": "Spårbarheten finns kvar även när många arbetar i samma lager.",
+   "status": "finns",
+   "fm": [
+    "FM-148"
+   ],
+   "sok": [
+    "serienummer",
+    "batch",
+    "parti",
+    "lot",
+    "variant",
+    "storlek",
+    "färg",
+    "spårbarhet"
+   ],
+   "roller": [
+    "lager"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "lagervarde-fifo",
+   "omrade": "order",
+   "namn": "Lagervärde och materialkostnad enligt FIFO",
+   "vad": "Materialet som används på ett uppdrag värderas till vad det kostade vid inköpet, enligt principen först in, först ut. Lagervärdet syns löpande, vid sidan av bokföringen.",
+   "nytta": "Marginalen bygger på de inköpskostnader som ligger bakom uttaget.",
+   "status": "finns",
+   "fm": [
+    "FM-149"
+   ],
+   "sok": [
+    "lagervärde",
+    "FIFO",
+    "inköpspris",
+    "kostnad",
+    "värdering",
+    "lagervärdering"
+   ],
+   "roller": [
+    "ekonomi",
+    "lager"
+   ],
+   "hor": [
+    "projektekonomi"
+   ],
+   "not_": "I driftversionen 509a79334 sedan 26 okt 2026 (förmågekartan v54: klar, produktion nej före driftsättningen). Bekräftas i drift före publicering (E11)."
+  },
+  {
+   "id": "frakt",
+   "omrade": "order",
+   "namn": "Fraktbokning hos transportör med etikett och spårning",
+   "vad": "Boka frakt, skriv ut etiketten och följ försändelsen från ordern, på företagets eget kundnummer hos transportören. Fraktbokningen öppnas transportör för transportör när avtal och anslutning är klara.",
+   "nytta": "Frakten hör till leveransen.",
+   "status": "avtal",
+   "fm": [
+    "FM-150",
+    "FM-152"
+   ],
+   "sok": [
+    "frakt",
+    "fraktsedel",
+    "transportör",
+    "PostNord",
+    "DHL",
+    "Bring",
+    "nShift",
+    "spårning",
+    "kollietikett",
+    "fraktbokning",
+    "fraktbolag"
+   ],
+   "roller": [
+    "lager"
+   ],
+   "hor": [
+    "delleverans-restorder"
+   ],
+   "not_": "Bring byggd mot sandbox. Väntar på avtal och produktionsaktivering, därefter fler transportörer."
+  },
+  {
+   "id": "edi",
+   "omrade": "order",
+   "namn": "EDI: order och leveransavisering",
+   "vad": "Större kedjor och inköpssystem kan skicka order och ta emot leveransaviseringar i EDIFACT (ORDERS, DESADV). Formaten finns, och förbindelsen sätts upp tillsammans med varje handelspartner.",
+   "nytta": "Storkunden kan beställa i sitt eget format.",
+   "status": "avtal",
+   "fm": [
+    "FM-151"
+   ],
+   "sok": [
+    "EDI",
+    "EDIFACT",
+    "ORDERS",
+    "DESADV",
+    "kedja",
+    "grossist",
+    "integration"
+   ],
+   "roller": [
+    "lager",
+    "salj"
+   ],
+   "hor": [],
+   "not_": "Formatet byggt. Transport sätts upp vid en namngiven motpart."
+  },
+  {
+   "id": "leverantorsregister",
+   "omrade": "inkop",
+   "namn": "Leverantörsregister med kontaktpersoner och inköpsstatistik",
+   "vad": "Leverantören läggs upp en gång. Leverantörssidan visar vad företaget har köpt månad för månad, fördelat och ofördelat, med import och export.",
+   "nytta": "Ni har kontaktuppgifterna samlade och kan följa inköpen över tid.",
+   "status": "finns",
+   "fm": [
+    "FM-160"
+   ],
+   "sok": [
+    "leverantör",
+    "inköpsstatistik",
+    "spend",
+    "spendanalys",
+    "import",
+    "leverantörskort"
+   ],
+   "roller": [
+    "inkop",
+    "agare"
+   ],
+   "hor": [
+    "artikelregister"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "leverantorsfaktura",
+   "omrade": "inkop",
+   "namn": "Leverantörsfaktura: attest, betalning, kredit och bestridande",
+   "vad": "Leverantörsfakturorna visas med de förfallna först. Företaget kan välja attest före betalning, registrera kredit och bestridande och fakturera en rad vidare till kunden.",
+   "nytta": "Ni ser vad som ska granskas, betalas och faktureras vidare.",
+   "status": "finns",
+   "fm": [
+    "FM-161"
+   ],
+   "sok": [
+    "leverantörsfaktura",
+    "attest",
+    "reskontra",
+    "förfallen",
+    "vidarefakturera",
+    "leverantörsreskontra",
+    "betala"
+   ],
+   "roller": [
+    "inkop",
+    "ekonomi"
+   ],
+   "hor": [
+    "inkopsorder"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "inkopsorder",
+   "omrade": "inkop",
+   "namn": "Inköpsorder, varumottag och avstämning i tre led",
+   "vad": "Beställt, mottaget och fakturerat stäms av per rad. En avvikelse visas som upplysning, och fakturan kan hanteras som vanligt.",
+   "nytta": "Ni jämför beställt, mottaget och fakturerat rad för rad och kan följa upp avvikelserna.",
+   "status": "finns",
+   "fm": [
+    "FM-162"
+   ],
+   "sok": [
+    "inköpsorder",
+    "beställning",
+    "varumottag",
+    "inleverans",
+    "matchning",
+    "avvikelse",
+    "inköp",
+    "trevägsmatchning"
+   ],
+   "roller": [
+    "inkop",
+    "lager"
+   ],
+   "hor": [
+    "lagersaldo"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kvitton",
+   "omrade": "inkop",
+   "namn": "Kvitto nu, fördela senare",
+   "vad": "Kvittot fotograferas när du har det, i bilen, i butiken eller på kontoret, och fördelas när sammanhanget är klart. Ett köp för kommande uppdrag står kvar att fördela och hålls skilt från kundfakturorna.",
+   "nytta": "Kvittot är sparat direkt, och kostnaden kan fördelas senare.",
+   "status": "finns",
+   "fm": [
+    "FM-163"
+   ],
+   "sok": [
+    "kvitto",
+    "utlägg",
+    "foto",
+    "fördela",
+    "kostnad",
+    "projekt",
+    "kvittoinkorg",
+    "handskfack"
+   ],
+   "roller": [
+    "falt",
+    "ekonomi"
+   ],
+   "hor": [
+    "narvaro-franvaro"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kvittoskanning",
+   "omrade": "inkop",
+   "namn": "Kvittoskanning som föreslår uppgifterna",
+   "vad": "Fotot läses av, och belopp, moms och kategori föreslås för granskning. Planerad funktion i en senare utbyggnad.",
+   "nytta": "Mindre att skriva in.",
+   "status": "kommer",
+   "fm": [
+    "FM-164"
+   ],
+   "sok": [
+    "OCR",
+    "tolkning",
+    "skanna kvitto",
+    "automatisk",
+    "fyller i"
+   ],
+   "roller": [
+    "ekonomi"
+   ],
+   "hor": [
+    "kvitton"
+   ],
+   "not_": "Väntar på val av AI-drift."
+  },
+  {
+   "id": "underentreprenorskostnad",
+   "omrade": "inkop",
+   "namn": "Underentreprenörens faktura blir projektkostnad",
+   "vad": "När underentreprenören fakturerar i ett samarbete i SAEFUR förs beloppet till projektets kostnader, med företagets påslag och en varning om F-skatt saknas.",
+   "nytta": "Kostnaden hamnar på uppdraget utan ny registrering.",
+   "status": "finns",
+   "fm": [
+    "FM-165"
+   ],
+   "sok": [
+    "UE",
+    "underentreprenör",
+    "påslag",
+    "F-skatt",
+    "kostnad"
+   ],
+   "roller": [
+    "ekonomi",
+    "projektledare"
+   ],
+   "hor": [
+    "samarbetsfaktura"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "faktura-ur-arbete",
+   "omrade": "fakturering",
+   "namn": "Faktura ur arbete och leverans, spårbar rad för rad",
+   "vad": "Fakturan bygger på affärens underlag: utfört eller godkänt arbete, en registrerad leverans eller ett avtal. En utfärdad faktura bevaras som den skickades och rättas med kredit, hel eller per rad.",
+   "nytta": "Varje fakturarad går att följa till underlaget bakom den.",
+   "status": "finns",
+   "fm": [
+    "FM-110"
+   ],
+   "sok": [
+    "faktura",
+    "fakturera",
+    "kreditera",
+    "kreditfaktura",
+    "underlag",
+    "fakturaunderlag",
+    "fakturerbart",
+    "fryst",
+    "låst",
+    "godkänt arbete"
+   ],
+   "roller": [
+    "ekonomi",
+    "agare"
+   ],
+   "hor": [
+    "klarmarkera-godkanna",
+    "betalningsplan"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "svensk-efterlevnad",
+   "omrade": "fakturering",
+   "namn": "Stöd för svenska fakturaregler",
+   "vad": "Nummerserie, fakturadatum, förfallodatum, F-skatt, moms efter kundtyp och underlag för ROT-avdrag. Privatpersoner ser priser inklusive moms och företag exklusive.",
+   "nytta": "Systemet hjälper till med nummerserie, datum och moms utifrån affärens uppgifter. ROT-underlaget är ett stöd, och rätten till avdrag bedöms i varje affär.",
+   "status": "finns",
+   "fm": [
+    "FM-111"
+   ],
+   "sok": [
+    "ROT",
+    "RUT",
+    "moms",
+    "F-skatt",
+    "fakturanummer",
+    "lagkrav",
+    "momssats",
+    "förfallodatum",
+    "fakturaregler",
+    "efterlevnad"
+   ],
+   "roller": [
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "omvand-byggmoms",
+   "omrade": "fakturering",
+   "namn": "Omvänd byggmoms",
+   "vad": "När säljaren väljer omvänd skattskyldighet visas lagtexten och båda parternas momsnummer på fakturan.",
+   "nytta": "Fakturan får de uppgifter som omvänd byggmoms kräver, när villkoren är uppfyllda och valet är gjort.",
+   "status": "finns",
+   "fm": [
+    "FM-112"
+   ],
+   "sok": [
+    "omvänd skattskyldighet",
+    "byggmoms",
+    "moms bygg"
+   ],
+   "roller": [
+    "ekonomi"
+   ],
+   "hor": [
+    "samarbetsfaktura"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "betalningar",
+   "omrade": "fakturering",
+   "namn": "Betalningar: hela, delar, rättelser och löpande saldo",
+   "vad": "Per faktura syns vad som är betalt och vad som återstår. En felregistrerad betalning rättas spårbart.",
+   "nytta": "Ni följer registrerade betalningar och det som återstår per faktura.",
+   "status": "finns",
+   "fm": [
+    "FM-113"
+   ],
+   "sok": [
+    "betalning",
+    "delbetalning",
+    "inbetalning",
+    "saldo",
+    "avprickning",
+    "betalstatus",
+    "reversering"
+   ],
+   "roller": [
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "swish-qr",
+   "omrade": "fakturering",
+   "namn": "Swish-QR på fakturan och kundlänken",
+   "vad": "Kunden skannar koden och öppnar Swish med belopp och referens ifyllda.",
+   "nytta": "Kunden kan betala direkt i telefonen.",
+   "status": "finns",
+   "fm": [
+    "FM-114"
+   ],
+   "sok": [
+    "Swish",
+    "QR",
+    "QR-kod",
+    "betala direkt"
+   ],
+   "roller": [
+    "ekonomi",
+    "kund"
+   ],
+   "hor": [
+    "fakturalank"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kortbetalning",
+   "omrade": "fakturering",
+   "namn": "Kortbetalning direkt till företagets konto",
+   "vad": "Kunden betalar fakturan med kort via företagets eget konto hos betaltjänsten. En bestridd betalning markeras på fakturan och en återbetalning syns i historiken. Kortbetalning öppnas i ett senare steg, när betaltjänsten är i skarp drift.",
+   "nytta": "Pengarna går direkt till företagets konto.",
+   "status": "avtal",
+   "fm": [
+    "FM-115"
+   ],
+   "sok": [
+    "kort",
+    "kortbetalning",
+    "Stripe",
+    "betallänk",
+    "betala online",
+    "kreditkort"
+   ],
+   "roller": [
+    "ekonomi",
+    "kund"
+   ],
+   "hor": [
+    "fakturalank"
+   ],
+   "not_": "Byggt. Skarpt läge väntar på kundkännedom och nycklar hos betaltjänsten."
+  },
+  {
+   "id": "paminnelser",
+   "omrade": "fakturering",
+   "namn": "Påminnelser förberedda i tid, godkända av en människa",
+   "vad": "Systemet förbereder påminnelsen enligt företagets schema, på kundens språk och högst en per dag. Påminnelsen skickas när någon har godkänt den, och fakturan står kvar oförändrad.",
+   "nytta": "Ni granskar den förberedda påminnelsen och väljer när den ska skickas.",
+   "status": "finns",
+   "fm": [
+    "FM-116",
+    "FM-120"
+   ],
+   "sok": [
+    "påminnelse",
+    "förfallen",
+    "obetald",
+    "uppföljning",
+    "betalningspåminnelse"
+   ],
+   "roller": [
+    "ekonomi"
+   ],
+   "hor": [
+    "drojsmalskrav"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "drojsmalsranta",
+   "omrade": "fakturering",
+   "namn": "Dröjsmålsränta och förseningsersättning enligt lag",
+   "vad": "Räntan och ersättningen enligt lag är förvalda, och avtalade villkor används där lagen tillåter det. Villkoren sparas när fakturan låses.",
+   "nytta": "Beräkningen utgår från förvalda regler och registrerade avtalsvillkor.",
+   "status": "finns",
+   "fm": [
+    "FM-117"
+   ],
+   "sok": [
+    "ränta",
+    "dröjsmål",
+    "förseningsavgift",
+    "förseningsersättning"
+   ],
+   "roller": [
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "drojsmalskrav",
+   "omrade": "fakturering",
+   "namn": "Dröjsmålskrav som egen handling med länk",
+   "vad": "Kravet får eget nummer, PDF och en länk där kunden ser och betalar det. Det bokförs i en egen serie utan moms.",
+   "nytta": "Kravet finns som en egen handling med nummer, belopp och underlag, bevarad som den utfärdades.",
+   "status": "finns",
+   "fm": [
+    "FM-118",
+    "FM-094"
+   ],
+   "sok": [
+    "krav",
+    "kravbrev",
+    "dröjsmålskrav",
+    "kravlänk"
+   ],
+   "roller": [
+    "ekonomi",
+    "kund"
+   ],
+   "hor": [
+    "inkasso"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "inkasso",
+   "omrade": "fakturering",
+   "namn": "Underlag till inkasso",
+   "vad": "Kravet, fakturan, påminnelserna och kontakterna samlas i ett paket att ladda ner och lämna till det inkassoföretag ni väljer. Paketet kan återkallas.",
+   "nytta": "Dokumenten för att lämna över ärendet finns samlade, och ni väljer själva inkassoföretag.",
+   "status": "finns",
+   "fm": [
+    "FM-119"
+   ],
+   "sok": [
+    "inkasso",
+    "kravhantering",
+    "överlämning"
+   ],
+   "roller": [
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "projektlos-faktura",
+   "omrade": "fakturering",
+   "namn": "Faktura utan projekt, från kundkortet",
+   "vad": "Den som har levererat till en kund skapar fakturan och dess PDF direkt från kundkortet och väljer själv om den ska sparas som utkast eller låsas.",
+   "nytta": "En tjänst eller leverans utan projekt faktureras direkt från kunden.",
+   "status": "finns",
+   "fm": [
+    "FM-121",
+    "FM-259"
+   ],
+   "sok": [
+    "snabbfaktura",
+    "enkel faktura",
+    "direkt",
+    "utan projekt",
+    "fakturera snabbt",
+    "direkt från kunden"
+   ],
+   "roller": [
+    "ekonomi",
+    "agare"
+   ],
+   "hor": [
+    "utfort-arbete-ett-steg"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "fakturalista-csv",
+   "omrade": "fakturering",
+   "namn": "Fakturalista och körjournal som CSV",
+   "vad": "Fakturor och körjournal kan hämtas som CSV-fil.",
+   "nytta": "Uppgifterna kan användas vidare i egna analyser.",
+   "status": "finns",
+   "fm": [
+    "FM-122"
+   ],
+   "sok": [
+    "export",
+    "CSV",
+    "körjournal",
+    "excel"
+   ],
+   "roller": [
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "utlandsk-valuta",
+   "omrade": "fakturering",
+   "namn": "Utländsk valuta genom hela affären",
+   "vad": "En affär i euro får valutakursen för rätt dag i offert, order, faktura och betalning, och vidare i underlaget till redovisningen.",
+   "nytta": "Belopp och valutakurser följer affären hela vägen till redovisningen.",
+   "status": "finns",
+   "fm": [
+    "FM-176"
+   ],
+   "sok": [
+    "euro",
+    "valuta",
+    "utländsk",
+    "kurs",
+    "EUR",
+    "hela kedjan"
+   ],
+   "roller": [
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "kortterminal",
+   "omrade": "fakturering",
+   "namn": "Kortterminal på plats",
+   "vad": "Beloppet skickas till en ansluten kortterminal och betalningsbekräftelsen kommer tillbaka till SAEFUR. Planerad funktion i en senare utbyggnad.",
+   "nytta": "Betalningen tas på plats och registreras på fakturan.",
+   "status": "avtal",
+   "fm": [
+    "FM-178"
+   ],
+   "sok": [
+    "terminal",
+    "Nets",
+    "butik",
+    "betala på plats",
+    "kortläsare"
+   ],
+   "roller": [
+    "falt",
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": "Väntar på teknisk information från terminalleverantör."
+  },
+  {
+   "id": "peppol",
+   "omrade": "fakturering",
+   "namn": "E-faktura via Peppol",
+   "vad": "Fakturor till kommuner, regioner och större företag skickas som e-faktura. Planerad funktion, som byggs när den behövs för kunder i offentlig sektor.",
+   "nytta": "Offentlig sektor kan bli kund med samma fakturaflöde.",
+   "status": "avtal",
+   "fm": [
+    "FM-242"
+   ],
+   "sok": [
+    "e-faktura",
+    "Peppol",
+    "kommun",
+    "offentlig sektor",
+    "region"
+   ],
+   "roller": [
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": "Byggs när ett kundföretag fakturerar offentlig sektor."
+  },
+  {
+   "id": "ekonomivy",
+   "omrade": "ekonomi",
+   "namn": "Ekonomivy med flöde, lönsamhet och sex signaler",
+   "vad": "Ofakturerat arbete, saknad dokumentation, dubbla inköp, negativ marginal, avvikande leverantörspris och ofördelade inköp lyfts fram automatiskt.",
+   "nytta": "Ni ser vad som behöver ekonomisk uppföljning och går direkt vidare till underlaget.",
+   "status": "finns",
+   "fm": [
+    "FM-170"
+   ],
+   "sok": [
+    "ekonomi",
+    "översikt",
+    "signal",
+    "ofakturerat",
+    "negativ marginal",
+    "avvikelse",
+    "likviditet",
+    "kassaflöde"
+   ],
+   "roller": [
+    "agare",
+    "ekonomi"
+   ],
+   "hor": [
+    "resultatbild",
+    "projektekonomi"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "resultatbild",
+   "omrade": "ekonomi",
+   "namn": "Resultat per period, kund och projekt",
+   "vad": "Fakturerat, kostnad för att utföra och leverera och täckningsbidrag per månad, exklusive moms. Det är en operativ resultatbild, skild från bokslutet.",
+   "nytta": "Du följer månadens resultat medan den pågår.",
+   "status": "finns",
+   "fm": [
+    "FM-171"
+   ],
+   "sok": [
+    "resultat",
+    "täckningsbidrag",
+    "rapport",
+    "månad",
+    "lönsamhet per kund",
+    "resultatrapport"
+   ],
+   "roller": [
+    "agare",
+    "ekonomi"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "sie4",
+   "omrade": "ekonomi",
+   "namn": "SIE4-export per period med lista över det som saknas",
+   "vad": "Redovisningsbyrån får en SIE4-fil med periodens kundfakturor, leverantörsfakturor, betalningar och kvitton. Dokument som kommer in sent hamnar i nästa period, och kvittona får en egen serie. Före överlämningen visas vad som saknas eller är ofullständigt.",
+   "nytta": "Ni lämnar periodens underlag och ser i förväg vad som behöver kompletteras.",
+   "status": "finns",
+   "fm": [
+    "FM-173"
+   ],
+   "sok": [
+    "SIE",
+    "SIE4",
+    "bokföring",
+    "Fortnox",
+    "Visma",
+    "Björn Lundén",
+    "export",
+    "verifikat",
+    "redovisning",
+    "bokföringsunderlag",
+    "periodavslut"
+   ],
+   "roller": [
+    "ekonomi",
+    "byra"
+   ],
+   "hor": [
+    "byrans-lasplats"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "byrans-lasplats",
+   "omrade": "ekonomi",
+   "namn": "Läsplats för redovisningsbyrån, utan licens",
+   "vad": "Byrån hämtar varje överlämnad fil själv och ser vad som saknades och lagerlistan, i 90 dagar. Åtkomsten kan återkallas, och byrån behöver inget konto i företaget.",
+   "nytta": "Byrån får en avgränsad läsplats med det underlag den behöver.",
+   "status": "finns",
+   "fm": [
+    "FM-174"
+   ],
+   "sok": [
+    "byrå",
+    "redovisningskonsult",
+    "revisor",
+    "läsplats",
+    "partner",
+    "redovisningsbyrå",
+    "bokföringsbyrå",
+    "byråns läsplats"
+   ],
+   "roller": [
+    "byra",
+    "agare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "reskontra-export",
+   "omrade": "ekonomi",
+   "namn": "Leverantörsreskontra och kundregister som export",
+   "vad": "Leverantörsfakturor och kundregister kan hämtas som fil, för redovisningsbyrån eller för egen analys.",
+   "nytta": "Era uppgifter går att ta med till byrån eller till egna analyser.",
+   "status": "finns",
+   "fm": [
+    "FM-175"
+   ],
+   "sok": [
+    "export",
+    "reskontra",
+    "kundlista",
+    "data"
+   ],
+   "roller": [
+    "ekonomi",
+    "byra"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "loneunderlag",
+   "omrade": "ekonomi",
+   "namn": "Löneunderlag per månad till lönepartnern",
+   "vad": "Tid, frånvaro, saldon, utlägg, resor och schema per anställd lämnas till lönepartnern en gång per månad, krypterat. En ändring efteråt skickas som rättelse.",
+   "nytta": "Lönekörningen börjar med månadens registrerade underlag samlat.",
+   "status": "finns",
+   "fm": [
+    "FM-179"
+   ],
+   "sok": [
+    "lön",
+    "löneunderlag",
+    "lönekörning",
+    "lönepartner",
+    "lönefil"
+   ],
+   "roller": [
+    "hr",
+    "ekonomi",
+    "byra"
+   ],
+   "hor": [
+    "narvaro-franvaro",
+    "paxml"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "paxml",
+   "omrade": "ekonomi",
+   "namn": "Löneunderlag i lönesystemets format",
+   "vad": "Underlaget lämnas som PAXml, ett standardformat för import i lönesystem som Fortnox Lön, Kontek och Crona.",
+   "nytta": "Lönepartnern kan läsa in underlaget direkt i lönesystemet.",
+   "status": "finns",
+   "fm": [
+    "FM-180"
+   ],
+   "sok": [
+    "PAXml",
+    "Fortnox Lön",
+    "Kontek",
+    "Crona",
+    "lönesystem",
+    "import"
+   ],
+   "roller": [
+    "byra",
+    "hr"
+   ],
+   "hor": [
+    "loneunderlag"
+   ],
+   "not_": "I driftversionen 509a79334 sedan 26 okt 2026 (förmågekartan v54: klar, produktion nej före driftsättningen). Bekräftas i drift före publicering (E11). Import i lönesystemen själva är PK-37."
+  },
+  {
+   "id": "bankkoppling",
+   "omrade": "ekonomi",
+   "namn": "Bankkoppling: transaktioner, matchning och saldo",
+   "vad": "Bankens transaktioner hämtas in och matchas mot fakturorna, och saldot visar likviditeten. Kopplingen öppnas när avtalet med banken är klart.",
+   "nytta": "Avstämningen och likviditetsbilden utgår från bankens egna uppgifter.",
+   "status": "avtal",
+   "fm": [
+    "FM-177"
+   ],
+   "sok": [
+    "bank",
+    "bankkoppling",
+    "PSD2",
+    "avstämning",
+    "likviditet",
+    "likviditetsprognos",
+    "kontoutdrag",
+    "bankgiro"
+   ],
+   "roller": [
+    "ekonomi",
+    "agare"
+   ],
+   "hor": [
+    "betalningar"
+   ],
+   "not_": "Byggt mot bankens sandlåda. Väntar på avtal med bank."
+  },
+  {
+   "id": "live-integration",
+   "omrade": "ekonomi",
+   "namn": "Direktkoppling till redovisnings- eller lönesystem",
+   "vad": "Verifikat och underlag förs direkt in i partnerns system. Planerad funktion, och i dag lämnas underlaget som SIE4- och PAXml-fil.",
+   "nytta": "Ett steg mindre för redovisningsbyrån och lönepartnern.",
+   "status": "kommer",
+   "fm": [
+    "FM-181"
+   ],
+   "sok": [
+    "integration",
+    "API",
+    "Fortnox",
+    "Visma",
+    "koppling",
+    "synk"
+   ],
+   "roller": [
+    "byra"
+   ],
+   "hor": [
+    "sie4"
+   ],
+   "not_": "Beslutad riktning. SIE4-filen och läsplatsen är vägen i dag."
+  },
+  {
+   "id": "foljlank",
+   "omrade": "kundlank",
+   "namn": "Följlänk: kunden följer projektet, godkänner eller invänder",
+   "vad": "Via länken ser kunden faser, delade foton, avtalade rader med moms, tid per dag och fakturor. Kunden kan godkänna, invända och skriva till er, och skapa ett eget konto senare.",
+   "nytta": "Kunden följer arbetet och svarar via en länk, utan konto.",
+   "status": "finns",
+   "fm": [
+    "FM-090"
+   ],
+   "sok": [
+    "följlänk",
+    "kundlänk",
+    "godkänna",
+    "utan konto",
+    "insyn",
+    "kundportal",
+    "följa projektet",
+    "länk",
+    "renovering",
+    "renovera",
+    "hemmet",
+    "privatperson"
+   ],
+   "roller": [
+    "kund",
+    "projektledare"
+   ],
+   "hor": [
+    "klarmarkera-godkanna",
+    "fotodokumentation"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "fakturalank",
+   "omrade": "kundlank",
+   "namn": "Fakturalänk: se och betala fakturan",
+   "vad": "Länken visar fakturan, dess status och de betalningssätt företaget erbjuder, på kundens språk.",
+   "nytta": "Kunden hittar fakturan, betalningsläget och sätten att betala på ett ställe.",
+   "status": "finns",
+   "fm": [
+    "FM-092"
+   ],
+   "sok": [
+    "betala",
+    "fakturalänk",
+    "betallänk",
+    "fakturan online"
+   ],
+   "roller": [
+    "kund",
+    "ekonomi"
+   ],
+   "hor": [
+    "swish-qr",
+    "kortbetalning"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kundens-staende-lank",
+   "omrade": "kundlank",
+   "namn": "Kundens stående länk: order, avtal, fakturor och meddelanden",
+   "vad": "En gemensam ingång där kunden ser sina dokument och kan skriva till er. Svar och godkännanden görs via respektive dokuments egen länk.",
+   "nytta": "Kunden har en fast ingång till alla sina dokument.",
+   "status": "finns",
+   "fm": [
+    "FM-093"
+   ],
+   "sok": [
+    "kundportal",
+    "min sida",
+    "kundsida",
+    "mina dokument",
+    "stående länk"
+   ],
+   "roller": [
+    "kund"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "mottagningsbekraftelse",
+   "omrade": "kundlank",
+   "namn": "Kunden bekräftar att varorna kom fram",
+   "vad": "Kunden bekräftar mottagandet för sig, skilt från säljarens registrerade leverans, och faktureringen bygger på leveransen.",
+   "nytta": "Det framgår både vad ni har levererat och vad kunden har bekräftat.",
+   "status": "finns",
+   "fm": [
+    "FM-095"
+   ],
+   "sok": [
+    "mottaget",
+    "leveranskvitto",
+    "bekräfta leverans",
+    "kvittens"
+   ],
+   "roller": [
+    "kund",
+    "lager"
+   ],
+   "hor": [
+    "delleverans-restorder"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "bestallare-med-konto",
+   "omrade": "kundlank",
+   "namn": "Beställare med eget konto: förening, förvaltare eller företag",
+   "vad": "En organisation beställer projekt, godkänner som motpart och ser sin egen ekonomi över alla projekt, även i utländsk valuta. Beställaren ser kundpriserna, och utförarens kostnader stannar hos utföraren.",
+   "nytta": "Beställaren följer sina projekt och sin ekonomi på ett ställe.",
+   "status": "finns",
+   "fm": [
+    "FM-058",
+    "FM-057"
+   ],
+   "sok": [
+    "beställare",
+    "BRF",
+    "förvaltare",
+    "byggherre",
+    "kundens ekonomi",
+    "bostadsrättsförening",
+    "fastighetsägare",
+    "renovering",
+    "eget projekt"
+   ],
+   "roller": [
+    "kund"
+   ],
+   "hor": [
+    "foretagskund-flera-roller"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "transaktionsmejl",
+   "omrade": "kundlank",
+   "namn": "Dokument och besked mejlas med länk",
+   "vad": "Offert, faktura, påminnelse, krav, kundlänk, följlänk, leveransbesked och inbjudningar skickas som mejl med länk, på mottagarens språk där det stöds.",
+   "nytta": "Dokumenten når kunden med länk direkt från SAEFUR.",
+   "status": "finns",
+   "fm": [
+    "FM-212"
+   ],
+   "sok": [
+    "e-post",
+    "utskick",
+    "mejl",
+    "skicka",
+    "automatiskt mejl",
+    "kundens språk"
+   ],
+   "roller": [
+    "kundservice",
+    "ekonomi"
+   ],
+   "hor": [
+    "sprak"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "foretagsrelation",
+   "omrade": "samarbeten",
+   "namn": "Uppdrag mellan företag som använder SAEFUR",
+   "vad": "Underentreprenören får uppdraget, aktiviteten och avtalet automatiskt i sin egen verksamhet. Säljaren väljer uttryckligen hur momsen ska hanteras.",
+   "nytta": "Båda företagen arbetar i sin egen del av SAEFUR, med ett sammanhängande uppdrag.",
+   "status": "finns",
+   "fm": [
+    "FM-190"
+   ],
+   "sok": [
+    "underentreprenör",
+    "UE",
+    "partner",
+    "samarbete",
+    "anlita",
+    "uppdrag",
+    "entreprenör",
+    "samarbetspartner"
+   ],
+   "roller": [
+    "agare",
+    "projektledare",
+    "partner"
+   ],
+   "hor": [
+    "tilldela",
+    "omvand-byggmoms"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "kedjevillkor",
+   "omrade": "samarbeten",
+   "namn": "Villkor i flera led, sparade vid accept",
+   "vad": "Vilken insyn som delas uppåt och nedåt och om fler underentreprenörer får anlitas avtalas när uppdraget accepteras. De accepterade villkoren gäller som de godkändes.",
+   "nytta": "Alla led ser vilka villkor som gäller och vilken insyn som delas.",
+   "status": "finns",
+   "fm": [
+    "FM-191"
+   ],
+   "sok": [
+    "kedja",
+    "flera led",
+    "villkor",
+    "underleverantör i flera led",
+    "insyn",
+    "kedjevillkor",
+    "frysta"
+   ],
+   "roller": [
+    "agare",
+    "partner"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "godkanna-ue",
+   "omrade": "samarbeten",
+   "namn": "Godkänn underentreprenörens arbete och dela foton",
+   "vad": "Det anlitande företaget granskar ett avgränsat, delat underlag och godkänner det färdiga arbetet från sin egen del av SAEFUR. Foton kan delas bild för bild vidare till den egna kunden.",
+   "nytta": "Godkännandet sker över företagsgränsen, med dokumentation.",
+   "status": "finns",
+   "fm": [
+    "FM-192"
+   ],
+   "sok": [
+    "godkänna",
+    "foton",
+    "över företagsgräns",
+    "UE-arbete"
+   ],
+   "roller": [
+    "projektledare",
+    "partner"
+   ],
+   "hor": [
+    "klarmarkera-godkanna",
+    "ata"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "samarbetsfaktura",
+   "omrade": "samarbeten",
+   "namn": "Partnerns faktura blir er leverantörsfaktura",
+   "vad": "Underentreprenörens faktura i samarbetet kommer in som leverantörsfaktura hos er, och köparen är alltid företaget.",
+   "nytta": "Fakturan registreras en gång och finns hos båda företagen.",
+   "status": "finns",
+   "fm": [
+    "FM-193"
+   ],
+   "sok": [
+    "faktura mellan företag",
+    "automatisk leverantörsfaktura",
+    "samarbetsfaktura"
+   ],
+   "roller": [
+    "ekonomi",
+    "partner"
+   ],
+   "hor": [
+    "leverantorsfaktura",
+    "underentreprenorskostnad"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "avtalstid-intjanat",
+   "omrade": "samarbeten",
+   "namn": "Avtalstid, intjänat och betalplan mellan företagen",
+   "vad": "Hur länge uppdraget gäller och vad som är upparbetat syns hos båda företagen, och en betalplan kan gälla mellan dem.",
+   "nytta": "Båda följer uppdragets tid, upparbetade värde och betalplan.",
+   "status": "finns",
+   "fm": [
+    "FM-194"
+   ],
+   "sok": [
+    "intjänat",
+    "betalplan",
+    "avtalstid",
+    "upparbetat",
+    "över kanten"
+   ],
+   "roller": [
+    "ekonomi",
+    "partner"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "fler-aktiviteter",
+   "omrade": "samarbeten",
+   "namn": "Mer arbete till samma partner",
+   "vad": "Det anlitande företaget lägger till aktiviteter i ett redan accepterat uppdrag.",
+   "nytta": "Ett pågående uppdrag kan utökas med fler aktiviteter.",
+   "status": "finns",
+   "fm": [
+    "FM-195"
+   ],
+   "sok": [
+    "lägg till aktivitet",
+    "utöka uppdrag"
+   ],
+   "roller": [
+    "projektledare",
+    "partner"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "samarbetsrattigheter",
+   "omrade": "samarbeten",
+   "namn": "Vem som får anlita och vem som får utföra",
+   "vad": "Behörigheten att anlita andra företag och att utföra uppdrag åt andra ges per person.",
+   "nytta": "Inköps- och uppdragsansvar kan lämnas över med tydliga befogenheter.",
+   "status": "finns",
+   "fm": [
+    "FM-197"
+   ],
+   "sok": [
+    "rättighet",
+    "behörighet",
+    "anlita"
+   ],
+   "roller": [
+    "agare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "bjud-in-foretag",
+   "omrade": "samarbeten",
+   "namn": "Bjud in ett företag som ännu saknar SAEFUR",
+   "vad": "Ett företag utanför SAEFUR bjuds in per mejl. Pris och aktiviteter visas när företaget är verifierat och personen har rätt att företräda det. Inbjudan öppnas när verifieringen mot Bolagsverket är i drift.",
+   "nytta": "Uppdragets villkor visas för den som har rätt att företräda företaget.",
+   "status": "avtal",
+   "fm": [
+    "FM-196",
+    "FM-198"
+   ],
+   "sok": [
+    "inbjudan",
+    "bjuda in",
+    "mejl",
+    "nytt företag",
+    "utanför SAEFUR"
+   ],
+   "roller": [
+    "agare",
+    "partner"
+   ],
+   "hor": [
+    "bolagsverket-verifiering"
+   ],
+   "not_": "Byggt för Sverige. Väntar på Bolagsverkets produktionsåtkomst och öppningsbeslut."
+  },
+  {
+   "id": "anstallningar",
+   "omrade": "hr",
+   "namn": "Anställningar med skyddade personuppgifter",
+   "vad": "Varje anställd finns som en post, med eller utan inloggning. Personnumret visas maskerat, och i klartext bara för den som har särskild behörighet, med loggning.",
+   "nytta": "Personuppgifterna visas efter uttrycklig behörighet.",
+   "status": "finns",
+   "fm": [
+    "FM-200"
+   ],
+   "sok": [
+    "anställd",
+    "personnummer",
+    "personalregister",
+    "medarbetare",
+    "HR",
+    "anställning"
+   ],
+   "roller": [
+    "hr",
+    "agare"
+   ],
+   "hor": [
+    "villkor-personalakt"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "narvaro-franvaro",
+   "omrade": "hr",
+   "namn": "Närvaro, frånvaro, semestersaldo och utlägg",
+   "vad": "Medarbetaren rapporterar själv på sin kontosida. Chefen ser att någon är borta, och orsaken visas för den som har behörighet.",
+   "nytta": "Underlaget till lönen samlas under månaden, och den som ansvarar för HR får relevant underlag.",
+   "status": "finns",
+   "fm": [
+    "FM-201"
+   ],
+   "sok": [
+    "närvaro",
+    "frånvaro",
+    "sjuk",
+    "semester",
+    "VAB",
+    "utlägg",
+    "tidrapport",
+    "semestersaldo",
+    "ledig"
+   ],
+   "roller": [
+    "hr",
+    "falt"
+   ],
+   "hor": [
+    "loneunderlag",
+    "tid-resa-material"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "schema",
+   "omrade": "hr",
+   "namn": "Grundschema, bemanning och tidrapporteringskalender",
+   "vad": "Planerad och rapporterad tid visas per vecka och månad. Medarbetaren bekräftar sina pass i en egen kalender och får en påminnelse när en dag saknas.",
+   "nytta": "Ni planerar bemanningen och följer upp den på samma ställe.",
+   "status": "finns",
+   "fm": [
+    "FM-202"
+   ],
+   "sok": [
+    "schema",
+    "bemanning",
+    "kalender",
+    "arbetspass",
+    "planering",
+    "arbetstid"
+   ],
+   "roller": [
+    "hr",
+    "projektledare",
+    "falt"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "ledighetsansokan",
+   "omrade": "hr",
+   "namn": "Ledighetsansökan med beslut",
+   "vad": "Den anställda ansöker i appen, och den som beslutar beviljar eller avslår. Ett beviljande registreras som frånvaro i samma steg.",
+   "nytta": "Den beviljade ledigheten förs direkt över till frånvaron.",
+   "status": "finns",
+   "fm": [
+    "FM-256"
+   ],
+   "sok": [
+    "ledighet",
+    "ansökan",
+    "semesteransökan",
+    "ledighetsansökan",
+    "bevilja"
+   ],
+   "roller": [
+    "hr",
+    "falt"
+   ],
+   "hor": [
+    "narvaro-franvaro"
+   ],
+   "not_": "Driftsatt. En intern efterkontroll återstår."
+  },
+  {
+   "id": "organisationskarta",
+   "omrade": "hr",
+   "namn": "Organisationskarta med enheter och chefer",
+   "vad": "Vem som rapporterar till vem ritas in en gång. Alla i företaget ser organisationskartan, och den som har behörighet ändrar den genom att dra och släppa.",
+   "nytta": "Nya medarbetare ser vilken enhet de hör till och vem de rapporterar till. Chefslinjen och befogenheterna hanteras var för sig.",
+   "status": "finns",
+   "fm": [
+    "FM-203"
+   ],
+   "sok": [
+    "organisation",
+    "org-schema",
+    "chef",
+    "enhet",
+    "avdelning",
+    "organisationsvy",
+    "hierarki",
+    "chefslinje"
+   ],
+   "roller": [
+    "hr",
+    "agare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "villkor-personalakt",
+   "omrade": "hr",
+   "namn": "Anställningens villkor med datum och skyddad personalakt",
+   "vad": "Villkoren har giltighetsdatum och historik. Arbetsgivarens handlingar om den anställda lagras krypterade och läses med uttrycklig behörighet.",
+   "nytta": "Gällande villkor och handlingar hittas av dem som har behörighet.",
+   "status": "finns",
+   "fm": [
+    "FM-257"
+   ],
+   "sok": [
+    "personalakt",
+    "villkor",
+    "handlingar",
+    "dokument",
+    "anställningsvillkor",
+    "lönevillkor"
+   ],
+   "roller": [
+    "hr"
+   ],
+   "hor": [
+    "avtal-fran-mall"
+   ],
+   "not_": "Driftsatt. En intern efterkontroll återstår."
+  },
+  {
+   "id": "avtal-fran-mall",
+   "omrade": "hr",
+   "namn": "Anställningsavtal från mall till registrerat original",
+   "vad": "Ett anställningsavtal eller ändringsavtal tas fram ur en mall med uppgifter ur systemet, skrivs ut eller sparas som PDF eller Word, och det undertecknade originalet registreras på personen.",
+   "nytta": "Avtalet utgår från registrerade uppgifter, granskas före underskrift och finns sedan på personen.",
+   "status": "finns",
+   "fm": [
+    "FM-258"
+   ],
+   "sok": [
+    "anställningsavtal",
+    "mall",
+    "Word",
+    "PDF",
+    "avtalsmall",
+    "ändringsavtal"
+   ],
+   "roller": [
+    "hr"
+   ],
+   "hor": [],
+   "not_": "Driftsatt. En intern efterkontroll återstår."
+  },
+  {
+   "id": "kollegachatt",
+   "omrade": "hr",
+   "namn": "Arbetskontakt och direktchatt mellan kolleger",
+   "vad": "En kollega nås via arbetstelefon, arbetsmejl eller chatt, även utanför projekten. Privata kontaktuppgifter hålls skilda från arbetskontakten.",
+   "nytta": "Kollegornas registrerade arbetskontakt finns på samma plats som chatten.",
+   "status": "finns",
+   "fm": [
+    "FM-204"
+   ],
+   "sok": [
+    "chatt",
+    "kollega",
+    "telefonlista",
+    "kontakt",
+    "intern chatt"
+   ],
+   "roller": [
+    "falt",
+    "hr"
+   ],
+   "hor": [
+    "konversationer"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "rattigheter",
+   "omrade": "hr",
+   "namn": "Behörigheter och områden per medarbetare",
+   "vad": "Behörigheterna ges var för sig, och den som delar ut en behörighet kan bara dela ut sådana den själv har. Områden som kundregister, leverantörer, försäljning och samarbeten slås på per kollega, och var och en kan dölja sina egna menyrader.",
+   "nytta": "Varje medarbetare får relevant insyn och befogenhet, med tydliga gränser för vad som kan delegeras.",
+   "status": "finns",
+   "fm": [
+    "FM-205",
+    "FM-224"
+   ],
+   "sok": [
+    "behörighet",
+    "rättighet",
+    "roll",
+    "meny",
+    "admin",
+    "åtkomst",
+    "användare",
+    "företagsrättigheter"
+   ],
+   "roller": [
+    "agare",
+    "hr"
+   ],
+   "hor": [
+    "projektroller",
+    "meny-tandregel"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "teamimport",
+   "omrade": "hr",
+   "namn": "Importera hela teamet",
+   "vad": "Ett befintligt team registreras i en gemensam import, med roll och arbetsinriktning per rad och möjlighet att ångra.",
+   "nytta": "Teamets uppgifter kommer in i ett samlat steg.",
+   "status": "finns",
+   "fm": [
+    "FM-206"
+   ],
+   "sok": [
+    "import",
+    "excel",
+    "team",
+    "bjud in",
+    "användare"
+   ],
+   "roller": [
+    "hr",
+    "agare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "tvapersonskontroll",
+   "omrade": "hr",
+   "namn": "Tvåpersonskontroll för känsliga beslut",
+   "vad": "Företaget kan välja att avslut av en anställning, ändrade behörigheter eller en borttagen medlem kräver godkännande av en andra behörig person, även när grundaren själv fattar beslutet.",
+   "nytta": "Känsliga beslut granskas av två personer när företaget väljer det.",
+   "status": "finns",
+   "fm": [
+    "FM-207"
+   ],
+   "sok": [
+    "fyra ögon",
+    "attest",
+    "säkerhet",
+    "kontroll",
+    "godkännande"
+   ],
+   "roller": [
+    "agare",
+    "hr"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "ta-bort-medlem",
+   "omrade": "hr",
+   "namn": "Åtkomsten avslutas när någon lämnar företaget",
+   "vad": "När medlemskapet tas bort stängs åtkomsten till företagets projekt, kunder och uppgifter. Personen behåller sitt eget konto.",
+   "nytta": "Åtkomsten till företaget avslutas i ett steg när medlemskapet tas bort.",
+   "status": "finns",
+   "fm": [
+    "FM-208"
+   ],
+   "sok": [
+    "offboarding",
+    "sluta",
+    "ta bort",
+    "avsluta anställning",
+    "förlorar åtkomsten",
+    "slutar"
+   ],
+   "roller": [
+    "hr",
+    "agare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "tjansteresa",
+   "omrade": "hr",
+   "namn": "Tjänsteresor med traktamente enligt rätt lands regler",
+   "vad": "Resan registreras på uppdraget, med traktamente beräknat enligt reglerna i det land resan gäller. Planerad funktion, och resor och mil registreras redan i dag på uppdraget.",
+   "nytta": "Reseräkningen följer det aktuella landets regler.",
+   "status": "kommer",
+   "fm": [
+    "FM-251"
+   ],
+   "sok": [
+    "traktamente",
+    "resa",
+    "reseräkning",
+    "tjänsteresa",
+    "milersättning"
+   ],
+   "roller": [
+    "hr",
+    "falt"
+   ],
+   "hor": [
+    "tid-resa-material"
+   ],
+   "not_": "Beslutad, byggs när ett kundföretag har en skarp resa."
+  },
+  {
+   "id": "stallforetradare",
+   "omrade": "hr",
+   "namn": "Ställföreträdare och överlämning av grundarens ansvar",
+   "vad": "Företaget kan föra över grundarens ansvar till en ställföreträdare, med behörigheterna intakta. Planerad funktion, och i dag hjälper SAEFURs support till med den här överlämningen.",
+   "nytta": "Ansvaret kan föras vidare när grundaren är borta.",
+   "status": "kommer",
+   "fm": [
+    "FM-253"
+   ],
+   "sok": [
+    "kontinuitet",
+    "ställföreträdare",
+    "vikarie",
+    "grundare",
+    "återvinning av ansvar"
+   ],
+   "roller": [
+    "agare"
+   ],
+   "hor": [
+    "tvapersonskontroll"
+   ],
+   "not_": "Beslutad riktning. Under piloten hanteras det av SAEFURs support."
+  },
+  {
+   "id": "inloggning",
+   "omrade": "plattform",
+   "namn": "Inloggning med e-post, BankID eller passkey",
+   "vad": "Alla loggar in på samma ställe. Till vardags räcker en passkey, till exempel Face ID eller Touch ID, och BankID används när identiteten ska styrkas. Lösenordet återställer var och en själv.",
+   "nytta": "Ni loggar in på ett enkelt sätt och kommer snabbt tillbaka med en passkey.",
+   "status": "finns",
+   "fm": [
+    "FM-001"
+   ],
+   "sok": [
+    "BankID",
+    "inloggning",
+    "passkey",
+    "Face ID",
+    "Touch ID",
+    "lösenord",
+    "tvåfaktor",
+    "logga in",
+    "säkerhet"
+   ],
+   "roller": [
+    "agare",
+    "falt",
+    "kund"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "google-inloggning",
+   "omrade": "plattform",
+   "namn": "Inloggning med Google",
+   "vad": "Inloggning med Google-kontot, kopplat till samma konto per person. Planerad inloggningsväg, som öppnas när anslutningen för drift är klar.",
+   "nytta": "Ytterligare en inloggningsväg för den som använder Google.",
+   "status": "kommer",
+   "fm": [
+    "FM-234"
+   ],
+   "sok": [
+    "Google",
+    "Gmail",
+    "SSO"
+   ],
+   "roller": [
+    "agare"
+   ],
+   "hor": [
+    "inloggning"
+   ],
+   "not_": "Byggt. Kräver en Google-klient för produktionsdomänen."
+  },
+  {
+   "id": "grunda-foretaget",
+   "omrade": "plattform",
+   "namn": "Starta företaget med land och regelgrund",
+   "vad": "Företaget läggs upp en gång med land, moms och de uppgifter som fakturorna behöver. Ett felaktigt valt land rättas av den som får teckna firman.",
+   "nytta": "Företaget har sina grunduppgifter på plats från första fakturan.",
+   "status": "finns",
+   "fm": [
+    "FM-002"
+   ],
+   "sok": [
+    "skapa företag",
+    "registrera",
+    "komma igång",
+    "starta",
+    "land",
+    "moms",
+    "grunda"
+   ],
+   "roller": [
+    "agare"
+   ],
+   "hor": [
+    "bolagsverket-verifiering"
+   ],
+   "not_": "I drift i Sverige. Juridisk granskning av texter för andra marknader återstår."
+  },
+  {
+   "id": "bolagsverket-verifiering",
+   "omrade": "plattform",
+   "namn": "Verifiering av företaget mot Bolagsverket",
+   "vad": "En administratör som har legitimerat sig med BankID anger organisationsnumret och får företaget och sin rätt att företräda det bekräftade ur registret. Verifieringen öppnas när anslutningen till Bolagsverket är klar för drift.",
+   "nytta": "Företagsprofilen visar uppgifter från registret.",
+   "status": "avtal",
+   "fm": [
+    "FM-003"
+   ],
+   "sok": [
+    "Bolagsverket",
+    "verifierad",
+    "firmatecknare",
+    "företrädare",
+    "verifiering"
+   ],
+   "roller": [
+    "agare",
+    "kund"
+   ],
+   "hor": [],
+   "not_": "Byggt. Väntar på klientuppgifter och ändamålsgodkännande från Bolagsverket."
+  },
+  {
+   "id": "flera-organisationer",
+   "omrade": "plattform",
+   "namn": "Växla mellan företag i samma konto",
+   "vad": "Den som äger eller arbetar i mer än ett företag växlar mellan dem i menyn.",
+   "nytta": "Ett konto för alla företag du har åtkomst till, och varje företag har sina egna uppgifter.",
+   "status": "finns",
+   "fm": [
+    "FM-004"
+   ],
+   "sok": [
+    "flera bolag",
+    "koncern",
+    "växla",
+    "flera företag",
+    "byta organisation"
+   ],
+   "roller": [
+    "agare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "sprak",
+   "omrade": "plattform",
+   "namn": "Gränssnitt på ditt språk, dokument på kundens",
+   "vad": "Varje person arbetar på sitt eget språk. Offert, avtal och faktura skickas på kundens språk, enligt de dokumentregler som gäller för företagets marknad.",
+   "nytta": "Medarbetare och kunder möter SAEFUR på sitt språk.",
+   "status": "finns",
+   "fm": [
+    "FM-220"
+   ],
+   "sok": [
+    "språk",
+    "engelska",
+    "polska",
+    "26 språk",
+    "24 språk",
+    "översättning",
+    "flerspråkig",
+    "svenska"
+   ],
+   "roller": [
+    "agare",
+    "falt",
+    "kund"
+   ],
+   "hor": [
+    "transaktionsmejl"
+   ],
+   "not_": "Antalet språk ska bekräftas före publicering: koden listar 26 kataloger, förmågekartan säger 24 levande språk."
+  },
+  {
+   "id": "meddelandeoversattning",
+   "omrade": "plattform",
+   "namn": "Översättning av meddelanden",
+   "vad": "Ett meddelande skrivs på avsändarens språk och läses på mottagarens. Översättningen aktiveras i ett senare steg.",
+   "nytta": "Kolleger med olika språk kan samtala om samma uppdrag.",
+   "status": "avtal",
+   "fm": [
+    "FM-214"
+   ],
+   "sok": [
+    "översätt",
+    "översättning",
+    "meddelanden",
+    "språk"
+   ],
+   "roller": [
+    "falt"
+   ],
+   "hor": [
+    "konversationer"
+   ],
+   "not_": "Byggt. Aktiveras när egen AI-drift finns."
+  },
+  {
+   "id": "push-notiser",
+   "omrade": "plattform",
+   "namn": "Notiser på låsskärmen",
+   "vad": "Notiser i mobilen även när appen är stängd. Planerad funktion i en senare utbyggnad. I dag visas notiserna i appen.",
+   "nytta": "Beskedet når fram där du är, när enheten stöder det.",
+   "status": "kommer",
+   "fm": [
+    "FM-214"
+   ],
+   "sok": [
+    "push",
+    "mobilnotis",
+    "låsskärm"
+   ],
+   "roller": [
+    "falt"
+   ],
+   "hor": [
+    "notiser"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "hjalpcenter",
+   "omrade": "plattform",
+   "namn": "Hjälpcenter med sökning och startguider",
+   "vad": "Hjälpen finns i produkten. Den täcker de vanligaste flödena och menyn, har startguider per företagstyp och en sökning som leder till rätt sida.",
+   "nytta": "Du hittar guider och svar i produkten, och supporten hjälper till när du behöver mer.",
+   "status": "finns",
+   "fm": [
+    "FM-221"
+   ],
+   "sok": [
+    "hjälp",
+    "manual",
+    "guide",
+    "startguide",
+    "dokumentation",
+    "instruktion",
+    "support"
+   ],
+   "roller": [
+    "agare",
+    "falt"
+   ],
+   "hor": [
+    "mini"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "mini",
+   "omrade": "plattform",
+   "namn": "SAEFUR Mini, hjälpfiguren",
+   "vad": "En liten figur som hälsar, reagerar och öppnar hjälpen. Var och en väljer hur mycket figuren ska synas, och den kan stängas av.",
+   "nytta": "En valbar genväg till hjälpen och ett lättare sällskap i gränssnittet.",
+   "status": "finns",
+   "fm": [
+    "FM-222"
+   ],
+   "sok": [
+    "Mini",
+    "figur",
+    "maskot",
+    "hjälpfigur",
+    "assistent"
+   ],
+   "roller": [
+    "falt",
+    "agare"
+   ],
+   "hor": [
+    "hjalpcenter"
+   ],
+   "not_": "I drift. Fler utseenden och rörelser byggs vidare."
+  },
+  {
+   "id": "pwa",
+   "omrade": "plattform",
+   "namn": "Installerbar app på hemskärmen",
+   "vad": "SAEFUR kan läggas på telefonens hemskärm och visar tydligt när uppkopplingen saknas. Arbete helt utan uppkoppling är planerat.",
+   "nytta": "Telefonen blir ett arbetsredskap med SAEFUR nära till hands.",
+   "status": "finns",
+   "fm": [
+    "FM-223"
+   ],
+   "sok": [
+    "app",
+    "iPhone",
+    "Android",
+    "hemskärm",
+    "offline",
+    "App Store",
+    "installera"
+   ],
+   "roller": [
+    "falt"
+   ],
+   "hor": [],
+   "not_": "I driftversionen 509a79334 sedan 26 okt 2026 (förmågekartan v54: klar, produktion nej före driftsättningen). Bekräftas i drift före publicering (E11). Arbete helt utan uppkoppling är beslutad riktning."
+  },
+  {
+   "id": "meny-tandregel",
+   "omrade": "plattform",
+   "namn": "Menyn visar de områden ni använder",
+   "vad": "En menyrad visas när personen har behörighet till området och företaget har börjat använda det. Vilka områden som visas och vad en person får göra styrs var för sig.",
+   "nytta": "Ni börjar med de områden ni behöver, och menyn växer med verksamheten.",
+   "status": "finns",
+   "fm": [
+    "FM-224"
+   ],
+   "sok": [
+    "meny",
+    "anpassa",
+    "dölja",
+    "enkel",
+    "växa",
+    "områden",
+    "tändregel",
+    "tänder"
+   ],
+   "roller": [
+    "agare"
+   ],
+   "hor": [
+    "rattigheter"
+   ],
+   "not_": ""
+  },
+  {
+   "id": "support-sparbarhet",
+   "omrade": "plattform",
+   "namn": "Support med avgränsad åtkomst och logg",
+   "vad": "Supporten ser det som behövs för att hjälpa till. Varje åtgärd loggas med läget före och efter, och företaget ser när supporten har agerat.",
+   "nytta": "Hjälpen är avgränsad och spårbar.",
+   "status": "finns",
+   "fm": [
+    "FM-230"
+   ],
+   "sok": [
+    "support",
+    "logg",
+    "spårbarhet",
+    "GDPR",
+    "administration",
+    "granskningslogg"
+   ],
+   "roller": [
+    "agare"
+   ],
+   "hor": [],
+   "not_": ""
+  },
+  {
+   "id": "driftsakerhet",
+   "omrade": "plattform",
+   "namn": "Säkerhetskopior och skydd av publika länkar",
+   "vad": "Upprepade försök att gissa kundlänkar bromsas, och driften kan återställas från säkerhetskopia.",
+   "nytta": "Kundlänkarna är skyddade och uppgifterna säkerhetskopieras.",
+   "status": "finns",
+   "fm": [
+    "FM-233"
+   ],
+   "sok": [
+    "säkerhet",
+    "backup",
+    "driftsäkerhet",
+    "säkerhetskopia"
+   ],
+   "roller": [
+    "agare"
+   ],
+   "hor": [],
+   "not_": "I drift. Loggaggregering och fler driftkontroller byggs vidare."
+  },
+  {
+   "id": "marknader",
+   "omrade": "plattform",
+   "namn": "Tyskland, Storbritannien, Frankrike och Spanien",
+   "vad": "Stödet för moms och fakturakrav i Tyskland, Storbritannien, Frankrike och Spanien är förberett och öppnas land för land efter juridisk granskning. Vid lanseringen är SAEFUR öppet för företag i Sverige.",
+   "nytta": "Varje marknad får sina egna regler, och språk och valuta väljs för sig.",
+   "status": "avtal",
+   "fm": [
+    "FM-240",
+    "FM-241"
+   ],
+   "sok": [
+    "Tyskland",
+    "Storbritannien",
+    "UK",
+    "Frankrike",
+    "Spanien",
+    "internationellt",
+    "DATEV",
+    "utland",
+    "export"
+   ],
+   "roller": [
+    "agare"
+   ],
+   "hor": [],
+   "not_": "Byggt. I produktion bara Sverige. Väntar på juridisk granskning och åtkomster per land."
+  },
+  {
+   "id": "projektintelligens",
+   "omrade": "plattform",
+   "namn": "Kostnadsprognos och jämförelser mellan projekt",
+   "vad": "Projekt jämförs med varandra och en prognos tas fram ur kostnadshistoriken. Förklaringar i klartext till varför ett projekt avviker aktiveras i ett senare steg.",
+   "nytta": "Siffrorna får sammanhang och en riktning framåt.",
+   "status": "avtal",
+   "fm": [
+    "FM-232"
+   ],
+   "sok": [
+    "AI",
+    "prognos",
+    "riskcoachning",
+    "förklaring",
+    "benchmark",
+    "förklaringar i klartext"
+   ],
+   "roller": [
+    "agare"
+   ],
+   "hor": [],
+   "not_": "Deterministiska delar i drift. Språkmodell i egen drift väntar på beslut."
+  }
+ ]
+}
