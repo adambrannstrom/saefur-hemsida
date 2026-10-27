@@ -3,7 +3,7 @@
 // Formulärprovet byter ut mottagningens adress i sidans data och svarar med en stubbe i testet. Stubben finns inte i sidan.
 import { chromium } from '/Users/adambrannstrom/Websites/Hantis-main/node_modules/playwright/index.mjs';
 const BAS = 'http://127.0.0.1:5520/';
-const SIDOR = ['index.html', 'funktioner.html', 'media.html', 'priser.html', 'om.html', 'early-bird.html'];
+const SIDOR = ['index.html', 'funktioner.html', 'media.html', 'priser.html', 'om.html', 'early-bird.html', 'betatest.html'];
 const fel = [];
 const b = await chromium.launch();
 const log = (...a) => console.log(...a);
@@ -24,9 +24,9 @@ for (const [bredd, hojd] of [[1440, 900], [390, 844]]) {
     const m = await p.evaluate(() => ({
       scroll: document.documentElement.scrollWidth > document.documentElement.clientWidth,
       band: document.querySelector('.lansering')?.textContent.replace(/\s+/g, ' ').trim(),
-      pilot: [...document.querySelectorAll('header a')].filter(a => a.textContent.trim() === 'Pilotinloggning').map(a => a.href),
+      inloggning: [...document.querySelectorAll('header a')].filter(a => a.textContent.trim() === 'Inloggning för betatest').map(a => a.href),
       eb: [...document.querySelectorAll('header .right a.btn')].map(a => a.textContent.trim() + '→' + a.getAttribute('href')),
-      gamla: document.body.innerText.match(/Prova nu|gratis provperiod|Logga in|Konto skapas i webbläsaren|Interaktiv|127\.0\.0\.1:55/g),
+      gamla: document.body.innerText.match(/Prova nu|gratis provperiod|Logga in|Konto skapas i webbläsaren|Interaktiv|[Pp]ilot|Funktioner|127\.0\.0\.1:55/g),
       regLank: [...document.querySelectorAll('a')].filter(a => /sv\/register/.test(a.href)).length,
       rubrik: document.querySelector('h1')?.innerText.replace(/\n/g, ' '),
     }));
@@ -40,7 +40,7 @@ for (const [bredd, hojd] of [[1440, 900], [390, 844]]) {
 {
   const p = await ny(1440, 900, 'meny-dator');
   await p.goto(BAS + 'index.html');
-  for (const t of ['Funktioner', 'Media', 'Priser', 'Om SAEFUR']) {
+  for (const t of ['Vad ni kan göra', 'Media', 'Priser', 'Om SAEFUR']) {
     await p.click(`header .nav a:has-text("${t}")`); await p.waitForTimeout(300);
     log('meny dator', t, '→', p.url().replace(BAS, ''), '| aktiv:', await p.textContent('header .nav a[aria-current=page]'));
   }
@@ -53,7 +53,7 @@ for (const [bredd, hojd] of [[1440, 900], [390, 844]]) {
 {
   const p = await ny(390, 844, 'meny-mobil');
   await p.goto(BAS + 'index.html');
-  for (const t of ['Funktioner', 'Media', 'Priser', 'Om SAEFUR', 'Early Bird']) {
+  for (const t of ['Vad ni kan göra', 'Media', 'Priser', 'Om SAEFUR', 'Early Bird']) {
     await p.goto(BAS + 'index.html');
     await p.click('header details.meny summary'); await p.waitForTimeout(150);
     await p.click(`header .panel a:has-text("${t}")`); await p.waitForTimeout(300);

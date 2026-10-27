@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 HAR = Path(__file__).resolve().parent
-for skript in ("bygg_start_media.py", "bygg_funktioner.py", "bygg_priser.py", "bygg_om.py", "bygg_early_bird.py"):
+for skript in ("bygg_start_media.py", "bygg_funktioner.py", "bygg_priser.py", "bygg_om.py", "bygg_early_bird.py", "bygg_betatest.py"):
     print("==", skript)
     r = subprocess.run([sys.executable, "-I", str(HAR / skript)])
     if r.returncode:

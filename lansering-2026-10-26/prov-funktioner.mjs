@@ -181,7 +181,7 @@ for (const [bredd, hojd, namn] of [[1440, 900, 'dator'], [390, 844, 'mobil']]) {
   kolla(fy.vis && fy.v >= 0 && fy.h <= bredd && fy.n === 8, `10 fokus i fältet visar förslagsytan med ${fy.n} sökningar inom skärmen (${fy.v} till ${fy.h})`);
   await bild('10_forslag');
   await p.keyboard.press('ArrowDown'); let fok = await p.evaluate(() => document.activeElement?.dataset?.q);
-  kolla(fok === 'fakturera', `10 pil ned från fältet går till första förslaget: ${fok}`);
+  kolla(fok === 'offert', `10 pil ned från fältet går till första förslaget: ${fok}`);
   await p.keyboard.press('Escape'); await p.waitForTimeout(100);
   l = await lage(); fok = await p.evaluate(() => document.activeElement?.id);
   kolla(!l.forslag && fok === 'q', `10 Escape stänger förslagsytan, fokus tillbaka i fältet`);

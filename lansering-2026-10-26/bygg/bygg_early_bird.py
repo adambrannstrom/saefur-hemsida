@@ -13,7 +13,7 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from gemensamt import LANSERING, EB, LOGIN, MOTTAGNING, huvud, sidfot, skissrad, FORETAG  # noqa: E402
+from gemensamt import LANSERING, EB, LOGIN, MOTTAGNING, BETATEST, INLOGG, huvud, sidfot, skissrad, FORETAG  # noqa: E402
 
 ROT = Path(__file__).resolve().parent.parent
 # Texten och versionen (2026-10-25.1) är A:s i Hantis-main (launch.earlyBird.consent); A sparar versionen, webben skickar den inte.
@@ -26,7 +26,7 @@ VILLKOR = [
     "Ett företag per anmälan.",
     "Abonnemanget ska starta inom 90 dagar efter lanseringsbeskedet.",
     "Kan inte kombineras med Founding Customer eller andra introduktionserbjudanden.",
-    "Anmälan ger inte pilotåtkomst.",
+    "Anmälan ger inte tillgång till betatestet.",  # 27 okt: pilot blev betatest i besökarens text, villkoret i sak oförändrat
 ]
 villkor = "".join(f"<li>{v}</li>" for v in VILLKOR)
 
@@ -85,7 +85,7 @@ sida = f'''<!doctype html>
       <p class="mikro eb-samtycke-text">{SAMTYCKE}</p>
       <button class="btn stor" type="submit" id="eb-skicka">Anmäl ditt företag</button>
       <div class="eb-status" id="eb-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
-      <p class="mikro">Redan inbjuden som pilot? <a class="textlank" href="{LOGIN}">Pilotinloggning</a></p>
+      <p class="mikro">Redan med i betatestet? <a class="textlank" href="{LOGIN}">{INLOGG}</a></p>
     </form>
   </div>
 </section>
@@ -114,6 +114,19 @@ sida = f'''<!doctype html>
     </div>
   </div>
 </section>
+
+<section class="sektion band" id="betatest">
+  <div class="wrap eb-grid">
+    <div>
+      <p class="etikett">Betatest</p>
+      <h2 class="rubrik">Vill ni börja före lanseringen?</h2>
+    </div>
+    <div class="eb-text">
+      <p>Före lanseringen väljer vi ut ett fåtal företag från olika branscher och med olika antal anställda som börjar använda SAEFUR i sitt arbete. De får hjälp att komma igång, stöd kring integrationer och möjlighet att lämna synpunkter som påverkar utvecklingen.</p>
+      <p>Betatestet är ett eget erbjudande med en egen intresseanmälan. <a class="textlank" href="{BETATEST}">Läs om betatestet</a></p>
+    </div>
+  </div>
+</section>
 </main>
 
 {sidfot()}
@@ -138,7 +151,7 @@ if not MOTTAGNING:
 
 # ---------- Intern översikt ----------
 sidor = [("index.html", "Start"), ("funktioner.html", "Funktioner (5515)"), ("media.html", "Media"), ("priser.html", "Priser (5516)"),
-         ("om.html", "Om SAEFUR (5517)"), ("early-bird.html", "Early Bird (ny)")]
+         ("om.html", "Om SAEFUR (5517)"), ("early-bird.html", "Early Bird (ny)"), ("betatest.html", "Betatest (27 okt, intresseanmälan via e-post)")]
 kontroll = [("kontroll-funktioner.html", "Funktioner mot förmågekartan"), ("kontroll-priser.html", "Priser, påstående för påstående"),
             ("kontroll-om.html", "Om SAEFUR, påstående för påstående")]
 anslutning = (f"<code>{MOTTAGNING}</code>" if MOTTAGNING else "<b>Saknas.</b> Formuläret skickar ingenting och säger det öppet.")

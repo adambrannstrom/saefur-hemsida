@@ -288,9 +288,9 @@
         '<p class="res-fot"><span class="mer">Rulla för fler träffar</span><span class="tangenter">Enter öppnar den första träffen · pil ned och upp flyttar · Esc stänger</span></p>';
     } else {
       resultat.innerHTML = '<div class="res-huvud"><h2 id="res-rubrik" tabindex="-1">Inga träffar på ”' + html(lage.q) + '”</h2></div>' +
-        '<div class="res-lista"><p class="inget">Prova ett kortare ord eller ett annat ord, välj ett vanligt sökord nedan, eller bläddra bland områdena under sökningen.</p>' +
+        '<div class="res-lista"><p class="inget">Prova ett kortare ord eller ett annat ord för samma sak, välj ett av orden nedan, eller bläddra bland områdena under sökningen.</p>' +
         '<p class="inget-chips">' + exempelOrd.map(function (e) { return '<button type="button" class="chip" data-q="' + html(e) + '">' + html(e) + '</button>'; }).join('') + '</p>' +
-        '<p class="inget mikro">Hittar du ändå inget? <a href="mailto:info@saefur.com?subject=Fr%C3%A5ga%20om%20funktion">Fråga oss</a>, så svarar vi hur SAEFUR stöder det.</p>' + ut + '</div>';
+        '<p class="inget mikro">Hittar du ändå inget? <a href="mailto:info@saefur.com?subject=Fr%C3%A5ga%20om%20SAEFUR">Fråga oss</a>, så svarar vi hur SAEFUR stöder ert arbete.</p>' + ut + '</div>';
     }
     uppdateraBanner();
     if (panelOppen) matta();

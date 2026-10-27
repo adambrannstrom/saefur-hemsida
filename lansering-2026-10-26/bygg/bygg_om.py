@@ -1,6 +1,6 @@
 # Bygger Om SAEFUR-prototypen: python3 -I bygg.py i mappen prototyp-om. 2026-10-25 sen kväll.
 #
-#   om.html         besökarens sida: varför SAEFUR finns, tankarna bakom, fyra principer, det vi lovar, företaget, avslut
+#   om.html         besökarens sida: varför SAEFUR finns, det SAEFUR hjälper till med, fyra principer, det vi lovar, företaget, avslut
 #   kontroll.html   intern sida: varje påstående med läge och källa
 #
 # Sidan är ett textförslag för Adams granskning. Den skiljer tre lägen:
@@ -10,6 +10,8 @@
 # Sidhuvud, sidfot och stil följer v4 (../../v4-lattare-2026-10-25/). Bakgrund: tre egna fotografier (sedan 26 okt) med samma
 # rörelse som den godkända prissidan (port 5516). Ingen person nämns vid namn.
 # Kopia med lanseringslagret, 25 okt 2026: python3 -I bygg/bygg_om.py i mappen lansering-2026-10-26. Sidhuvud och sidfot från gemensamt.py.
+# 27 okt (Adams uppdrag): rubriken "När företaget växer behöver arbetet fördelas.", varför-avsnittet omskrivet (kundservice,
+# samlad information, kundlivscykeln), de fyra frågorna ersatta av det SAEFUR hjälper till med, principerna i vardagligt språk.
 from pathlib import Path
 import json
 import re
@@ -37,32 +39,28 @@ VAXLING_SEK = 9
 P = [
     # id, läge, text som den står på sidan (eller sammandrag), källa, kvar att göra
     ("kundservice", "belagt",
-     "Efter många år med ansvar för kundservice vet vi att utebliven, försenad eller felaktig information är en av de största orsakerna till missnöjda kunder.",
-     "Adams redaktionella riktlinjer (citerade i omtag-2026-10-25/01_analys.md avsnitt 5). Erfarenhetsutsaga från avsändaren, ingen studie.",
+     "Många år med ansvar för kundservice har lärt oss att tydlig och korrekt information i tid är en av de viktigaste förutsättningarna för nöjda kunder.",
+     "Adams redaktionella riktlinjer (citerade i omtag-2026-10-25/01_analys.md avsnitt 5), positivt formulerad 27 okt. Erfarenhetsutsaga från avsändaren, ingen studie.",
      "Inget. Orden verksamhet och ledning ur v3:s utkast är borttagna eftersom de saknar belägg utöver utkastet."),
     ("leta", "belagt",
-     "Samlad information ger tillbaka den tid som annars går åt till att leta, påminna, föra över och stämma av.",
-     "SAEFUR Nuläge och konkurrensbenchmark 18 okt 2026 (Sälj-mappen): kundvärdet beskrivs som det arbete som försvinner: leta efter underlag, påminna, registrera om, stämma av.",
+     "Samlad information sparar tid i varje steg: tiden och materialet finns på projektet när fakturan ska skickas, offerten och arbetets läge finns på kundkortet när kunden ringer, och underlaget till redovisningsbyrån tas fram ur det som redan är registrerat.",
+     "SAEFUR Nuläge och konkurrensbenchmark 18 okt 2026 (Sälj-mappen): leta efter underlag, påminna, registrera om, stämma av. Konkretiserat 27 okt med kundkortet (offerter, pågående arbete, fakturor), fakturaunderlag ur registrerat arbete och SIE4 per period (Start, områdena Kunder, Fakturering och Byrån).",
      "Inget."),
     ("en-gang", "belagt",
-     "En uppgift registreras en gång, där den uppstår, och följer sedan med från överenskommelsen med kunden, genom arbetet, till fakturan och vidare till underlaget hos redovisningspartnern.",
-     "Broschyr 1 (okt 2026) principen Registrera en gång; Produktöversikt sept 2026 avsnitt 1.",
+     "Kundlivscykeln: kundens uppgifter och överenskommelser följer med från första kontakten till offerten, arbetet och fakturan, och vidare till underlaget hos redovisningspartnern.",
+     "Broschyr 1 (okt 2026) principen Registrera en gång; Produktöversikt sept 2026 avsnitt 1; Start, områdena Försäljning (affärsmöjlighet vidare till offert, avtal, leverans och faktura), Offerter (accepterad offert blir grunden för avtalet) och Fakturering (underlag ur registrerat arbete och leveranser). Ersätter \"registreras där den uppstår\" 27 okt.",
      "Inget."),
     ("insyn", "belagt",
-     "Varje person får den insyn och befogenhet som uppgiften kräver. Förtroliga uppgifter, som anställningshandlingar och marginaler, är förbehållna dem som har ansvaret för dem, och den som leder kan följa helheten.",
+     "Den som leder bestämmer vilken insyn och vilka befogenheter varje person får. Förtroliga uppgifter, som anställningshandlingar och marginaler, stannar hos dem som har ansvaret för dem, och den som leder följer helheten.",
      "Förmågekartan: rättigheter per person (FM-205), anställningshandlingar bakom uttrycklig rättighet (FM-257), marginal efter part och rättighet (FM-172). Ersätter den avvisade formuleringen om den enda som vet (Adams besked 26 okt).",
      "Inget."),
-    ("halla-ihop", "belagt",
-     "Läget, nästa steg och handlingen på samma ställe.",
-     "Egen sammanfattning av känslan i Hantis-main/docs/04_PRODUCT/UX_FEELING_BRIEF.md (maj 2026). Det tidigare citatet är ersatt enligt ordspärren 26 okt.",
+    ("hjalp", "belagt",
+     "Det SAEFUR hjälper till med: hålla det som är lovat kunden, fakturera det som är gjort, följa upp betalningar, lämna underlag till byrån och lönepartnern.",
+     "Start, områdena Kunder (löften och kundärenden med ansvarig och återkopplingsdatum), Fakturering (underlag ur arbete och leverans, påminnelser som skickas efter godkännande, Swish och kort via betallänk) och Byrån och lönepartnern (SIE4 per period med lista över det som saknas, löneunderlag per månad). Ersätter 27 okt avsnittet med en vanlig tisdag och fyra frågor (halla-ihop, fyra-fragor).",
      "Inget."),
-    ("fyra-fragor", "besked",
-     "Fyra frågor som varje vy prövas mot: förstå läget, se nästa steg, agera där du är, låt uppgiften följa med.",
-     "Begriplighet, hanterbarhet och meningsfullhet ur UX-briefen (känsla av sammanhang). B12 i beslutsunderlaget och Adams besked 25 okt: tanken kvar, begreppet nämns aldrig. Hanterbarhet är delad i två frågor för att följa regeln om fyra led.",
-     "Adam läser formuleringarna. Fråga 2 och 3 kan slås ihop om tre led godtas."),
-    ("princip-1", "belagt", "Registrera en gång.", "Broschyr 1 okt 2026, Tre principer.", "Inget."),
-    ("princip-2", "belagt", "Tydligt underlag. Medvetna beslut.", "Broschyr 1 okt 2026 (där: Fakta beslutar, människan attesterar), omformulerad 26 okt efter språkanalysen; produkten: förberedda påminnelser godkänns före utskick (FM-116), fakturautkast låses av en människa (FM-131).", "Broschyrerna har fortfarande det äldre namnet."),
-    ("princip-3", "belagt", "Ni börjar med det ni behöver.", "Broschyr 1 okt 2026 (där: Ni möter det ni använder), omformulerad 26 okt; menyn visar områden efter användning och behörighet (FM-224).", "Broschyrerna har fortfarande det äldre namnet."),
+    ("princip-1", "belagt", "Skriv in en uppgift en gång.", "Broschyr 1 okt 2026, Tre principer (där: Registrera en gång), vardagligare 27 okt.", "Broschyrerna har fortfarande det äldre namnet."),
+    ("princip-2", "belagt", "SAEFUR förbereder, ni bestämmer.", "Broschyr 1 okt 2026 (där: Fakta beslutar, människan attesterar), omformulerad 26 okt efter språkanalysen och 27 okt; produkten: förberedda påminnelser godkänns före utskick (FM-116), fakturautkast låses av en människa (FM-131).", "Broschyrerna har fortfarande det äldre namnet."),
+    ("princip-3", "belagt", "Börja med det ni behöver.", "Broschyr 1 okt 2026 (där: Ni möter det ni använder), omformulerad 26 okt och 27 okt; menyn visar områden efter användning och behörighet (FM-224).", "Broschyrerna har fortfarande det äldre namnet."),
     ("princip-4", "belagt", "Kunden ser det som berör kunden.",
      "Produktöversikt sept 2026, unik funktion 05: kundens länk med status, bilder, offerter och fakturor; interna siffror, marginaler och intern kommunikation stannar hos er. Fjärde principen enligt 02 och fråga 9 i 04 (fyra led).",
      "Adam avgör om fyra principer är bättre än tre (fråga 9)."),
@@ -72,7 +70,7 @@ P = [
      "Inget. Sedan 26 okt står planerade funktioner och väntande anslutningar beskrivna vid respektive funktion på Funktioner (Adams uppdrag 26 okt)."),
     ("rakt-svar", "belagt", "Frågor om ert eget arbetssätt besvarar vi på info@saefur.com.",
      "Supportadressen är den enda belagda kontaktvägen (01_analys). Svarstid saknas (D5).", "Svarstid om Adam vill ange en."),
-    ("i-drift", "besked", "SAEFUR körs i dag hos pilotföretag i Sverige.", "Ersätter \"i drift i Sverige\" från v4:s sidfot, som läser fel bredvid Lansering hösten 2026. Piloter är bekräftade i 08_lansering_early_bird_plan.md.", "Inget. Godkänd av Adam 25 okt 2026."),
+    ("i-drift", "besked", "SAEFUR används i dag av företag i betatest i Sverige.", "Ersätter \"i drift i Sverige\" från v4:s sidfot, som läser fel bredvid Lansering hösten 2026. Piloter är bekräftade i 08_lansering_early_bird_plan.md. Godkänd av Adam 25 okt som \"körs i dag hos pilotföretag\"; pilot blev betatest 27 okt (Adams uppdrag).", "Inget."),
     ("konto", "belagt", "När SAEFUR har öppnat skapar ni konto i webbläsaren.", "Verifierat 26 okt kväll mot driftversionen 509a79334: registreringen finns och spärren är driftsatt (/sv/register visar Registreringen är stängd). Meningen beskriver läget efter öppning, som sker på Adams besked.", "Inget."),
     ("sprak", "belagt", "Medarbetare kan använda systemet på 26 språk.",
      "Hantis-main/src/i18n/languages.ts 25 okt: 26 språk med status live (sv, nb, da, fi, is, fit, se, en, de, fr, es, it, pt-PT, pl, ro, uk, ru, tr, bg, hr, sr-Latn, bs, sq, el, lt, lv). Broschyr 1 säger också 26.",
@@ -129,29 +127,29 @@ panel = "".join(f'<a href="{h}">{t}</a>' for h, t in MENY)
 DATA = {"bilder": [k for k, *_ in BILDER], "vaxling": VAXLING_SEK}
 
 # ---------- Texterna ----------
-FRAGOR = [
-    ("01", "Förstå läget",
-     "Det som visas går att förstå direkt: vad som är klart, vad som pågår, vad som väntar och vad som är försenat. Varje siffra hör ihop med det arbete den kommer ifrån."),
-    ("02", "Se nästa steg",
-     "Systemet förbereder nästa handling, som offerten, påminnelsen, fakturan eller attesten. Du ser vad som väntar på dig och kan ta det i tur och ordning."),
-    ("03", "Agera där du är",
-     "Det som behövs för att ta steget finns i samma vy. Den som står hos kunden registrerar arbetet och skickar det för godkännande direkt från telefonen."),
-    ("04", "Låt uppgiften följa med",
-     "Det som registreras används vidare. Tiden blir underlag för fakturan, fotot blir en del av dokumentationen, kvittot blir en post i periodens underlag och ett godkännande visar vad som är klart att fakturera."),
+HJALP = [
+    ("01", "Hålla det ni har lovat",
+     "Löften och kundärenden sparas på kunden med ansvarig och datum för återkoppling. Den som tar samtalet ser vad som är lovat och kan svara direkt."),
+    ("02", "Fakturera det som är gjort",
+     "Tid, material och leveranser som registreras i arbetet blir fakturaunderlag. Varje fakturarad går att följa till arbetet bakom den."),
+    ("03", "Följa upp betalningar",
+     "Ni ser vilka fakturor som är betalda och vilka som väntar. Påminnelser förbereds i tid och skickas när ni har godkänt dem."),
+    ("04", "Lämna underlag till byrån",
+     "Periodens underlag lämnas som SIE4-fil med en lista över det som behöver kompletteras, och lönepartnern får löneunderlaget per månad."),
 ]
 PRINCIPER = [
-    ("princip-1", "Registrera en gång",
-     "Det som händer i verksamheten registreras där det händer. Kunden, artikeln, tiden och leveransen följer sedan med till offerten, fakturan, lagersaldot och periodens underlag."),
-    ("princip-2", "Tydligt underlag. Medvetna beslut.",
-     "Systemet föreslår och förbereder, och människan fattar besluten. En förberedd påminnelse skickas när du har godkänt den, och ett fakturautkast blir faktura när du låser det."),
-    ("princip-3", "Ni börjar med det ni behöver",
-     "Lager, HR, projekt och samarbeten visas när verksamheten behöver dem. Systemet växer med företaget, och varje person ser de områden som hör till uppgiften."),
+    ("princip-1", "Skriv in en uppgift en gång",
+     "Kunden, artikeln, tiden och leveransen skrivs in när de uppstår i arbetet. Sedan används samma uppgifter i offerten, fakturan, lagersaldot och periodens underlag."),
+    ("princip-2", "SAEFUR förbereder, ni bestämmer",
+     "SAEFUR tar fram påminnelser och fakturautkast åt er. En påminnelse skickas när du har godkänt den, och ett fakturautkast blir faktura när du låser det."),
+    ("princip-3", "Börja med det ni behöver",
+     "Lager, HR, projekt och samarbeten visas när verksamheten behöver dem, och varje person ser de områden som hör till uppgiften."),
     ("princip-4", "Kunden ser det som berör kunden",
-     "Kunden följer sin affär via personliga länkar, utan konto: offerten, arbetet, avtalet och fakturan. Marginaler och interna anteckningar stannar hos er."),
+     "Kunden följer sin affär via personliga länkar, utan eget konto: offerten, arbetet, avtalet och fakturan. Marginaler och interna anteckningar stannar hos er."),
 ]
 
-fragor = "".join(
-    f'<li><span class="punkt" aria-hidden="true"></span><p class="nr">{n}</p><h3>{h}</h3><p>{t}</p></li>' for n, h, t in FRAGOR)
+hjalp = "".join(
+    f'<li><span class="punkt" aria-hidden="true"></span><p class="nr">{n}</p><h3>{h}</h3><p>{t}</p></li>' for n, h, t in HJALP)
 principer = "".join(f'<div><h3>{m(pid, h)}</h3><p>{t}</p></div>' for pid, h, t in PRINCIPER)
 
 sida = f'''<!doctype html>
@@ -173,8 +171,8 @@ sida = f'''<!doctype html>
 <main>
 <section class="hero sida">
   <div class="wrap hero-text">
-    <h1>Fördela ansvaret.<br><span>Följ helheten.</span></h1>
-    <p class="lead">SAEFUR hjälper er att samordna verksamheten. Varje medarbetare får relevant insyn och befogenhet för sin uppgift, och den som leder ser vad som är överenskommet, genomfört, fakturerat och betalt.</p>
+    <h1>När företaget växer<br><span>behöver arbetet fördelas.</span></h1>
+    <p class="lead">SAEFUR hjälper er att fördela uppgifterna och hålla ihop verksamheten. Varje medarbetare får den insyn och de befogenheter uppgiften kräver, och den som leder ser vad som är överenskommet, genomfört, fakturerat och betalt.</p>
   </div>
 </section>
 
@@ -182,29 +180,30 @@ sida = f'''<!doctype html>
   <div class="wrap omrade">
     <div>
       <p class="etikett">Varför SAEFUR finns</p>
-      <h2>När företaget växer behöver kunskapen kunna delas.</h2>
+      <h2>Nöjda kunder börjar med tydlig information i tid.</h2>
     </div>
     <div class="text">
-      <p>I ett litet företag samlas mycket kunskap hos ägaren: vad som är lovat, vem som är hos vilken kund, vad som är levererat och vilken faktura som ska skickas. När fler blir inblandade behöver överenskommelser, beslut och underlag finnas där arbetet görs, så att kollegorna kan driva sitt arbete och underlaget kan uppdateras när dagen förändras.</p>
-      <p>{m("kundservice")} {m("leta")}</p>
-      <p>SAEFUR är byggt för att {m("en-gang", "en uppgift ska registreras en gång, där den uppstår, och sedan följa med: från överenskommelsen med kunden, genom arbetet, till fakturan och vidare till underlaget hos redovisningspartnern.")} {m("insyn")}</p>
+      <p>I ett litet företag har ägaren överblicken: vad som är lovat, vem som är hos vilken kund, vad som är levererat och vilken faktura som ska skickas. När fler blir inblandade samlar SAEFUR överenskommelser, beslut och underlag där arbetet görs. Kollegorna kan då driva sitt eget arbete och uppdatera underlaget när dagen ändras.</p>
+      <p>{m("kundservice")} När kunden får veta när arbetet börjar, vad som är klart och vad fakturan gäller, blir samarbetet enklare för båda parter. {m("leta")}</p>
+      <p>{m("en-gang", "SAEFUR följer hela kundlivscykeln. Kundens uppgifter och överenskommelser följer med från första kontakten till offerten, arbetet och fakturan, och vidare till underlaget hos redovisningspartnern.")} Det säljaren skrev in vid första kontakten finns med i offerten, den godkända offerten blir grunden för arbetet, och tiden och materialet som registreras i arbetet blir rader på fakturan. Varje uppgift skrivs in en gång.</p>
+      <p>{m("insyn")}</p>
     </div>
   </div>
 </section>
 
-<section class="sektion band" id="tankarna">
+<section class="sektion band" id="hjalp">
   <div class="wrap">
-    <p class="etikett">Tankarna som präglar systemet</p>
-    <h2 class="rubrik">{m("halla-ihop")}</h2>
-    <p class="ingress">Så vill vi att det ska kännas att öppna SAEFUR en vanlig tisdag. {m("fyra-fragor", "Därför prövar vi varje vy i systemet mot fyra frågor.")}</p>
-    <ol class="fragor-spar">{fragor}</ol>
+    <p class="etikett">Det SAEFUR hjälper er med</p>
+    <h2 class="rubrik">Mer tid för kunderna.</h2>
+    <p class="ingress">{m("hjalp", "SAEFUR visar vad som väntar och förbereder nästa steg i det dagliga arbetet med kunder, fakturor och underlag.")}</p>
+    <ol class="fragor-spar">{hjalp}</ol>
   </div>
 </section>
 
 <section class="sektion" id="principer">
   <div class="wrap">
     <p class="etikett">Så är systemet byggt</p>
-    <h2 class="rubrik">Fyra principer som styr produkten.</h2>
+    <h2 class="rubrik">Fyra principer bakom SAEFUR.</h2>
     <div class="principer fyra">{principer}</div>
   </div>
 </section>
@@ -300,7 +299,7 @@ kontroll = f'''<!doctype html>
 <h1>Kontroll: Om SAEFUR</h1>
 <p>Intern sida, aldrig publik. Besökarens sida (<a href="om.html">om.html</a>) är ett textförslag. Här står varje påstående med sitt läge, källa och vad som är kvar. Lägena styr märkningen via <code>P</code> i <code>bygg.py</code>: omärkt text är belagd i dokument, broschyr eller kod, eller är Adams eget besked; prickad understrykning bekräftas mot driftversionen eller kompletteras före publicering. Sidan har inga öppna affärsvillkor och därför ingen gul märkning.</p>
 <p>Belagt: {antal["belagt"]} · Adams besked: {antal["besked"]} · Bekräftas eller kompletteras: {antal["bekrafta"]}</p>
-<p>Avsikten med sidan: förklara varför SAEFUR finns och vilka tankar som präglar systemet, utan att upprepa Funktioner och utan teorigenomgång. Begreppet känsla av sammanhang (B12) nämns aldrig; dess tre delar bär avsnittet "Tankarna som präglar systemet" som fyra frågor. Ingen person nämns vid namn (bygget stoppar om ett namn smyger in).</p>
+<p>Avsikten med sidan: förklara varför SAEFUR finns, vad det hjälper till med och vilka principer som styr produkten, utan att upprepa sidan Vad ni kan göra och utan teorigenomgång. Sedan 27 oktober ersätter avsnittet "Det SAEFUR hjälper er med" de fyra frågorna (känsla av sammanhang, B12). Ingen person nämns vid namn (bygget stoppar om ett namn smyger in).</p>
 
 <h2>Belagt i dokument, broschyr eller kod (omärkt på sidan)</h2>
 <table class="belagt"><thead><tr><th>Id</th><th>Påstående</th><th>Källa</th><th>Kvar</th></tr></thead><tbody>{rader("belagt")}</tbody></table>
@@ -314,7 +313,7 @@ kontroll = f'''<!doctype html>
 <h2>Lämnat utanför sidan, och varför</h2>
 <table><tbody>
 <tr><td>Avsändarstycke med namn, porträtt och bakgrund (D1, D2).</td><td>Adams besked 25 okt: ingen person nämns vid namn.</td></tr>
-<tr><td>Begreppet känsla av sammanhang och forskarens namn (D3, B12).</td><td>Tanken kvar som fyra frågor, begreppet utelämnat enligt Adams besked.</td></tr>
+<tr><td>Begreppet känsla av sammanhang och forskarens namn (D3, B12).</td><td>Begreppet utelämnat enligt Adams besked 25 okt. De fyra frågorna (en vanlig tisdag) är ersatta 27 okt av det SAEFUR hjälper till med.</td></tr>
 <tr><td>Listan "Finns i dag / Kommer" från v3 och v4.</td><td>Ingen samlad lista. Sedan 26 okt beskrivs planerade funktioner och väntande anslutningar vid respektive funktion på Funktioner.</td></tr>
 <tr><td>Målgruppstal (30 till 50, 1 till 100, 15 till 80).</td><td>Fråga 8 i 04 är obesvarad. Sidan beskriver det lilla företaget som växer utan tal.</td></tr>
 <tr><td>Dokument till kund på sex språk.</td><td>Broschyr 1 säger att offert, avtal och faktura ställs ut på svenska; koden har sex dokumentspråk. Motstridigt, därför utelämnat.</td></tr>

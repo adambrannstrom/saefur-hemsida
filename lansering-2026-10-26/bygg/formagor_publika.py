@@ -644,7 +644,7 @@ FORMAGOR = [
     f("stallforetradare", "hr", "Ställföreträdare och överlämning av grundarens ansvar",
       "Företaget kan föra över grundarens ansvar till en ställföreträdare, med behörigheterna intakta. Planerad funktion, och i dag hjälper SAEFURs support till med den här överlämningen.",
       "Ansvaret kan föras vidare när grundaren är borta.",
-      "kommer", "FM-253", "kontinuitet, ställföreträdare, vikarie, grundare, återvinning av ansvar", "agare", "tvapersonskontroll", "Beslutad riktning. Under piloten hanteras det av SAEFURs support."),
+      "kommer", "FM-253", "kontinuitet, ställföreträdare, vikarie, grundare, återvinning av ansvar", "agare", "tvapersonskontroll", "Beslutad riktning. Under betatestet hanteras det av SAEFURs support."),
 
     # ───────────── Språk, inloggning och hjälp
     f("inloggning", "plattform", "Inloggning med e-post, BankID eller passkey",

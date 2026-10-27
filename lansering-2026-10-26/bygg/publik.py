@@ -12,7 +12,7 @@ from gemensamt import MOTTAGNING  # noqa: E402
 
 ROT = Path(__file__).resolve().parent.parent
 UT = ROT.parent / "publik-2026-10-26"
-SIDOR = ["index.html", "media.html", "funktioner.html", "priser.html", "om.html", "early-bird.html"]
+SIDOR = ["index.html", "media.html", "funktioner.html", "priser.html", "om.html", "early-bird.html", "betatest.html"]
 STILAR_SKRIPT = ["site.css", "lansering.css", "funktioner.css", "priser.css", "om.css", "funktioner.js", "priser.js", "om.js", "early-bird.js", "funktioner.json"]
 
 if not MOTTAGNING:

@@ -9,6 +9,8 @@
 #   prickad understrykning   = affärsavsikt som bekräftas i produkten före publicering (klassen bekrafta)
 # Kopia av 5516 (godkänd och låst) med lanseringslagret, 25 okt 2026: python3 -I bygg/bygg_priser.py i mappen lansering-2026-10-26.
 # Sidhuvud och sidfot kommer från gemensamt.py. Bolagsnamnet är rättat till AT Interactive Design AB.
+# 27 okt (Adams uppdrag): förklaringen av intervallen med räkneexempel ur STAFFEL, en mening om nyttan med ett samlat system,
+# licensens definition, rubriken "Så kommer ni igång." och betatest i stället för pilot. Priser och räkneregler oförändrade.
 from pathlib import Path
 import json
 
@@ -16,7 +18,7 @@ ROT = Path(__file__).resolve().parent.parent
 FUNKTIONER = "funktioner.html"
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from gemensamt import LOGIN, EB, MENY, LANSERING, huvud, sidfot, skissrad, avslut_sektion, FORETAG  # noqa: E402
+from gemensamt import LOGIN, EB, BETATEST, INLOGG, MENY, LANSERING, huvud, sidfot, skissrad, avslut_sektion, FORETAG  # noqa: E402
 
 # ---------- Prismodell (arbetsförslag) ----------
 STAFFEL = [("Första licensen", 1, 1, 995), ("Användare 2 till 10", 2, 10, 229), ("Användare 11 till 30", 11, 30, 179),
@@ -45,7 +47,7 @@ P = [
     # id, läge, text som den står på sidan (eller sammandrag), källa, vad som krävs för att ta bort märkningen
     ("pris-niva", "forslag", "Första licensen 995 kr per månad, därefter 229, 179, 149, 129 och 99 kr per person i fallande intervall.",
      "Adams arbetsförslag 25 okt; beslutsunderlag v4 avsnitt 3", "Adams prisbeslut."),
-    ("pris-intervall", "forslag", "Varje pris gäller personerna i sitt intervall. Hela företaget byter aldrig pris när en gräns passeras.",
+    ("pris-intervall", "forslag", "Varje intervall har sitt eget pris, som gäller användarna i just det intervallet. När företaget får fler användare behåller de tidigare användarna sitt intervallpris.",
      "Arbetsförslag, kontrollräknat (1: 995, 10: 3 056, 30: 6 636)", "Adams prisbeslut om stafflingsprincipen."),
     ("moms", "forslag", "Priser exklusive moms.", "B10, rekommenderat: exklusive moms med tydlig rad, standard mot företag", "Adams bekräftelse."),
     ("grundprodukt", "forslag", "Grundprodukten omfattar hela kedjan från kund och projekt till ekonomi. Valbara tillägg redovisas här när de är beslutade.",
@@ -53,11 +55,13 @@ P = [
     ("roller", "forslag", "Inga rollskillnader i pris; samma pris för alla personer.", "B6, rekommenderat: inga i första prislistan", "Adams bekräftelse. Står bara underförstått på sidan."),
     ("andring", "forslag", "Antalet personer kan ändras månad för månad.", "B7, rekommenderat: antal aktiva licenser på debiteringsdagen; P: vad abonnemangsflödet klarar",
      "Adams beslut om räknedag, och kontroll av abonnemangsflödet."),
-    ("licens", "avsikt", "En licens är en person i ert företag med eget konto. Kundens länk, byråns läsplats och samarbetspartner i andra företag ingår utan kostnad.",
+    ("samlat", "beslut", "Alla i företaget arbetar i samma system, med samma kunder, offerter, tider och fakturor, och periodens underlag till redovisningsbyrån tas fram ur det som redan är registrerat.",
+     "Start och Om (kundkortet med offerter, arbete och fakturor; fakturaunderlag ur registrerat arbete; SIE4 per period med lista över det som saknas, FM-källor i kontroll-funktioner.html). Adams uppdrag 27 okt.", "Inget."),
+    ("licens", "avsikt", "En licens är en person med eget konto i företaget. Kundens länk, byråns läsplats och samarbetspartner i andra företag ingår utan kostnad.",
      "B5 och B3, allt affärsunderlag sedan augusti; B4 kundens länk är starkast belagd", "Adams bekräftelse av principen; P: byråns läsplats i drift (E7)."),
     ("avtal-ingar", "avsikt", "Bankkoppling och fraktbokning ingår i grundprodukten när de är på plats, utan extra kostnad från SAEFUR.",
      "Affärsavsikt enligt innehållsförslaget 02", "Adams bekräftelse. Funktionerna själva väntar på avtal."),
-    ("early-bird", "beslut", "Anmäl er före lanseringen hösten 2026 och få 20 % rabatt på licenserna i sex månader. Anmälan ger ingen pilotåtkomst.",
+    ("early-bird", "beslut", "Anmäl er före lanseringen hösten 2026 och få 20 % rabatt på licenserna i sex månader. Anmälan ger ingen plats i betatestet.",
      "Adams godkända villkor 25 okt natt (08_lansering_early_bird_plan.md och Adams svar); fullständiga villkor på early-bird.html", "Belagt."),
     ("konto", "beslut", "När SAEFUR har öppnat skapar ni konto i webbläsaren.",
      "Verifierat 26 okt kväll mot driftversionen 509a79334: registreringen finns och spärren är driftsatt (/sv/register visar Registreringen är stängd); öppning sker efter Adams uttryckliga besked", "Inget."),
@@ -92,6 +96,15 @@ def pris(antal):
 
 assert pris(1) == 995 and pris(10) == 3056 and pris(30) == 6636, "stafflingen räknar fel"
 assert pris(60) == 3056 + 20 * 179 + 30 * 149 and pris(121) == pris(120) + 99
+
+# Räkneexemplet under stafflingen: tio användare, sedan den elfte. Beloppen räknas ur STAFFEL.
+_, _, _, P1 = STAFFEL[0]
+_, _, HI2, P2 = STAFFEL[1]
+_, _, _, P3 = STAFFEL[2]
+EXEMPEL_TEXT = (f"Exempel: Med tio användare betalar ni {kr(P1)} för första licensen och {kr(P2)} för var och en av de nio andra, "
+                f"{kr(pris(HI2))} i månaden. Den elfte användaren hör till nästa intervall och kostar {kr(P3)}. "
+                f"De tio första behåller sina priser, och ni betalar {kr(pris(HI2 + 1))} i månaden.")
+assert HI2 == 10 and pris(11) == 3235
 
 for fil in {b for _, b, *_ in BILDER}:
     assert (ROT / "bilder" / fil).is_file(), f"saknar bild {fil}"
@@ -146,7 +159,7 @@ sida = f'''<!doctype html>
   <div class="wrap hero-text">
     <span class="markning">Arbetsförslag till prislista, ej beslutat</span>
     <h1>Priset följer<br><span>antalet användare.</span></h1>
-    <p class="lead">{m("pris-niva", "Första licensen kostar 995 kr per månad. Varje ytterligare användare kostar mindre ju fler ni är.")} {m("moms")}</p>
+    <p class="lead">{m("samlat")} {m("pris-niva", "Första licensen kostar 995 kr per månad. Varje ytterligare användare kostar mindre ju fler ni är.")} {m("moms")}</p>
   </div>
 </section>
 
@@ -155,7 +168,8 @@ sida = f'''<!doctype html>
     <div class="staffel-del">
       <p class="etikett">Så räknas priset</p>
       <ul class="staffel" id="staffel">{staffel}</ul>
-      <p class="not">{m("pris-intervall", "Per användare och månad. Varje pris gäller användarna i sitt intervall, och priset för de tidigare användarna står kvar när en gräns passeras.")}</p>
+      <p class="not">{m("pris-intervall", "Priserna gäller per användare och månad. Varje intervall har sitt eget pris, som gäller användarna i just det intervallet. När företaget får fler användare behåller de tidigare användarna sitt intervallpris, och de nya användarna får priset i sitt intervall.")}</p>
+      <p class="not">{m("pris-niva", EXEMPEL_TEXT)}</p>
     </div>
     <div class="raknare" id="raknare">
       <div class="raknare-huvud">
@@ -205,8 +219,8 @@ sida = f'''<!doctype html>
 
 <section class="sektion" id="borja">
   <div class="wrap">
-    <h2 class="rubrik">Så börjar det.</h2>
-    <p class="ingress">Ni kommer igång på egen hand, och vi hjälper gärna till på info@saefur.com. Det som står med prickad understrykning är avsikten för flödet och bekräftas i produkten före publicering.</p>
+    <h2 class="rubrik">Så kommer ni igång.</h2>
+    <p class="ingress">Ni lägger upp företaget på egen hand, och vi hjälper gärna till på info@saefur.com. Vill ni börja före lanseringen kan ni <a class="textlank" href="{BETATEST}">anmäla intresse för betatestet</a>. Det som står med prickad understrykning är avsikten för flödet och bekräftas i produkten före publicering.</p>
     <ol class="start-steg">
       <li><span class="punkt" aria-hidden="true"></span><p class="nr">01</p><h3>Early Bird</h3><p>{m("early-bird")} <a class="textlank" href="early-bird.html#villkor">Villkor och anmälan</a></p></li>
       <li><span class="punkt" aria-hidden="true"></span><p class="nr">02</p><h3>Konto och 30 dagar</h3><p>{m("konto")} {m("prov-30")}</p></li>
@@ -287,7 +301,7 @@ a{{color:#1b2537}}
 
 <h2>Verifierat i produkten i dag (ur innehållsförslaget 02 och beslutsunderlaget P9)</h2>
 <table><tbody>
-<tr><td>Registrering på saefur.com/sv/register finns men saknar spärr i drift; webben länkar dit inte. Inloggning på <a href="{LOGIN}">saefur.com/sv/login</a> finns kvar som diskret Pilotinloggning.</td></tr>
+<tr><td>Registrering på saefur.com/sv/register finns men saknar spärr i drift; webben länkar dit inte. Inloggning på <a href="{LOGIN}">saefur.com/sv/login</a> finns kvar som diskret {INLOGG}.</td></tr>
 <tr><td>Kort kan registreras i förväg.</td></tr>
 <tr><td>Provperiod sätts per avtal, utan fast längd. 30 dagar vid självregistrering är avsikt.</td></tr>
 <tr><td>Förhandsbesked sju dagar före dragning finns i appens meddelanden.</td></tr>

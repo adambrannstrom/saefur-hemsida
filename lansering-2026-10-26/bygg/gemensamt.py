@@ -1,11 +1,15 @@
 # Gemensamt lanseringslager för alla sidor i lansering-2026-10-26. Sidhuvud, sidfot, uppmaningar och mottagningens adress.
-# Byggskripten importerar härifrån så att ordvalen (Early Bird, Pilotinloggning, Lansering hösten 2026) står på ett ställe.
+# Byggskripten importerar härifrån så att ordvalen (Early Bird, Inloggning för betatest, Lansering hösten 2026) står på ett ställe.
+# 27 okt: menynamnet Funktioner blev "Vad ni kan göra" och Pilotinloggning blev "Inloggning för betatest" (Adams uppdrag);
+# sidans adress funktioner.html och klassen pilot är oförändrade.
 # Godkända mappar (v4, 5515, 5516, 5517) är orörda; detta är en separat kopia med lanseringslagret.
 
 import os
 
 LOGIN = "https://saefur.com/sv/login"
 EB = "early-bird.html"
+BETATEST = "betatest.html"
+INLOGG = "Inloggning för betatest"
 LANSERING = "Lansering hösten 2026"
 FORETAG = "AT Interactive Design AB"
 ORGSATE = "org.nr 559556-4393, säte Rättvik"
@@ -14,7 +18,7 @@ ORGSATE = "org.nr 559556-4393, säte Rättvik"
 # Standard är samma adress som produkten (Caddy). Prov mot A:s provinstans: EARLY_BIRD_MOTTAGNING=http://localhost:3988/api/early-bird. Tom adress gör att formuläret säger öppet att anslutningen saknas och ingenting skickas. Se ../09_publicering_och_anslutning.md.
 MOTTAGNING = os.environ.get("EARLY_BIRD_MOTTAGNING", "/api/early-bird")
 
-MENY = [("funktioner.html", "Funktioner"), ("media.html", "Media"), ("priser.html", "Priser"), ("om.html", "Om SAEFUR")]
+MENY = [("funktioner.html", "Vad ni kan göra"), ("media.html", "Media"), ("priser.html", "Priser"), ("om.html", "Om SAEFUR")]
 
 
 def lansering_band():
@@ -39,10 +43,10 @@ def huvud(aktiv, fast=True):
   <a class="brand" href="index.html">SAEFUR</a>
   <nav class="nav" aria-label="Huvudmeny">{nav}</nav>
   <div class="right">
-    <a class="loggain pilot" href="{LOGIN}">Pilotinloggning</a>
+    <a class="loggain pilot" href="{LOGIN}">{INLOGG}</a>
     <a class="btn mjuk" href="{EB}"{' aria-current="page"' if aktiv == EB else ''}>Early Bird</a>
     <details class="meny"><summary>Meny</summary>
-      <div class="panel">{panel}<a href="{EB}">Early Bird</a><a href="{LOGIN}">Pilotinloggning</a></div>
+      <div class="panel">{panel}<a href="{EB}">Early Bird</a><a href="{LOGIN}">{INLOGG}</a></div>
     </details>
   </div>
 </header>
@@ -67,6 +71,6 @@ def avslut_sektion():
     <h2>Börja där ni behöver överblick.</h2>
     <p class="lead" style="margin-left:auto;margin-right:auto">{LANSERING}. När SAEFUR öppnar kan ni börja med det område som behöver ordning först och lägga till fler i er egen takt. Early Bird ger 20 % rabatt på licenserna i sex månader.</p>
     <div class="actions"><a class="btn stor" href="{EB}">Anmäl ditt företag till Early Bird</a></div>
-    <p class="mikro">Frågor eller en genomgång först? Skriv till info@saefur.com.</p>
+    <p class="mikro">Frågor eller en genomgång först? Skriv till info@saefur.com. Vill ni börja före lanseringen? <a class="textlank" href="{BETATEST}">Läs om betatestet</a></p>
   </div>
 </section>'''

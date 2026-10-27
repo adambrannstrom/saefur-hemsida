@@ -102,7 +102,7 @@ sida("index.html", "SAEFUR | Ett system för hela företaget", f'''<section clas
   <div class="wrap">
     <ol class="steg">{steg}
     </ol>
-    <p class="vidare"><a class="textlank" href="funktioner.html">Alla funktioner</a> · <a class="textlank" href="funktioner.html?p=sjalv&amp;g=kunden-gor-sin-del">Så följer kunden arbetet</a></p>
+    <p class="vidare"><a class="textlank" href="funktioner.html">Allt ni kan göra i SAEFUR</a> · <a class="textlank" href="funktioner.html?p=sjalv&amp;g=kunden-gor-sin-del">Så följer kunden arbetet</a></p>
   </div>
 </section>''', VAXLA, BAKGRUND)
 

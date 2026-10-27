@@ -16,6 +16,8 @@
 # Samma kväll (Adams justering): vanliga sökningar i en förslagsyta som visas när sökfältet får fokus, perspektivvalet
 #   centrerat, och perspektivets förklaring med den gemensamma undertexten i en utfällning vid knappen i stället för
 #   permanenta hjälprader.
+# 27 okt (Adams uppdrag): sidan heter "Vad ni kan göra i SAEFUR" i rubrik, meny och fönstertitel, och sökningen bjuder in
+#   till ord ur arbetet (offert, tidrapport, semester). Adress, id, sökning, perspektivval och återvägar är oförändrade.
 # Skiss med produktutsnitt: SAEFUR_SKISS=1 lägger in figurer ur utsnitt.py i de funktioner som har ett utsnitt,
 # och SAEFUR_UT pekar ut en annan målmapp. Ordinarie bygge (bygg_alla.py) sätter inget av detta.
 import json
@@ -204,8 +206,8 @@ data = dict(
     bilder=[k for k, _, _ in BILDER], gruppbild=GRUPPBILD, vaxling=VAXLING_SEK,
 )
 
-nav = "".join(f'<a href="{h}">{t}</a>' for h, t in MENY).replace('">Funktioner', '" aria-current="page">Funktioner')
-exempel = ["fakturera", "offert", "leverans", "schema", "lagerplatser", "löneunderlag", "ÄTA", "SIE4"]
+nav = "".join(f'<a href="{h}">{t}</a>' for h, t in MENY).replace('">Vad ni kan göra', '" aria-current="page">Vad ni kan göra')
+exempel = ["offert", "fakturera", "tidrapport", "leverans", "schema", "semester", "lagerplatser", "löneunderlag"]
 chips = "".join(f'<button type="button" class="chip" data-q="{esc(e)}">{esc(e)}</button>' for e in exempel)
 UNDERTEXT = "Samma SAEFUR i alla tre. Perspektivet väljer ordningen, och innehållet är detsamma."
 segment = "".join(
@@ -223,7 +225,7 @@ html = f'''<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Funktioner | SAEFUR</title>
+<title>Vad ni kan göra i SAEFUR | SAEFUR</title>
 <link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="funktioner.css">
 <link rel="stylesheet" href="lansering.css">
@@ -237,16 +239,16 @@ html = f'''<!doctype html>
 <main>
 <section class="hero sida">
   <div class="wrap hero-text">
-    <h1>Funktioner</h1>
-    <p class="lead">Hitta det som hjälper er i vardagen. Se hur SAEFUR fungerar när du driver företaget själv, när ni delar på arbetet eller när flera avdelningar samverkar. Söker du en viss funktion når du den direkt.</p>
+    <h1>Vad ni kan göra <span>i SAEFUR.</span></h1>
+    <p class="lead">Sök på något ni gör i arbetet, som att skicka en offert, rapportera tid eller planera semester, och se hur SAEFUR hjälper till. Under sökningen ser ni hur arbetet hänger ihop när du driver företaget själv, när ni delar på arbetet eller när flera avdelningar samverkar.</p>
     <div class="sokyta" id="sokyta">
       <form class="sok" role="search" onsubmit="return false">
-        <label for="q" class="visually-hidden">Sök funktion</label>
-        <input id="q" type="text" placeholder="Sök en funktion, till exempel fakturera, schema eller lagerplatser" autocomplete="off" spellcheck="false" aria-controls="resultat sokforslag" aria-expanded="false">
+        <label for="q" class="visually-hidden">Sök på något ni gör i arbetet</label>
+        <input id="q" type="text" placeholder="Vad gör ni i arbetet? Till exempel offert, tidrapport eller semester" autocomplete="off" spellcheck="false" aria-controls="resultat sokforslag" aria-expanded="false">
         <button type="button" class="rensa" id="rensa" hidden aria-label="Rensa sökningen">×</button>
       </form>
       <div id="resultat" class="resultat" role="region" aria-label="Sökträffar" tabindex="-1" hidden></div>
-      <div class="sokforslag" id="sokforslag" role="group" aria-labelledby="sokforslag-rubrik" hidden><p class="sokforslag-rubrik" id="sokforslag-rubrik">Vanliga sökningar</p><div class="sokforslag-chips">{chips}</div></div>
+      <div class="sokforslag" id="sokforslag" role="group" aria-labelledby="sokforslag-rubrik" hidden><p class="sokforslag-rubrik" id="sokforslag-rubrik">Prova ett ord ur arbetet</p><div class="sokforslag-chips">{chips}</div></div>
     </div>
   </div>
 </section>
